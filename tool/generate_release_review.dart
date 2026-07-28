@@ -57,11 +57,12 @@ void main(List<String> arguments) {
         trigger == 'context-unavailable'
             ? 'Release change context was not provided; no change claims '
                 'were generated.\n'
-            : 'This release was created by the monthly maintenance workflow.\n',
+            : 'This release was created by the automated maintenance '
+                'process.\n',
       )
       ..writeln('Eligible changes:\n')
       ..writeln('- Flutter major update: ${flutterUpdated ? 'yes' : 'no'}')
-      ..writeln('- Geographic upstream update: ${dataUpdated ? 'yes' : 'no'}\n')
+      ..writeln('- Geographic snapshot update: ${dataUpdated ? 'yes' : 'no'}\n')
       ..writeln('## Package version\n')
       ..writeln('Previous version: $oldVersion\n')
       ..writeln('New version: $newVersion\n')
