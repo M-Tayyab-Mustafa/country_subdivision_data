@@ -1,3 +1,14 @@
+## 0.0.3
+
+### Automation
+
+- Repaired release validation for the current GitHub-hosted Ubuntu runner.
+- Made automated failure reporting create its required labels.
+
+### Validation
+
+- Passed formatting, analysis, tests, snapshot integrity, Nigeria regression, and pub.dev publication dry-run.
+
 ## 0.0.2
 
 ### Data

@@ -7,7 +7,7 @@ Prepend a verified release entry to CHANGELOG.md.
 
 Usage:
   dart run tool/update_changelog.dart --version VERSION
-      --trigger flutter|data|combined
+      --trigger flutter|data|combined|maintenance
       [--old-flutter VERSION --new-flutter VERSION]
       [--old-commit SHA --new-commit SHA]
   dart run tool/update_changelog.dart --old-manifest OLD --new-manifest NEW
@@ -33,9 +33,12 @@ void main(List<String> arguments) {
       newCommit = newManifest['upstreamCommit']?.toString();
       trigger ??= 'data';
     }
-    if (trigger != 'flutter' && trigger != 'data' && trigger != 'combined') {
+    if (trigger != 'flutter' &&
+        trigger != 'data' &&
+        trigger != 'combined' &&
+        trigger != 'maintenance') {
       throw const FormatException(
-        '--trigger flutter|data|combined is required.',
+        '--trigger flutter|data|combined|maintenance is required.',
       );
     }
     final changelog = File('CHANGELOG.md');
@@ -81,6 +84,17 @@ void main(List<String> arguments) {
           '`$oldCommit` to `$newCommit`.\n',
         );
       }
+    }
+    if (trigger == 'maintenance') {
+      buffer
+        ..writeln('### Automation\n')
+        ..writeln(
+          '- Repaired release validation for the current GitHub-hosted '
+          'Ubuntu runner.',
+        )
+        ..writeln(
+          '- Made automated failure reporting create its required labels.\n',
+        );
     }
     buffer
       ..writeln('### Validation\n')
