@@ -9,7 +9,7 @@ Manage the package's decimal-digit rollover version policy.
 Usage:
   dart run tool/version_manager.dart current
   dart run tool/version_manager.dart next
-  dart run tool/version_manager.dart bump --reason flutter|data|combined
+  dart run tool/version_manager.dart bump --reason flutter|data|combined|maintenance
       [--dry-run] [--skip-changelog]
   dart run tool/version_manager.dart verify [--tag vX.Y.Z]
   dart run tool/version_manager.dart --help
@@ -34,9 +34,13 @@ void main(List<String> arguments) {
         stdout.writeln(current.nextPackageVersion);
       case 'bump':
         final reason = options['reason'];
-        if (reason != 'flutter' && reason != 'data' && reason != 'combined') {
+        if (reason != 'flutter' &&
+            reason != 'data' &&
+            reason != 'combined' &&
+            reason != 'maintenance') {
           throw const FormatException(
-            'A publishable --reason flutter|data|combined is required.',
+            'A publishable --reason '
+            'flutter|data|combined|maintenance is required.',
           );
         }
         final next = current.nextPackageVersion;
@@ -97,6 +101,8 @@ void _prependChangelog(SemanticVersion version, String reason) {
       '- Updated the pinned development Flutter stable major.',
     if (reason == 'data' || reason == 'combined')
       '- Updated the bundled country, subdivision, and city snapshot.',
+    if (reason == 'maintenance')
+      '- Repaired release automation and publication validation.',
   ];
   final temporary = File('CHANGELOG.md.tmp')
     ..writeAsStringSync(

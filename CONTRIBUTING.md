@@ -54,6 +54,10 @@ and downgrades. It never mutates a developer's global SDK or automatically
 raises package SDK constraints. The package version uses decimal-digit rollover:
 `0.0.9 → 0.1.0` and `0.9.9 → 1.0.0`.
 
+Verified release-automation repairs may use the `maintenance` release trigger.
+That trigger must leave Flutter and snapshot identities unchanged and must not
+claim a toolchain or geographic-data update.
+
 ## Monthly automated releases
 
 The single monthly workflow checks official Flutter stable metadata and the

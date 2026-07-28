@@ -8,7 +8,8 @@ Generate Markdown and JSON audit records for a verified monthly release.
 
 Usage:
   dart run tool/generate_release_review.dart
-      --old-version OLD --new-version NEW --trigger flutter|data|combined
+      --old-version OLD --new-version NEW
+      --trigger flutter|data|combined|maintenance
       --old-flutter VERSION --latest-flutter VERSION --new-flutter VERSION
       --old-manifest PATH --new-manifest PATH --output PATH
   dart run tool/generate_release_review.dart --help
@@ -31,6 +32,7 @@ void main(List<String> arguments) {
     if (trigger != 'flutter' &&
         trigger != 'data' &&
         trigger != 'combined' &&
+        trigger != 'maintenance' &&
         trigger != 'context-unavailable') {
       throw const FormatException('Invalid release trigger.');
     }
@@ -47,6 +49,7 @@ void main(List<String> arguments) {
     final newFlutter = options['new-flutter'] ?? currentFlutter;
     final flutterUpdated = trigger == 'flutter' || trigger == 'combined';
     final dataUpdated = trigger == 'data' || trigger == 'combined';
+    final automationUpdated = trigger == 'maintenance';
     final validated = options.containsKey('validated');
     final newManifestPath = options['new-manifest'] ?? currentManifestPath;
     validateSnapshot(File(newManifestPath).parent);
@@ -62,7 +65,11 @@ void main(List<String> arguments) {
       )
       ..writeln('Eligible changes:\n')
       ..writeln('- Flutter major update: ${flutterUpdated ? 'yes' : 'no'}')
-      ..writeln('- Geographic snapshot update: ${dataUpdated ? 'yes' : 'no'}\n')
+      ..writeln('- Geographic snapshot update: ${dataUpdated ? 'yes' : 'no'}')
+      ..writeln(
+        '- Release automation maintenance: '
+        '${automationUpdated ? 'yes' : 'no'}\n',
+      )
       ..writeln('## Package version\n')
       ..writeln('Previous version: $oldVersion\n')
       ..writeln('New version: $newVersion\n')
@@ -71,7 +78,7 @@ void main(List<String> arguments) {
       ..writeln('Latest official stable version checked: $latestFlutter\n')
       ..writeln('New pinned version: $newFlutter\n')
       ..writeln(
-        'Update reason: ${flutterUpdated ? 'A higher stable major version was available.' : 'No higher stable major version was available.'}\n',
+        'Update reason: ${flutterUpdated ? 'A higher stable major version was available.' : automationUpdated ? 'The pinned Flutter SDK was outside the scope of this automation-maintenance release.' : 'No higher stable major version was available.'}\n',
       )
       ..writeln('Minimum supported Flutter version: unchanged\n');
     if (dataUpdated) {
@@ -132,6 +139,7 @@ void main(List<String> arguments) {
     final audit = <String, Object?>{
       'schemaVersion': 1,
       'package': 'country_subdivision_data',
+      'trigger': trigger,
       'previousVersion': oldVersion,
       'version': newVersion,
       'tag': 'v$newVersion',
