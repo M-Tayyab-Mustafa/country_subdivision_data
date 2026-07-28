@@ -158,6 +158,10 @@ void main(List<String> arguments) {
               'nigeriaRegression': 'passed',
               'snapshot': 'passed',
               'deterministicGeneration': 'passed',
+              'flutterSdk': 'passed',
+              'upstreamMetadata': 'passed',
+              'versionPolicy': 'passed',
+              'releaseReview': 'passed',
               'publishDryRun': 'passed',
             }
           : <String, Object?>{

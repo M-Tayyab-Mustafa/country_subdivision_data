@@ -59,23 +59,40 @@ raises package SDK constraints. The package version uses decimal-digit rollover:
 The single monthly workflow checks official Flutter stable metadata and the
 verified upstream commit. No meaningful change leaves the repository untouched.
 An eligible run applies Flutter-major and/or data changes, validates before and
-after exactly one bump, generates a Markdown/JSON release review, commits to the
-default branch through a dedicated GitHub App, and pushes an immutable tag.
-Only that tag can trigger OIDC publication.
+after exactly one bump, generates a Markdown/JSON release review, and pushes
+only `automation/monthly-maintenance`. It opens or updates a pull request to
+`main` and enables auto-merge or the merge queue. After GitHub merges that pull
+request, a separate workflow verifies the commit on `main` and the dedicated
+release GitHub App creates the immutable tag. Only that tag can trigger OIDC
+publication.
 
 Repository setup must provide:
 
 - `RELEASE_APP_ID` as a repository/organization variable.
 - `RELEASE_APP_PRIVATE_KEY` as an encrypted secret.
 - `RELEASE_BOT_NOREPLY_EMAIL` as a repository variable.
-- A narrowly scoped GitHub App with repository metadata read and contents write.
-- A ruleset allowing only that App to push validated releases to the default
-  branch and tags; do not disable protection globally.
+- A narrowly scoped GitHub App with repository metadata read, contents write,
+  and pull requests write.
+- Active `main` protection with an empty bypass list, pull-request-only changes,
+  zero human approvals, conversation resolution, strict required checks, linear
+  history, force-push/deletion protection, and merge queue when supported.
+- Auto-merge enabled, with squash as the only allowed merge method.
+- Immutable `v*` tag protection with no update/deletion bypass. A separate tag
+  creation rule permits only the dedicated release GitHub App.
 - Labels `automated-release-failure`, `pub-dev`, and `maintenance`.
 
-The workflow fails if the remote branch advances, credentials are absent, a tag
-already exists, validation fails, or candidate data is not meaningful. It never
-force-pushes or reuses tags.
+Apply the checked-in repository policy with an administration-capable token:
+
+```bash
+GH_TOKEN=... RELEASE_APP_ID=... \
+  bash .github/scripts/configure_repository.sh
+```
+
+The workflow fails if `main` advances, credentials are absent, a tag already
+exists, validation fails, or candidate data is not meaningful. It may replace
+only its dedicated maintenance branch using a lease-protected update; it never
+pushes directly to `main`, bypasses the `main` ruleset, force-updates a release
+tag, or reuses a tag.
 
 ## One-time initial publication and OIDC
 

@@ -48,8 +48,13 @@ stable major; upstream requires meaningful verified publishable differences.
 
 After the one-time manual `0.0.1` publication, eligible monthly releases are
 fully automated. Complete validation is mandatory before commit and again
-before tag publication. The monthly workflow may push only with the scoped
-release GitHub App. The tag-triggered workflow alone publishes through OIDC and
-creates the GitHub Release. Never force-push, move/reuse a release tag, bypass
+before tag publication. The monthly workflow may push only
+`automation/monthly-maintenance`; every `main` change must arrive through a
+protected pull request with all required checks passing and auto-merge or merge
+queue enabled. The `main` ruleset has no bypass actors, including the release
+App. After GitHub merges the maintenance pull request, the release App may
+create a new protected `v*` tag but may not update or delete one. The
+tag-triggered workflow alone publishes through OIDC and creates the GitHub
+Release. Never push directly to `main`, move/reuse a release tag, bypass
 validation, store long-lived publication credentials, or publish from an
 untagged/scheduled job.
