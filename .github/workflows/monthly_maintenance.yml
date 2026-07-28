@@ -1,4 +1,4 @@
-name: Monthly maintenance and release
+name: Monthly maintenance pull request
 
 on:
   schedule:
@@ -9,11 +9,11 @@ permissions:
   contents: read
 
 concurrency:
-  group: country-subdivision-automated-release
+  group: country-subdivision-monthly-maintenance
   cancel-in-progress: false
 
 jobs:
-  release:
+  maintenance:
     runs-on: ubuntu-latest
     timeout-minutes: 120
     steps:
@@ -32,10 +32,12 @@ jobs:
         with:
           app-id: ${{ vars.RELEASE_APP_ID }}
           private-key: ${{ secrets.RELEASE_APP_PRIVATE_KEY }}
-      - name: Check out default branch with full history
+          permission-contents: write
+          permission-pull-requests: write
+      - name: Check out main with full history
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.repository.default_branch }}
+          ref: main
           fetch-depth: 0
           token: ${{ steps.app-token.outputs.token }}
           persist-credentials: true
@@ -51,6 +53,7 @@ jobs:
           cp assets/country_subdivision_data/manifest.json .tool_work/old_manifest.json
           echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
           echo "version=$(dart run tool/version_manager.dart current)" >> "$GITHUB_OUTPUT"
+          echo "next_version=$(dart run tool/version_manager.dart next)" >> "$GITHUB_OUTPUT"
           echo "flutter=$(tr -d '[:space:]' < .flutter-version)" >> "$GITHUB_OUTPUT"
       - name: Resolve eligible changes
         id: decision
@@ -118,18 +121,20 @@ jobs:
           bash .github/scripts/check_determinism.sh .tool_work/upstream
           bash .github/scripts/verify.sh
           test -n "$(git status --short -- . ':!.tool_work')"
-      - name: Create versioned release records
+      - name: Create exactly one versioned release record
         if: steps.decision.outputs.eligible == 'true'
         id: version
         env:
           TRIGGER: ${{ steps.decision.outputs.trigger }}
           OLD_VERSION: ${{ steps.start.outputs.version }}
+          EXPECTED_VERSION: ${{ steps.start.outputs.next_version }}
           OLD_FLUTTER: ${{ steps.start.outputs.flutter }}
           LATEST_FLUTTER: ${{ steps.decision.outputs.latest_flutter }}
         run: |
-          new_version="$(dart run tool/version_manager.dart next)"
           dart run tool/version_manager.dart bump \
             --reason "$TRIGGER" --skip-changelog
+          new_version="$(dart run tool/version_manager.dart current)"
+          test "$new_version" = "$EXPECTED_VERSION"
           args=(
             --version "$new_version"
             --trigger "$TRIGGER"
@@ -151,7 +156,7 @@ jobs:
             --validated \
             --output "tool/reports/releases/$new_version.md"
           echo "version=$new_version" >> "$GITHUB_OUTPUT"
-      - name: Final verification
+      - name: Final complete validation
         if: steps.decision.outputs.eligible == 'true'
         run: |
           bash .github/scripts/check_determinism.sh .tool_work/upstream
@@ -160,25 +165,65 @@ jobs:
           test -f "tool/reports/releases/${{ steps.version.outputs.version }}.json"
           rg "^## ${{ steps.version.outputs.version }}$" CHANGELOG.md
           ! git status --short | rg '(^|/)(build|coverage|\.dart_tool|\.tool_work)/'
-      - name: Commit and push immutable release
+      - name: Commit and update the maintenance branch
         if: steps.decision.outputs.eligible == 'true'
         env:
-          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
           START_SHA: ${{ steps.start.outputs.sha }}
           VERSION: ${{ steps.version.outputs.version }}
           BOT_EMAIL: ${{ vars.RELEASE_BOT_NOREPLY_EMAIL }}
+          BRANCH: automation/monthly-maintenance
         run: |
-          git fetch origin "$DEFAULT_BRANCH" --tags
-          test "$(git rev-parse "origin/$DEFAULT_BRANCH")" = "$START_SHA"
-          ! git rev-parse "v$VERSION" >/dev/null 2>&1
-          ! git ls-remote --exit-code --tags origin "refs/tags/v$VERSION" >/dev/null 2>&1
+          git fetch origin main
+          test "$(git rev-parse origin/main)" = "$START_SHA"
           git config user.name country-subdivision-data-release-bot
           git config user.email "$BOT_EMAIL"
+          git switch -C "$BRANCH" "$START_SHA"
           git add -A
           git commit -m "chore(release): country_subdivision_data $VERSION"
-          release_sha="$(git rev-parse HEAD)"
-          git push origin "HEAD:$DEFAULT_BRANCH"
-          git fetch origin "$DEFAULT_BRANCH" --tags
-          test "$(git rev-parse "origin/$DEFAULT_BRANCH")" = "$release_sha"
-          git tag -a "v$VERSION" -m "country_subdivision_data $VERSION"
-          git push origin "refs/tags/v$VERSION"
+
+          remote_sha="$(git ls-remote --heads origin "refs/heads/$BRANCH" | cut -f1)"
+          if [ -n "$remote_sha" ]; then
+            git push \
+              --force-with-lease="refs/heads/$BRANCH:$remote_sha" \
+              origin "HEAD:refs/heads/$BRANCH"
+          else
+            git push origin "HEAD:refs/heads/$BRANCH"
+          fi
+      - name: Open or update the protected release pull request
+        if: steps.decision.outputs.eligible == 'true'
+        id: pull-request
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+          VERSION: ${{ steps.version.outputs.version }}
+          BRANCH: automation/monthly-maintenance
+        run: |
+          title="chore(release): country_subdivision_data $VERSION"
+          body_file="tool/reports/releases/$VERSION.md"
+          pr_number="$(gh pr list \
+            --head "$BRANCH" --base main --state open \
+            --json number --jq '.[0].number // empty')"
+          if [ -z "$pr_number" ]; then
+            pr_url="$(gh pr create \
+              --head "$BRANCH" --base main \
+              --title "$title" --body-file "$body_file")"
+            pr_number="${pr_url##*/}"
+          else
+            gh api --method PATCH \
+              "repos/$GITHUB_REPOSITORY/pulls/$pr_number" \
+              -f title="$title" -F body=@"$body_file" >/dev/null
+          fi
+          echo "number=$pr_number" >> "$GITHUB_OUTPUT"
+      - name: Refresh the pull request branch from main
+        if: steps.decision.outputs.eligible == 'true'
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+          PR_NUMBER: ${{ steps.pull-request.outputs.number }}
+        run: |
+          gh pr update-branch "$PR_NUMBER" --repo "$GITHUB_REPOSITORY"
+      - name: Enable policy-gated squash auto-merge
+        if: steps.decision.outputs.eligible == 'true'
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+          PR_NUMBER: ${{ steps.pull-request.outputs.number }}
+        run: |
+          gh pr merge "$PR_NUMBER" --repo "$GITHUB_REPOSITORY" --auto --squash

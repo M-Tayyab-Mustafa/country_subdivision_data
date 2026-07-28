@@ -5,4 +5,4 @@
 - Cities: 152970
 - Compressed country data: 3591341 bytes
 - Uncompressed country data: 41577208 bytes
-- Snapshot SHA-256: `34961381e2ba5f56bbbd848b4141a9e0fc8e2ce3b1216b92220a9cf8ed8a6af1`
+- Snapshot SHA-256: `ccafabf2a07ea237267eeb9c6bf1eb3caf20f52d3fd7b6f1e7333342b2162b40`

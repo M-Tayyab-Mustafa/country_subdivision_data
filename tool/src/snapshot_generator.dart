@@ -6,7 +6,7 @@ import 'package:crypto/crypto.dart';
 import 'snapshot_validator.dart';
 import 'tool_utils.dart';
 
-const generatorVersion = '1.0.0';
+const generatorVersion = '1.0.1';
 const upstreamRepository = 'dr5hn/countries-states-cities-database';
 
 final class SnapshotGenerationResult {
@@ -204,6 +204,15 @@ SnapshotGenerationResult generateSnapshot({
     final code = country['iso2']! as String;
     final uncompressed = utf8.encode(prettyJson(dataByCountry[code]));
     final compressed = gzip.encode(uncompressed);
+    if (compressed.length < 10 ||
+        compressed[0] != 0x1f ||
+        compressed[1] != 0x8b) {
+      throw StateError('Gzip encoder returned an invalid payload for $code.');
+    }
+    // RFC 1952 permits 255 when the originating OS is unknown. Dart's gzip
+    // codec otherwise writes a platform-specific value here, which makes an
+    // identical snapshot differ between macOS and Linux.
+    compressed[9] = 255;
     final relativePath = 'countries/$code.json.gz';
     File('${temporary.path}/$relativePath').writeAsBytesSync(compressed);
     deterministicFiles[relativePath] = compressed;

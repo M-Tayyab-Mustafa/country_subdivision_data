@@ -114,7 +114,10 @@ void _verify(SemanticVersion version, String? explicitTag) {
       ).hasMatch(changelog.readAsStringSync())) {
     throw FormatException('CHANGELOG.md does not contain $version.');
   }
-  final tag = explicitTag ?? Platform.environment['GITHUB_REF_NAME'];
+  final tag = explicitTag ??
+      (Platform.environment['GITHUB_REF_TYPE'] == 'tag'
+          ? Platform.environment['GITHUB_REF_NAME']
+          : null);
   if (tag != null && tag.isNotEmpty && tag != 'v$version') {
     throw FormatException('Tag $tag does not match v$version.');
   }

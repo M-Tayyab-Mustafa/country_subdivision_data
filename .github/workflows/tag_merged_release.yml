@@ -1,0 +1,96 @@
+name: Tag merged monthly release
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  pull-requests: read
+
+concurrency:
+  group: tag-merged-release-${{ github.sha }}
+  cancel-in-progress: false
+
+jobs:
+  identify:
+    runs-on: ubuntu-latest
+    outputs:
+      monthly_release: ${{ steps.release.outputs.monthly_release }}
+      version: ${{ steps.release.outputs.version }}
+    steps:
+      - name: Require a merged monthly-maintenance pull request
+        id: release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          pr="$(gh api \
+            -H 'Accept: application/vnd.github+json' \
+            "repos/$GITHUB_REPOSITORY/commits/$GITHUB_SHA/pulls" \
+            --jq '[.[] | select(
+              .merged_at != null and
+              .base.ref == "main" and
+              .head.ref == "automation/monthly-maintenance"
+            )][0] // empty')"
+          if [ -z "$pr" ]; then
+            echo "monthly_release=false" >> "$GITHUB_OUTPUT"
+            echo "Main update was not the monthly maintenance pull request."
+            exit 0
+          fi
+          version="$(jq -r '.title | capture("^chore\\(release\\): country_subdivision_data (?<version>[0-9]+\\.[0-9]+\\.[0-9]+)$").version' <<<"$pr")"
+          test -n "$version"
+          echo "monthly_release=true" >> "$GITHUB_OUTPUT"
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+
+  validate-and-tag:
+    needs: identify
+    if: needs.identify.outputs.monthly_release == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Create release GitHub App token
+        id: app-token
+        uses: actions/create-github-app-token@v2
+        with:
+          app-id: ${{ vars.RELEASE_APP_ID }}
+          private-key: ${{ secrets.RELEASE_APP_PRIVATE_KEY }}
+          permission-contents: write
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ steps.app-token.outputs.token }}
+          persist-credentials: true
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version-file: '.flutter-version'
+          cache: true
+      - name: Verify the immutable release identity on main
+        env:
+          VERSION: ${{ needs.identify.outputs.version }}
+        run: |
+          test "$GITHUB_SHA" = "$(git rev-parse HEAD)"
+          git fetch origin main --tags
+          git merge-base --is-ancestor "$GITHUB_SHA" origin/main
+          test "v$VERSION" = "v$(dart run tool/version_manager.dart current)"
+          dart run tool/version_manager.dart verify --tag "v$VERSION"
+          test -f "tool/reports/releases/$VERSION.md"
+          test -f "tool/reports/releases/$VERSION.json"
+          ! git rev-parse "refs/tags/v$VERSION" >/dev/null 2>&1
+          ! git ls-remote --exit-code --tags origin \
+            "refs/tags/v$VERSION" >/dev/null 2>&1
+      - name: Run complete post-merge validation
+        run: bash .github/scripts/verify.sh
+      - name: Create and push only the protected release tag
+        env:
+          VERSION: ${{ needs.identify.outputs.version }}
+          BOT_EMAIL: ${{ vars.RELEASE_BOT_NOREPLY_EMAIL }}
+        run: |
+          test -n "$BOT_EMAIL"
+          git config user.name country-subdivision-data-release-bot
+          git config user.email "$BOT_EMAIL"
+          git tag -a "v$VERSION" "$GITHUB_SHA" \
+            -m "country_subdivision_data $VERSION"
+          test "$(git rev-list -n 1 "v$VERSION")" = "$GITHUB_SHA"
+          git push origin "refs/tags/v$VERSION"

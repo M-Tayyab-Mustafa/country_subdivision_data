@@ -1,20 +1,49 @@
-name: CI
+name: Required checks
 
 on:
+  pull_request:
   push:
     branches:
       - main
-  pull_request:
 
 permissions:
   contents: read
 
 concurrency:
-  group: ci-${{ github.ref }}
+  group: required-checks-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
 
 jobs:
-  verify:
+  formatting:
+    name: Formatting
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version-file: '.flutter-version'
+          cache: true
+      - run: flutter pub get
+      - run: dart format --output=none --set-exit-if-changed .
+
+  static-analysis:
+    name: Static analysis
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version-file: '.flutter-version'
+          cache: true
+      - run: flutter pub get
+      - run: flutter analyze
+
+  tests:
+    name: Unit and integration tests
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
@@ -24,8 +53,130 @@ jobs:
           channel: stable
           flutter-version-file: '.flutter-version'
           cache: true
-      - name: Verify package
-        run: bash .github/scripts/verify.sh
+      - run: flutter pub get
+      - run: flutter test
+
+  snapshot:
+    name: Snapshot validation
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version-file: '.flutter-version'
+          cache: true
+      - run: flutter pub get
+      - run: dart run tool/validate_snapshot.dart
+
+  nigeria:
+    name: Nigeria regression validation
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version-file: '.flutter-version'
+          cache: true
+      - run: flutter pub get
+      - run: flutter test test/regression/nigeria_regression_test.dart
+
+  deterministic-generation:
+    name: Deterministic-generation validation
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version-file: '.flutter-version'
+          cache: true
+      - run: flutter pub get
+      - name: Check out the recorded upstream commit
+        run: |
+          upstream_commit="$(jq -r .upstreamCommit assets/country_subdivision_data/manifest.json)"
+          git clone --filter=blob:none --no-checkout \
+            https://github.com/dr5hn/countries-states-cities-database.git \
+            .tool_work/upstream
+          git -C .tool_work/upstream sparse-checkout set --no-cone \
+            /LICENSE /json/countries+states+cities.json
+          git -C .tool_work/upstream fetch --depth=1 origin "$upstream_commit"
+          git -C .tool_work/upstream checkout --detach FETCH_HEAD
+      - run: bash .github/scripts/check_determinism.sh .tool_work/upstream
+
+  flutter-sdk:
+    name: Flutter SDK verification
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version-file: '.flutter-version'
+          cache: true
+      - run: flutter --version
+      - run: dart run tool/flutter_sdk_manager.dart verify
+
+  upstream-metadata:
+    name: Upstream metadata verification
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version-file: '.flutter-version'
+          cache: true
+      - run: flutter pub get
+      - run: dart run tool/upstream_data_manager.dart verify
+
+  version-policy:
+    name: Version-policy verification
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version-file: '.flutter-version'
+          cache: true
+      - run: flutter pub get
+      - run: dart run tool/version_manager.dart verify
+
+  release-review:
+    name: Release-review verification
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version-file: '.flutter-version'
+          cache: true
+      - run: flutter pub get
+      - run: dart run tool/verify_release_review.dart
+
+  publication-dry-run:
+    name: pub.dev publication dry-run
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version-file: '.flutter-version'
+          cache: true
+      - run: flutter pub get
+      - run: dart pub publish --dry-run
       - name: Verify publication contents
         run: |
           test -f assets/country_subdivision_data/manifest.json
