@@ -162,8 +162,13 @@ void main() {
   test('publication verifies identity and reports failures', () {
     expect(publish, contains('tool/version_manager.dart verify --tag'));
     expect(publish, contains('git merge-base --is-ancestor'));
+    expect(publish, contains('grep -Fx'));
+    expect(publish, isNot(contains(r'rg "^# country_subdivision_data')));
     expect(publish, contains('Refuse an already-published version'));
     expect(publish, contains('always() && failure()'));
+    expect(publish, contains('gh label create automated-release-failure'));
+    expect(publish, contains('gh label create pub-dev'));
+    expect(publish, contains('gh label create maintenance'));
     expect(publish, contains('gh issue create'));
     expect(publish, contains('gh release create'));
   });
