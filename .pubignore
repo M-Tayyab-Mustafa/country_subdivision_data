@@ -1,0 +1,15 @@
+.dart_tool/
+.github/
+.idea/
+.tool_work/
+benchmark/
+build/
+coverage/
+example/build/
+test/
+tool/reports/
+tool/.upstream/
+tool/cache/
+*.iml
+*.tmp
+*.backup

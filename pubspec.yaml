@@ -1,0 +1,33 @@
+name: country_subdivision_data
+description: Offline country, subdivision, city, and calling-code data with lazy loading, customizable phone fields, and searchable country pickers.
+version: 0.0.1
+homepage: https://github.com/M-Tayyab-Mustafa/country_subdivision_data
+repository: https://github.com/M-Tayyab-Mustafa/country_subdivision_data
+issue_tracker: https://github.com/M-Tayyab-Mustafa/country_subdivision_data/issues
+
+topics:
+  - countries
+  - subdivisions
+  - cities
+  - geodata
+  - iso-codes
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+  flutter: ">=3.19.0"
+
+dependencies:
+  archive: ^4.0.7
+  crypto: ^3.0.6
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_lints: ^6.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  assets:
+    - assets/country_subdivision_data/
+    - assets/country_subdivision_data/countries/

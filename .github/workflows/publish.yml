@@ -1,0 +1,136 @@
+name: Publish to pub.dev
+
+on:
+  push:
+    tags:
+      - 'v[0-9]+.[0-9]+.[0-9]+'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: country-subdivision-publish-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version-file: '.flutter-version'
+          cache: true
+      - name: Verify immutable release identity
+        env:
+          TAG: ${{ github.ref_name }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          version="${TAG#v}"
+          printf '%s\n' "$TAG" | grep -E '^v[0-9]+\.[0-9]+\.[0-9]+$'
+          test "$TAG" = "v$(dart run tool/version_manager.dart current)"
+          dart run tool/version_manager.dart verify --tag "$TAG"
+          test -f "tool/reports/releases/$version.md"
+          test -f "tool/reports/releases/$version.json"
+          rg "^# country_subdivision_data $version$" \
+            "tool/reports/releases/$version.md"
+          test "$(jq -r .version "tool/reports/releases/$version.json")" = "$version"
+          git fetch origin "$DEFAULT_BRANCH"
+          git merge-base --is-ancestor "$GITHUB_SHA" "origin/$DEFAULT_BRANCH"
+          git log -1 --format=%s | \
+            grep -F "chore(release): country_subdivision_data $version"
+      - name: Refuse an already-published version
+        env:
+          TAG: ${{ github.ref_name }}
+        run: |
+          version="${TAG#v}"
+          status="$(curl --silent --output /dev/null --write-out '%{http_code}' \
+            "https://pub.dev/api/packages/country_subdivision_data/versions/$version")"
+          test "$status" = 404
+      - name: Run complete publication validation
+        run: bash .github/scripts/verify.sh
+      - name: Upload audit records
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-validation-${{ github.ref_name }}
+          path: tool/reports/releases/
+
+  publish:
+    needs: validate
+    permissions:
+      id-token: write
+      contents: read
+    uses: dart-lang/setup-dart/.github/workflows/publish.yml@v1
+    with:
+      environment: pub.dev
+
+  github-release:
+    needs:
+      - validate
+      - publish
+    if: success()
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Create GitHub Release after publication
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.ref_name }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          version="${TAG#v}"
+          sed 's/pub.dev publication: pending/pub.dev publication: successful/' \
+            "tool/reports/releases/$version.md" > /tmp/release-notes.md
+          printf '\nGitHub Actions run: %s\n' "$RUN_URL" >> /tmp/release-notes.md
+          gh release create "$TAG" \
+            --title "country_subdivision_data $version" \
+            --notes-file /tmp/release-notes.md \
+            --latest \
+            "tool/reports/releases/$version.json"
+
+  report-failure:
+    needs:
+      - validate
+      - publish
+      - github-release
+    if: ${{ always() && failure() }}
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Create or update an actionable failure issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.ref_name }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          version="${TAG#v}"
+          title="Automated publication failed for $TAG"
+          body="$(printf '%s\n' \
+            "Package version: $version" \
+            "Tag: $TAG" \
+            "Release commit: $GITHUB_SHA" \
+            "Workflow run: $RUN_URL" \
+            "Flutter version: $(tr -d '[:space:]' < .flutter-version)" \
+            "Upstream commit: $(jq -r .upstreamCommit assets/country_subdivision_data/manifest.json)" \
+            "pub.dev receipt: unknown; inspect the linked run before retrying." \
+            "The immutable tag was not moved or reused.")"
+          existing="$(gh issue list --state open --search "$title in:title" \
+            --json number --jq '.[0].number // empty')"
+          if [ -n "$existing" ]; then
+            gh issue comment "$existing" --body "$body"
+          else
+            gh issue create --title "$title" --body "$body" \
+              --label automated-release-failure --label pub-dev --label maintenance
+          fi

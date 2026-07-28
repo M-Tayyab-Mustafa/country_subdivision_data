@@ -1,0 +1,184 @@
+name: Monthly maintenance and release
+
+on:
+  schedule:
+    - cron: '23 4 1 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: country-subdivision-automated-release
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - name: Require release-bot configuration
+        env:
+          APP_ID: ${{ vars.RELEASE_APP_ID }}
+          APP_KEY: ${{ secrets.RELEASE_APP_PRIVATE_KEY }}
+          BOT_EMAIL: ${{ vars.RELEASE_BOT_NOREPLY_EMAIL }}
+        run: |
+          test -n "$APP_ID"
+          test -n "$APP_KEY"
+          test -n "$BOT_EMAIL"
+      - name: Create GitHub App token
+        id: app-token
+        uses: actions/create-github-app-token@v2
+        with:
+          app-id: ${{ vars.RELEASE_APP_ID }}
+          private-key: ${{ secrets.RELEASE_APP_PRIVATE_KEY }}
+      - name: Check out default branch with full history
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 0
+          token: ${{ steps.app-token.outputs.token }}
+          persist-credentials: true
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version-file: '.flutter-version'
+          cache: true
+      - name: Capture starting state
+        id: start
+        run: |
+          mkdir -p .tool_work
+          cp assets/country_subdivision_data/manifest.json .tool_work/old_manifest.json
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+          echo "version=$(dart run tool/version_manager.dart current)" >> "$GITHUB_OUTPUT"
+          echo "flutter=$(tr -d '[:space:]' < .flutter-version)" >> "$GITHUB_OUTPUT"
+      - name: Resolve eligible changes
+        id: decision
+        run: |
+          set +e
+          flutter_output="$(dart run tool/flutter_sdk_manager.dart check-major 2>&1)"
+          flutter_status=$?
+          set -e
+          printf '%s\n' "$flutter_output"
+          test "$flutter_status" -eq 0 -o "$flutter_status" -eq 10
+          latest_flutter="$(printf '%s\n' "$flutter_output" | sed -n 's/^Latest: //p')"
+          test -n "$latest_flutter"
+
+          git clone --depth 1 \
+            https://github.com/dr5hn/countries-states-cities-database.git \
+            .tool_work/upstream
+          latest_commit="$(git -C .tool_work/upstream rev-parse HEAD)"
+          current_commit="$(jq -r .upstreamCommit .tool_work/old_manifest.json)"
+          data_changed=false
+          if [ "$latest_commit" != "$current_commit" ]; then
+            dart run tool/generate_snapshot.dart \
+              --upstream-path .tool_work/upstream \
+              --upstream-commit "$latest_commit" \
+              --output .tool_work/candidate
+            old_checksum="$(jq -r .sha256 .tool_work/old_manifest.json)"
+            new_checksum="$(jq -r .sha256 .tool_work/candidate/manifest.json)"
+            if [ "$old_checksum" != "$new_checksum" ]; then
+              rm -rf assets/country_subdivision_data
+              mv .tool_work/candidate assets/country_subdivision_data
+              data_changed=true
+            fi
+          fi
+
+          flutter_changed=false
+          if [ "$flutter_status" -eq 10 ]; then
+            dart run tool/flutter_sdk_manager.dart update
+            flutter_changed=true
+          fi
+
+          if [ "$flutter_changed" = false ] && [ "$data_changed" = false ]; then
+            echo "eligible=false" >> "$GITHUB_OUTPUT"
+            echo "No eligible update; repository remains unchanged."
+            exit 0
+          fi
+          if [ "$flutter_changed" = true ] && [ "$data_changed" = true ]; then
+            trigger=combined
+          elif [ "$flutter_changed" = true ]; then
+            trigger=flutter
+          else
+            trigger=data
+          fi
+          echo "eligible=true" >> "$GITHUB_OUTPUT"
+          echo "trigger=$trigger" >> "$GITHUB_OUTPUT"
+          echo "latest_flutter=$latest_flutter" >> "$GITHUB_OUTPUT"
+      - name: Install selected Flutter pin
+        if: steps.decision.outputs.eligible == 'true'
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version-file: '.flutter-version'
+          cache: true
+      - name: Pre-version verification
+        if: steps.decision.outputs.eligible == 'true'
+        run: |
+          bash .github/scripts/check_determinism.sh .tool_work/upstream
+          bash .github/scripts/verify.sh
+          test -n "$(git status --short -- . ':!.tool_work')"
+      - name: Create versioned release records
+        if: steps.decision.outputs.eligible == 'true'
+        id: version
+        env:
+          TRIGGER: ${{ steps.decision.outputs.trigger }}
+          OLD_VERSION: ${{ steps.start.outputs.version }}
+          OLD_FLUTTER: ${{ steps.start.outputs.flutter }}
+          LATEST_FLUTTER: ${{ steps.decision.outputs.latest_flutter }}
+        run: |
+          new_version="$(dart run tool/version_manager.dart next)"
+          dart run tool/version_manager.dart bump \
+            --reason "$TRIGGER" --skip-changelog
+          args=(
+            --version "$new_version"
+            --trigger "$TRIGGER"
+            --old-flutter "$OLD_FLUTTER"
+            --new-flutter "$(tr -d '[:space:]' < .flutter-version)"
+            --old-commit "$(jq -r .upstreamCommit .tool_work/old_manifest.json)"
+            --new-commit "$(jq -r .upstreamCommit assets/country_subdivision_data/manifest.json)"
+          )
+          dart run tool/update_changelog.dart "${args[@]}"
+          dart run tool/generate_release_review.dart \
+            --old-version "$OLD_VERSION" \
+            --new-version "$new_version" \
+            --trigger "$TRIGGER" \
+            --old-flutter "$OLD_FLUTTER" \
+            --latest-flutter "$LATEST_FLUTTER" \
+            --new-flutter "$(tr -d '[:space:]' < .flutter-version)" \
+            --old-manifest .tool_work/old_manifest.json \
+            --new-manifest assets/country_subdivision_data/manifest.json \
+            --validated \
+            --output "tool/reports/releases/$new_version.md"
+          echo "version=$new_version" >> "$GITHUB_OUTPUT"
+      - name: Final verification
+        if: steps.decision.outputs.eligible == 'true'
+        run: |
+          bash .github/scripts/check_determinism.sh .tool_work/upstream
+          bash .github/scripts/verify.sh
+          test -f "tool/reports/releases/${{ steps.version.outputs.version }}.md"
+          test -f "tool/reports/releases/${{ steps.version.outputs.version }}.json"
+          rg "^## ${{ steps.version.outputs.version }}$" CHANGELOG.md
+          ! git status --short | rg '(^|/)(build|coverage|\.dart_tool|\.tool_work)/'
+      - name: Commit and push immutable release
+        if: steps.decision.outputs.eligible == 'true'
+        env:
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+          START_SHA: ${{ steps.start.outputs.sha }}
+          VERSION: ${{ steps.version.outputs.version }}
+          BOT_EMAIL: ${{ vars.RELEASE_BOT_NOREPLY_EMAIL }}
+        run: |
+          git fetch origin "$DEFAULT_BRANCH" --tags
+          test "$(git rev-parse "origin/$DEFAULT_BRANCH")" = "$START_SHA"
+          ! git rev-parse "v$VERSION" >/dev/null 2>&1
+          ! git ls-remote --exit-code --tags origin "refs/tags/v$VERSION" >/dev/null 2>&1
+          git config user.name country-subdivision-data-release-bot
+          git config user.email "$BOT_EMAIL"
+          git add -A
+          git commit -m "chore(release): country_subdivision_data $VERSION"
+          release_sha="$(git rev-parse HEAD)"
+          git push origin "HEAD:$DEFAULT_BRANCH"
+          git fetch origin "$DEFAULT_BRANCH" --tags
+          test "$(git rev-parse "origin/$DEFAULT_BRANCH")" = "$release_sha"
+          git tag -a "v$VERSION" -m "country_subdivision_data $VERSION"
+          git push origin "refs/tags/v$VERSION"

@@ -1,0 +1,4934 @@
+[
+  {
+    "id": 6,
+    "name": "Andorra",
+    "iso2": "AD",
+    "iso3": "AND",
+    "nativeName": "Andorra",
+    "phoneCode": "376",
+    "capital": "Andorra la Vella",
+    "currencyCode": "EUR",
+    "currencyName": "Euro",
+    "currencySymbol": "€",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "latitude": 42.5,
+    "longitude": 1.5,
+    "timezones": [
+      "Europe/Andorra"
+    ]
+  },
+  {
+    "id": 231,
+    "name": "United Arab Emirates",
+    "iso2": "AE",
+    "iso3": "ARE",
+    "nativeName": "دولة الإمارات العربية المتحدة",
+    "phoneCode": "971",
+    "capital": "Abu Dhabi",
+    "currencyCode": "AED",
+    "currencyName": "United Arab Emirates dirham",
+    "currencySymbol": "إ.د",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "latitude": 24.0,
+    "longitude": 54.0,
+    "timezones": [
+      "Asia/Dubai"
+    ]
+  },
+  {
+    "id": 1,
+    "name": "Afghanistan",
+    "iso2": "AF",
+    "iso3": "AFG",
+    "nativeName": "افغانستان",
+    "phoneCode": "93",
+    "capital": "Kabul",
+    "currencyCode": "AFN",
+    "currencyName": "Afghan afghani",
+    "currencySymbol": "؋",
+    "region": "Asia",
+    "subregion": "Southern Asia",
+    "latitude": 33.0,
+    "longitude": 65.0,
+    "timezones": [
+      "Asia/Kabul"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Antigua and Barbuda",
+    "iso2": "AG",
+    "iso3": "ATG",
+    "nativeName": "Antigua and Barbuda",
+    "phoneCode": "1",
+    "capital": "St. John's",
+    "currencyCode": "XCD",
+    "currencyName": "Eastern Caribbean dollar",
+    "currencySymbol": "$",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "latitude": 17.05,
+    "longitude": -61.8,
+    "timezones": [
+      "America/Antigua"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Anguilla",
+    "iso2": "AI",
+    "iso3": "AIA",
+    "nativeName": "Anguilla",
+    "phoneCode": "1",
+    "capital": "The Valley",
+    "currencyCode": "XCD",
+    "currencyName": "Eastern Caribbean dollar",
+    "currencySymbol": "$",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "latitude": 18.25,
+    "longitude": -63.16666666,
+    "timezones": [
+      "America/Anguilla"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Albania",
+    "iso2": "AL",
+    "iso3": "ALB",
+    "nativeName": "Shqipëria",
+    "phoneCode": "355",
+    "capital": "Tirana",
+    "currencyCode": "ALL",
+    "currencyName": "Albanian lek",
+    "currencySymbol": "Lek",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "latitude": 41.0,
+    "longitude": 20.0,
+    "timezones": [
+      "Europe/Tirane"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Armenia",
+    "iso2": "AM",
+    "iso3": "ARM",
+    "nativeName": "Հայաստան",
+    "phoneCode": "374",
+    "capital": "Yerevan",
+    "currencyCode": "AMD",
+    "currencyName": "Armenian dram",
+    "currencySymbol": "֏",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "latitude": 40.0,
+    "longitude": 45.0,
+    "timezones": [
+      "Asia/Yerevan"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Angola",
+    "iso2": "AO",
+    "iso3": "AGO",
+    "nativeName": "Angola",
+    "phoneCode": "244",
+    "capital": "Luanda",
+    "currencyCode": "AOA",
+    "currencyName": "Angolan kwanza",
+    "currencySymbol": "Kz",
+    "region": "Africa",
+    "subregion": "Middle Africa",
+    "latitude": -12.5,
+    "longitude": 18.5,
+    "timezones": [
+      "Africa/Luanda"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Antarctica",
+    "iso2": "AQ",
+    "iso3": "ATA",
+    "nativeName": "Antarctica",
+    "phoneCode": "672",
+    "capital": null,
+    "currencyCode": "AAD",
+    "currencyName": "Antarctican dollar",
+    "currencySymbol": "$",
+    "region": "Polar",
+    "subregion": null,
+    "latitude": -74.65,
+    "longitude": 4.48,
+    "timezones": [
+      "Antarctica/Casey",
+      "Antarctica/Davis",
+      "Antarctica/DumontDUrville",
+      "Antarctica/Mawson",
+      "Antarctica/McMurdo",
+      "Antarctica/Palmer",
+      "Antarctica/Rothera",
+      "Antarctica/Syowa",
+      "Antarctica/Troll",
+      "Antarctica/Vostok"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Argentina",
+    "iso2": "AR",
+    "iso3": "ARG",
+    "nativeName": "Argentina",
+    "phoneCode": "54",
+    "capital": "Buenos Aires",
+    "currencyCode": "ARS",
+    "currencyName": "Argentine peso",
+    "currencySymbol": "$",
+    "region": "Americas",
+    "subregion": "South America",
+    "latitude": -34.0,
+    "longitude": -64.0,
+    "timezones": [
+      "America/Argentina/Buenos_Aires",
+      "America/Argentina/Catamarca",
+      "America/Argentina/Cordoba",
+      "America/Argentina/Jujuy",
+      "America/Argentina/La_Rioja",
+      "America/Argentina/Mendoza",
+      "America/Argentina/Rio_Gallegos",
+      "America/Argentina/Salta",
+      "America/Argentina/San_Juan",
+      "America/Argentina/San_Luis",
+      "America/Argentina/Tucuman",
+      "America/Argentina/Ushuaia"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "American Samoa",
+    "iso2": "AS",
+    "iso3": "ASM",
+    "nativeName": "American Samoa",
+    "phoneCode": "1",
+    "capital": "Pago Pago",
+    "currencyCode": "USD",
+    "currencyName": "United States dollar",
+    "currencySymbol": "$",
+    "region": "Oceania",
+    "subregion": "Polynesia",
+    "latitude": -14.33333333,
+    "longitude": -170.0,
+    "timezones": [
+      "Pacific/Pago_Pago"
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Austria",
+    "iso2": "AT",
+    "iso3": "AUT",
+    "nativeName": "Österreich",
+    "phoneCode": "43",
+    "capital": "Vienna",
+    "currencyCode": "EUR",
+    "currencyName": "Euro",
+    "currencySymbol": "€",
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "latitude": 47.33333333,
+    "longitude": 13.33333333,
+    "timezones": [
+      "Europe/Vienna"
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Australia",
+    "iso2": "AU",
+    "iso3": "AUS",
+    "nativeName": "Australia",
+    "phoneCode": "61",
+    "capital": "Canberra",
+    "currencyCode": "AUD",
+    "currencyName": "Australian dollar",
+    "currencySymbol": "$",
+    "region": "Oceania",
+    "subregion": "Australia and New Zealand",
+    "latitude": -27.0,
+    "longitude": 133.0,
+    "timezones": [
+      "Antarctica/Macquarie",
+      "Australia/Adelaide",
+      "Australia/Brisbane",
+      "Australia/Broken_Hill",
+      "Australia/Currie",
+      "Australia/Darwin",
+      "Australia/Eucla",
+      "Australia/Hobart",
+      "Australia/Lindeman",
+      "Australia/Lord_Howe",
+      "Australia/Melbourne",
+      "Australia/Perth",
+      "Australia/Sydney"
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Aruba",
+    "iso2": "AW",
+    "iso3": "ABW",
+    "nativeName": "Aruba",
+    "phoneCode": "297",
+    "capital": "Oranjestad",
+    "currencyCode": "AWG",
+    "currencyName": "Aruban florin",
+    "currencySymbol": "ƒ",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "latitude": 12.5,
+    "longitude": -69.96666666,
+    "timezones": [
+      "America/Aruba"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Aland Islands",
+    "iso2": "AX",
+    "iso3": "ALA",
+    "nativeName": "Åland",
+    "phoneCode": "358",
+    "capital": "Mariehamn",
+    "currencyCode": "EUR",
+    "currencyName": "Euro",
+    "currencySymbol": "€",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "latitude": 60.116667,
+    "longitude": 19.9,
+    "timezones": [
+      "Europe/Mariehamn"
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Azerbaijan",
+    "iso2": "AZ",
+    "iso3": "AZE",
+    "nativeName": "Azərbaycan",
+    "phoneCode": "994",
+    "capital": "Baku",
+    "currencyCode": "AZN",
+    "currencyName": "Azerbaijani manat",
+    "currencySymbol": "m",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "latitude": 40.5,
+    "longitude": 47.5,
+    "timezones": [
+      "Asia/Baku"
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Bosnia and Herzegovina",
+    "iso2": "BA",
+    "iso3": "BIH",
+    "nativeName": "Bosna i Hercegovina",
+    "phoneCode": "387",
+    "capital": "Sarajevo",
+    "currencyCode": "BAM",
+    "currencyName": "Bosnia and Herzegovina convertible mark",
+    "currencySymbol": "KM",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "latitude": 44.0,
+    "longitude": 18.0,
+    "timezones": [
+      "Europe/Sarajevo"
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Barbados",
+    "iso2": "BB",
+    "iso3": "BRB",
+    "nativeName": "Barbados",
+    "phoneCode": "1",
+    "capital": "Bridgetown",
+    "currencyCode": "BBD",
+    "currencyName": "Barbadian dollar",
+    "currencySymbol": "Bds$",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "latitude": 13.16666666,
+    "longitude": -59.53333333,
+    "timezones": [
+      "America/Barbados"
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Bangladesh",
+    "iso2": "BD",
+    "iso3": "BGD",
+    "nativeName": "Bangladesh",
+    "phoneCode": "880",
+    "capital": "Dhaka",
+    "currencyCode": "BDT",
+    "currencyName": "Bangladeshi taka",
+    "currencySymbol": "৳",
+    "region": "Asia",
+    "subregion": "Southern Asia",
+    "latitude": 24.0,
+    "longitude": 90.0,
+    "timezones": [
+      "Asia/Dhaka"
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Belgium",
+    "iso2": "BE",
+    "iso3": "BEL",
+    "nativeName": "België",
+    "phoneCode": "32",
+    "capital": "Brussels",
+    "currencyCode": "EUR",
+    "currencyName": "Euro",
+    "currencySymbol": "€",
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "latitude": 50.83333333,
+    "longitude": 4.0,
+    "timezones": [
+      "Europe/Brussels"
+    ]
+  },
+  {
+    "id": 35,
+    "name": "Burkina Faso",
+    "iso2": "BF",
+    "iso3": "BFA",
+    "nativeName": "Burkina Faso",
+    "phoneCode": "226",
+    "capital": "Ouagadougou",
+    "currencyCode": "XOF",
+    "currencyName": "West African CFA franc",
+    "currencySymbol": "CFA",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "latitude": 13.0,
+    "longitude": -2.0,
+    "timezones": [
+      "Africa/Ouagadougou"
+    ]
+  },
+  {
+    "id": 34,
+    "name": "Bulgaria",
+    "iso2": "BG",
+    "iso3": "BGR",
+    "nativeName": "България",
+    "phoneCode": "359",
+    "capital": "Sofia",
+    "currencyCode": "EUR",
+    "currencyName": "Euro",
+    "currencySymbol": "€",
+    "region": "Europe",
+    "subregion": "Eastern Europe",
+    "latitude": 43.0,
+    "longitude": 25.0,
+    "timezones": [
+      "Europe/Sofia"
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Bahrain",
+    "iso2": "BH",
+    "iso3": "BHR",
+    "nativeName": "‏البحرين",
+    "phoneCode": "973",
+    "capital": "Manama",
+    "currencyCode": "BHD",
+    "currencyName": "Bahraini dinar",
+    "currencySymbol": ".د.ب",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "latitude": 26.0,
+    "longitude": 50.55,
+    "timezones": [
+      "Asia/Bahrain"
+    ]
+  },
+  {
+    "id": 36,
+    "name": "Burundi",
+    "iso2": "BI",
+    "iso3": "BDI",
+    "nativeName": "Burundi",
+    "phoneCode": "257",
+    "capital": "Bujumbura",
+    "currencyCode": "BIF",
+    "currencyName": "Burundian franc",
+    "currencySymbol": "FBu",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "latitude": -3.5,
+    "longitude": 30.0,
+    "timezones": [
+      "Africa/Bujumbura"
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Benin",
+    "iso2": "BJ",
+    "iso3": "BEN",
+    "nativeName": "Bénin",
+    "phoneCode": "229",
+    "capital": "Porto-Novo",
+    "currencyCode": "XOF",
+    "currencyName": "West African CFA franc",
+    "currencySymbol": "CFA",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "latitude": 9.5,
+    "longitude": 2.25,
+    "timezones": [
+      "Africa/Porto-Novo"
+    ]
+  },
+  {
+    "id": 189,
+    "name": "Saint-Barthelemy",
+    "iso2": "BL",
+    "iso3": "BLM",
+    "nativeName": "Saint-Barthélemy",
+    "phoneCode": "590",
+    "capital": "Gustavia",
+    "currencyCode": "EUR",
+    "currencyName": "Euro",
+    "currencySymbol": "€",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "latitude": 18.5,
+    "longitude": -63.41666666,
+    "timezones": [
+      "America/St_Barthelemy"
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Bermuda",
+    "iso2": "BM",
+    "iso3": "BMU",
+    "nativeName": "Bermuda",
+    "phoneCode": "1",
+    "capital": "Hamilton",
+    "currencyCode": "BMD",
+    "currencyName": "Bermudian dollar",
+    "currencySymbol": "$",
+    "region": "Americas",
+    "subregion": "Northern America",
+    "latitude": 32.33333333,
+    "longitude": -64.75,
+    "timezones": [
+      "Atlantic/Bermuda"
+    ]
+  },
+  {
+    "id": 33,
+    "name": "Brunei",
+    "iso2": "BN",
+    "iso3": "BRN",
+    "nativeName": "Negara Brunei Darussalam",
+    "phoneCode": "673",
+    "capital": "Bandar Seri Begawan",
+    "currencyCode": "BND",
+    "currencyName": "Brunei dollar",
+    "currencySymbol": "B$",
+    "region": "Asia",
+    "subregion": "South-Eastern Asia",
+    "latitude": 4.5,
+    "longitude": 114.66666666,
+    "timezones": [
+      "Asia/Brunei"
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Bolivia",
+    "iso2": "BO",
+    "iso3": "BOL",
+    "nativeName": "Bolivia",
+    "phoneCode": "591",
+    "capital": "Sucre",
+    "currencyCode": "BOB",
+    "currencyName": "Bolivian boliviano",
+    "currencySymbol": "Bs.",
+    "region": "Americas",
+    "subregion": "South America",
+    "latitude": -17.0,
+    "longitude": -65.0,
+    "timezones": [
+      "America/La_Paz"
+    ]
+  },
+  {
+    "id": 155,
+    "name": "Bonaire, Sint Eustatius and Saba",
+    "iso2": "BQ",
+    "iso3": "BES",
+    "nativeName": "Caribisch Nederland",
+    "phoneCode": "599",
+    "capital": "Kralendijk",
+    "currencyCode": "USD",
+    "currencyName": "United States dollar",
+    "currencySymbol": "$",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "latitude": 12.15,
+    "longitude": -68.266667,
+    "timezones": [
+      "America/Kralendijk"
+    ]
+  },
+  {
+    "id": 31,
+    "name": "Brazil",
+    "iso2": "BR",
+    "iso3": "BRA",
+    "nativeName": "Brasil",
+    "phoneCode": "55",
+    "capital": "Brasilia",
+    "currencyCode": "BRL",
+    "currencyName": "Brazilian real",
+    "currencySymbol": "R$",
+    "region": "Americas",
+    "subregion": "South America",
+    "latitude": -10.0,
+    "longitude": -55.0,
+    "timezones": [
+      "America/Araguaina",
+      "America/Bahia",
+      "America/Belem",
+      "America/Boa_Vista",
+      "America/Campo_Grande",
+      "America/Cuiaba",
+      "America/Eirunepe",
+      "America/Fortaleza",
+      "America/Maceio",
+      "America/Manaus",
+      "America/Noronha",
+      "America/Porto_Velho",
+      "America/Recife",
+      "America/Rio_Branco",
+      "America/Santarem",
+      "America/Sao_Paulo"
+    ]
+  },
+  {
+    "id": 17,
+    "name": "The Bahamas",
+    "iso2": "BS",
+    "iso3": "BHS",
+    "nativeName": "Bahamas",
+    "phoneCode": "1",
+    "capital": "Nassau",
+    "currencyCode": "BSD",
+    "currencyName": "Bahamian dollar",
+    "currencySymbol": "B$",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "latitude": 24.25,
+    "longitude": -76.0,
+    "timezones": [
+      "America/Nassau"
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Bhutan",
+    "iso2": "BT",
+    "iso3": "BTN",
+    "nativeName": "ʼbrug-yul",
+    "phoneCode": "975",
+    "capital": "Thimphu",
+    "currencyCode": "BTN",
+    "currencyName": "Bhutanese ngultrum",
+    "currencySymbol": "Nu.",
+    "region": "Asia",
+    "subregion": "Southern Asia",
+    "latitude": 27.5,
+    "longitude": 90.5,
+    "timezones": [
+      "Asia/Thimphu"
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Bouvet Island",
+    "iso2": "BV",
+    "iso3": "BVT",
+    "nativeName": "Bouvetøya",
+    "phoneCode": "0055",
+    "capital": null,
+    "currencyCode": "NOK",
+    "currencyName": "Norwegian krone",
+    "currencySymbol": "ko",
+    "region": null,
+    "subregion": null,
+    "latitude": -54.43333333,
+    "longitude": 3.4,
+    "timezones": [
+      "Europe/Oslo"
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Botswana",
+    "iso2": "BW",
+    "iso3": "BWA",
+    "nativeName": "Botswana",
+    "phoneCode": "267",
+    "capital": "Gaborone",
+    "currencyCode": "BWP",
+    "currencyName": "Botswana pula",
+    "currencySymbol": "P",
+    "region": "Africa",
+    "subregion": "Southern Africa",
+    "latitude": -22.0,
+    "longitude": 24.0,
+    "timezones": [
+      "Africa/Gaborone"
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Belarus",
+    "iso2": "BY",
+    "iso3": "BLR",
+    "nativeName": "Белару́сь",
+    "phoneCode": "375",
+    "capital": "Minsk",
+    "currencyCode": "BYN",
+    "currencyName": "Belarusian ruble",
+    "currencySymbol": "Br",
+    "region": "Europe",
+    "subregion": "Eastern Europe",
+    "latitude": 53.0,
+    "longitude": 28.0,
+    "timezones": [
+      "Europe/Minsk"
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Belize",
+    "iso2": "BZ",
+    "iso3": "BLZ",
+    "nativeName": "Belize",
+    "phoneCode": "501",
+    "capital": "Belmopan",
+    "currencyCode": "BZD",
+    "currencyName": "Belize dollar",
+    "currencySymbol": "$",
+    "region": "Americas",
+    "subregion": "Central America",
+    "latitude": 17.25,
+    "longitude": -88.75,
+    "timezones": [
+      "America/Belize"
+    ]
+  },
+  {
+    "id": 39,
+    "name": "Canada",
+    "iso2": "CA",
+    "iso3": "CAN",
+    "nativeName": "Canada",
+    "phoneCode": "1",
+    "capital": "Ottawa",
+    "currencyCode": "CAD",
+    "currencyName": "Canadian dollar",
+    "currencySymbol": "$",
+    "region": "Americas",
+    "subregion": "Northern America",
+    "latitude": 60.0,
+    "longitude": -95.0,
+    "timezones": [
+      "America/Atikokan",
+      "America/Blanc-Sablon",
+      "America/Cambridge_Bay",
+      "America/Creston",
+      "America/Dawson",
+      "America/Dawson_Creek",
+      "America/Edmonton",
+      "America/Fort_Nelson",
+      "America/Glace_Bay",
+      "America/Goose_Bay",
+      "America/Halifax",
+      "America/Inuvik",
+      "America/Iqaluit",
+      "America/Moncton",
+      "America/Nipigon",
+      "America/Pangnirtung",
+      "America/Rainy_River",
+      "America/Rankin_Inlet",
+      "America/Regina",
+      "America/Resolute",
+      "America/St_Johns",
+      "America/Swift_Current",
+      "America/Thunder_Bay",
+      "America/Toronto",
+      "America/Vancouver",
+      "America/Whitehorse",
+      "America/Winnipeg",
+      "America/Yellowknife"
+    ]
+  },
+  {
+    "id": 47,
+    "name": "Cocos (Keeling) Islands",
+    "iso2": "CC",
+    "iso3": "CCK",
+    "nativeName": "Cocos (Keeling) Islands",
+    "phoneCode": "61",
+    "capital": "West Island",
+    "currencyCode": "AUD",
+    "currencyName": "Australian dollar",
+    "currencySymbol": "$",
+    "region": "Oceania",
+    "subregion": "Australia and New Zealand",
+    "latitude": -12.5,
+    "longitude": 96.83333333,
+    "timezones": [
+      "Indian/Cocos"
+    ]
+  },
+  {
+    "id": 51,
+    "name": "Democratic Republic of the Congo",
+    "iso2": "CD",
+    "iso3": "COD",
+    "nativeName": "République démocratique du Congo",
+    "phoneCode": "243",
+    "capital": "Kinshasa",
+    "currencyCode": "CDF",
+    "currencyName": "Congolese Franc",
+    "currencySymbol": "FC",
+    "region": "Africa",
+    "subregion": "Middle Africa",
+    "latitude": 0.0,
+    "longitude": 25.0,
+    "timezones": [
+      "Africa/Kinshasa",
+      "Africa/Lubumbashi"
+    ]
+  },
+  {
+    "id": 42,
+    "name": "Central African Republic",
+    "iso2": "CF",
+    "iso3": "CAF",
+    "nativeName": "Ködörösêse tî Bêafrîka",
+    "phoneCode": "236",
+    "capital": "Bangui",
+    "currencyCode": "XAF",
+    "currencyName": "Central African CFA franc",
+    "currencySymbol": "FCFA",
+    "region": "Africa",
+    "subregion": "Middle Africa",
+    "latitude": 7.0,
+    "longitude": 21.0,
+    "timezones": [
+      "Africa/Bangui"
+    ]
+  },
+  {
+    "id": 50,
+    "name": "Congo",
+    "iso2": "CG",
+    "iso3": "COG",
+    "nativeName": "République du Congo",
+    "phoneCode": "242",
+    "capital": "Brazzaville",
+    "currencyCode": "CDF",
+    "currencyName": "Congolese Franc",
+    "currencySymbol": "FC",
+    "region": "Africa",
+    "subregion": "Middle Africa",
+    "latitude": -1.0,
+    "longitude": 15.0,
+    "timezones": [
+      "Africa/Brazzaville"
+    ]
+  },
+  {
+    "id": 214,
+    "name": "Switzerland",
+    "iso2": "CH",
+    "iso3": "CHE",
+    "nativeName": "Schweiz",
+    "phoneCode": "41",
+    "capital": "Bern",
+    "currencyCode": "CHF",
+    "currencyName": "Swiss franc",
+    "currencySymbol": "CHf",
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "latitude": 47.0,
+    "longitude": 8.0,
+    "timezones": [
+      "Europe/Zurich"
+    ]
+  },
+  {
+    "id": 54,
+    "name": "Ivory Coast",
+    "iso2": "CI",
+    "iso3": "CIV",
+    "nativeName": "Cote D'Ivoire",
+    "phoneCode": "225",
+    "capital": "Yamoussoukro",
+    "currencyCode": "XOF",
+    "currencyName": "West African CFA franc",
+    "currencySymbol": "CFA",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "latitude": 8.0,
+    "longitude": -5.0,
+    "timezones": [
+      "Africa/Abidjan"
+    ]
+  },
+  {
+    "id": 52,
+    "name": "Cook Islands",
+    "iso2": "CK",
+    "iso3": "COK",
+    "nativeName": "Cook Islands",
+    "phoneCode": "682",
+    "capital": "Avarua",
+    "currencyCode": "NZD",
+    "currencyName": "New Zealand dollar",
+    "currencySymbol": "$",
+    "region": "Oceania",
+    "subregion": "Polynesia",
+    "latitude": -21.23333333,
+    "longitude": -159.76666666,
+    "timezones": [
+      "Pacific/Rarotonga"
+    ]
+  },
+  {
+    "id": 44,
+    "name": "Chile",
+    "iso2": "CL",
+    "iso3": "CHL",
+    "nativeName": "Chile",
+    "phoneCode": "56",
+    "capital": "Santiago",
+    "currencyCode": "CLP",
+    "currencyName": "Chilean peso",
+    "currencySymbol": "$",
+    "region": "Americas",
+    "subregion": "South America",
+    "latitude": -30.0,
+    "longitude": -71.0,
+    "timezones": [
+      "America/Coyhaique",
+      "America/Punta_Arenas",
+      "America/Santiago",
+      "Pacific/Easter"
+    ]
+  },
+  {
+    "id": 38,
+    "name": "Cameroon",
+    "iso2": "CM",
+    "iso3": "CMR",
+    "nativeName": "Cameroon",
+    "phoneCode": "237",
+    "capital": "Yaounde",
+    "currencyCode": "XAF",
+    "currencyName": "Central African CFA franc",
+    "currencySymbol": "FCFA",
+    "region": "Africa",
+    "subregion": "Middle Africa",
+    "latitude": 6.0,
+    "longitude": 12.0,
+    "timezones": [
+      "Africa/Douala"
+    ]
+  },
+  {
+    "id": 45,
+    "name": "China",
+    "iso2": "CN",
+    "iso3": "CHN",
+    "nativeName": "中国",
+    "phoneCode": "86",
+    "capital": "Beijing",
+    "currencyCode": "CNY",
+    "currencyName": "Chinese yuan",
+    "currencySymbol": "¥",
+    "region": "Asia",
+    "subregion": "Eastern Asia",
+    "latitude": 35.0,
+    "longitude": 105.0,
+    "timezones": [
+      "Asia/Shanghai",
+      "Asia/Urumqi"
+    ]
+  },
+  {
+    "id": 48,
+    "name": "Colombia",
+    "iso2": "CO",
+    "iso3": "COL",
+    "nativeName": "Colombia",
+    "phoneCode": "57",
+    "capital": "Bogotá",
+    "currencyCode": "COP",
+    "currencyName": "Colombian peso",
+    "currencySymbol": "$",
+    "region": "Americas",
+    "subregion": "South America",
+    "latitude": 4.0,
+    "longitude": -72.0,
+    "timezones": [
+      "America/Bogota"
+    ]
+  },
+  {
+    "id": 53,
+    "name": "Costa Rica",
+    "iso2": "CR",
+    "iso3": "CRI",
+    "nativeName": "Costa Rica",
+    "phoneCode": "506",
+    "capital": "San Jose",
+    "currencyCode": "CRC",
+    "currencyName": "Costa Rican colón",
+    "currencySymbol": "₡",
+    "region": "Americas",
+    "subregion": "Central America",
+    "latitude": 10.0,
+    "longitude": -84.0,
+    "timezones": [
+      "America/Costa_Rica"
+    ]
+  },
+  {
+    "id": 56,
+    "name": "Cuba",
+    "iso2": "CU",
+    "iso3": "CUB",
+    "nativeName": "Cuba",
+    "phoneCode": "53",
+    "capital": "Havana",
+    "currencyCode": "CUP",
+    "currencyName": "Cuban peso",
+    "currencySymbol": "$",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "latitude": 21.5,
+    "longitude": -80.0,
+    "timezones": [
+      "America/Havana"
+    ]
+  },
+  {
+    "id": 40,
+    "name": "Cape Verde",
+    "iso2": "CV",
+    "iso3": "CPV",
+    "nativeName": "Cabo Verde",
+    "phoneCode": "238",
+    "capital": "Praia",
+    "currencyCode": "CVE",
+    "currencyName": "Cape Verdean escudo",
+    "currencySymbol": "$",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "latitude": 16.0,
+    "longitude": -24.0,
+    "timezones": [
+      "Atlantic/Cape_Verde"
+    ]
+  },
+  {
+    "id": 249,
+    "name": "Curaçao",
+    "iso2": "CW",
+    "iso3": "CUW",
+    "nativeName": "Curaçao",
+    "phoneCode": "599",
+    "capital": "Willemstad",
+    "currencyCode": "ANG",
+    "currencyName": "Netherlands Antillean guilder",
+    "currencySymbol": "ƒ",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "latitude": 12.116667,
+    "longitude": -68.933333,
+    "timezones": [
+      "America/Curacao"
+    ]
+  },
+  {
+    "id": 46,
+    "name": "Christmas Island",
+    "iso2": "CX",
+    "iso3": "CXR",
+    "nativeName": "Christmas Island",
+    "phoneCode": "61",
+    "capital": "Flying Fish Cove",
+    "currencyCode": "AUD",
+    "currencyName": "Australian dollar",
+    "currencySymbol": "$",
+    "region": "Oceania",
+    "subregion": "Australia and New Zealand",
+    "latitude": -10.5,
+    "longitude": 105.66666666,
+    "timezones": [
+      "Indian/Christmas"
+    ]
+  },
+  {
+    "id": 57,
+    "name": "Cyprus",
+    "iso2": "CY",
+    "iso3": "CYP",
+    "nativeName": "Κύπρος",
+    "phoneCode": "357",
+    "capital": "Nicosia",
+    "currencyCode": "EUR",
+    "currencyName": "Euro",
+    "currencySymbol": "€",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "latitude": 35.0,
+    "longitude": 33.0,
+    "timezones": [
+      "Asia/Famagusta",
+      "Asia/Nicosia"
+    ]
+  },
+  {
+    "id": 58,
+    "name": "Czech Republic",
+    "iso2": "CZ",
+    "iso3": "CZE",
+    "nativeName": "Česká republika",
+    "phoneCode": "420",
+    "capital": "Prague",
+    "currencyCode": "CZK",
+    "currencyName": "Czech koruna",
+    "currencySymbol": "Kč",
+    "region": "Europe",
+    "subregion": "Eastern Europe",
+    "latitude": 49.75,
+    "longitude": 15.5,
+    "timezones": [
+      "Europe/Prague"
+    ]
+  },
+  {
+    "id": 82,
+    "name": "Germany",
+    "iso2": "DE",
+    "iso3": "DEU",
+    "nativeName": "Deutschland",
+    "phoneCode": "49",
+    "capital": "Berlin",
+    "currencyCode": "EUR",
+    "currencyName": "Euro",
+    "currencySymbol": "€",
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "latitude": 51.0,
+    "longitude": 9.0,
+    "timezones": [
+      "Europe/Berlin",
+      "Europe/Busingen"
+    ]
+  },
+  {
+    "id": 60,
+    "name": "Djibouti",
+    "iso2": "DJ",
+    "iso3": "DJI",
+    "nativeName": "Djibouti",
+    "phoneCode": "253",
+    "capital": "Djibouti",
+    "currencyCode": "DJF",
+    "currencyName": "Djiboutian franc",
+    "currencySymbol": "Fdj",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "latitude": 11.5,
+    "longitude": 43.0,
+    "timezones": [
+      "Africa/Djibouti"
+    ]
+  },
+  {
+    "id": 59,
+    "name": "Denmark",
+    "iso2": "DK",
+    "iso3": "DNK",
+    "nativeName": "Danmark",
+    "phoneCode": "45",
+    "capital": "Copenhagen",
+    "currencyCode": "DKK",
+    "currencyName": "Danish krone",
+    "currencySymbol": "Kr.",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "latitude": 56.0,
+    "longitude": 10.0,
+    "timezones": [
+      "Europe/Copenhagen"
+    ]
+  },
+  {
+    "id": 61,
+    "name": "Dominica",
+    "iso2": "DM",
+    "iso3": "DMA",
+    "nativeName": "Dominica",
+    "phoneCode": "1",
+    "capital": "Roseau",
+    "currencyCode": "XCD",
+    "currencyName": "Eastern Caribbean dollar",
+    "currencySymbol": "$",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "latitude": 15.41666666,
+    "longitude": -61.33333333,
+    "timezones": [
+      "America/Dominica"
+    ]
+  },
+  {
+    "id": 62,
+    "name": "Dominican Republic",
+    "iso2": "DO",
+    "iso3": "DOM",
+    "nativeName": "República Dominicana",
+    "phoneCode": "1",
+    "capital": "Santo Domingo",
+    "currencyCode": "DOP",
+    "currencyName": "Dominican peso",
+    "currencySymbol": "$",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "latitude": 19.0,
+    "longitude": -70.66666666,
+    "timezones": [
+      "America/Santo_Domingo"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Algeria",
+    "iso2": "DZ",
+    "iso3": "DZA",
+    "nativeName": "الجزائر",
+    "phoneCode": "213",
+    "capital": "Algiers",
+    "currencyCode": "DZD",
+    "currencyName": "Algerian dinar",
+    "currencySymbol": "دج",
+    "region": "Africa",
+    "subregion": "Northern Africa",
+    "latitude": 28.0,
+    "longitude": 3.0,
+    "timezones": [
+      "Africa/Algiers"
+    ]
+  },
+  {
+    "id": 64,
+    "name": "Ecuador",
+    "iso2": "EC",
+    "iso3": "ECU",
+    "nativeName": "Ecuador",
+    "phoneCode": "593",
+    "capital": "Quito",
+    "currencyCode": "USD",
+    "currencyName": "United States dollar",
+    "currencySymbol": "$",
+    "region": "Americas",
+    "subregion": "South America",
+    "latitude": -2.0,
+    "longitude": -77.5,
+    "timezones": [
+      "America/Guayaquil",
+      "Pacific/Galapagos"
+    ]
+  },
+  {
+    "id": 69,
+    "name": "Estonia",
+    "iso2": "EE",
+    "iso3": "EST",
+    "nativeName": "Eesti",
+    "phoneCode": "372",
+    "capital": "Tallinn",
+    "currencyCode": "EUR",
+    "currencyName": "Euro",
+    "currencySymbol": "€",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "latitude": 59.0,
+    "longitude": 26.0,
+    "timezones": [
+      "Europe/Tallinn"
+    ]
+  },
+  {
+    "id": 65,
+    "name": "Egypt",
+    "iso2": "EG",
+    "iso3": "EGY",
+    "nativeName": "مصر‎",
+    "phoneCode": "20",
+    "capital": "Cairo",
+    "currencyCode": "EGP",
+    "currencyName": "Egyptian pound",
+    "currencySymbol": "ج.م",
+    "region": "Africa",
+    "subregion": "Northern Africa",
+    "latitude": 27.0,
+    "longitude": 30.0,
+    "timezones": [
+      "Africa/Cairo"
+    ]
+  },
+  {
+    "id": 244,
+    "name": "Western Sahara",
+    "iso2": "EH",
+    "iso3": "ESH",
+    "nativeName": "الصحراء الغربية",
+    "phoneCode": "212",
+    "capital": "El-Aaiun",
+    "currencyCode": "MAD",
+    "currencyName": "Moroccan dirham",
+    "currencySymbol": "DH",
+    "region": "Africa",
+    "subregion": "Northern Africa",
+    "latitude": 24.5,
+    "longitude": -13.0,
+    "timezones": [
+      "Africa/El_Aaiun"
+    ]
+  },
+  {
+    "id": 68,
+    "name": "Eritrea",
+    "iso2": "ER",
+    "iso3": "ERI",
+    "nativeName": "ኤርትራ",
+    "phoneCode": "291",
+    "capital": "Asmara",
+    "currencyCode": "ERN",
+    "currencyName": "Eritrean nakfa",
+    "currencySymbol": "Nfk",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "latitude": 15.0,
+    "longitude": 39.0,
+    "timezones": [
+      "Africa/Asmara"
+    ]
+  },
+  {
+    "id": 207,
+    "name": "Spain",
+    "iso2": "ES",
+    "iso3": "ESP",
+    "nativeName": "España",
+    "phoneCode": "34",
+    "capital": "Madrid",
+    "currencyCode": "EUR",
+    "currencyName": "Euro",
+    "currencySymbol": "€",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "latitude": 40.0,
+    "longitude": -4.0,
+    "timezones": [
+      "Africa/Ceuta",
+      "Atlantic/Canary",
+      "Europe/Madrid"
+    ]
+  },
+  {
+    "id": 70,
+    "name": "Ethiopia",
+    "iso2": "ET",
+    "iso3": "ETH",
+    "nativeName": "ኢትዮጵያ",
+    "phoneCode": "251",
+    "capital": "Addis Ababa",
+    "currencyCode": "ETB",
+    "currencyName": "Ethiopian birr",
+    "currencySymbol": "Nkf",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "latitude": 8.0,
+    "longitude": 38.0,
+    "timezones": [
+      "Africa/Addis_Ababa"
+    ]
+  },
+  {
+    "id": 74,
+    "name": "Finland",
+    "iso2": "FI",
+    "iso3": "FIN",
+    "nativeName": "Suomi",
+    "phoneCode": "358",
+    "capital": "Helsinki",
+    "currencyCode": "EUR",
+    "currencyName": "Euro",
+    "currencySymbol": "€",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "latitude": 64.0,
+    "longitude": 26.0,
+    "timezones": [
+      "Europe/Helsinki"
+    ]
+  },
+  {
+    "id": 73,
+    "name": "Fiji Islands",
+    "iso2": "FJ",
+    "iso3": "FJI",
+    "nativeName": "Fiji",
+    "phoneCode": "679",
+    "capital": "Suva",
+    "currencyCode": "FJD",
+    "currencyName": "Fijian dollar",
+    "currencySymbol": "FJ$",
+    "region": "Oceania",
+    "subregion": "Melanesia",
+    "latitude": -18.0,
+    "longitude": 175.0,
+    "timezones": [
+      "Pacific/Fiji"
+    ]
+  },
+  {
+    "id": 71,
+    "name": "Falkland Islands",
+    "iso2": "FK",
+    "iso3": "FLK",
+    "nativeName": "Falkland Islands",
+    "phoneCode": "500",
+    "capital": "Stanley",
+    "currencyCode": "FKP",
+    "currencyName": "Falkland Islands pound",
+    "currencySymbol": "£",
+    "region": "Americas",
+    "subregion": "South America",
+    "latitude": -51.75,
+    "longitude": -59.0,
+    "timezones": [
+      "Atlantic/Stanley"
+    ]
+  },
+  {
+    "id": 143,
+    "name": "Micronesia",
+    "iso2": "FM",
+    "iso3": "FSM",
+    "nativeName": "Micronesia",
+    "phoneCode": "691",
+    "capital": "Palikir",
+    "currencyCode": "USD",
+    "currencyName": "United States dollar",
+    "currencySymbol": "$",
+    "region": "Oceania",
+    "subregion": "Micronesia",
+    "latitude": 6.91666666,
+    "longitude": 158.25,
+    "timezones": [
+      "Pacific/Chuuk",
+      "Pacific/Kosrae",
+      "Pacific/Pohnpei"
+    ]
+  },
+  {
+    "id": 72,
+    "name": "Faroe Islands",
+    "iso2": "FO",
+    "iso3": "FRO",
+    "nativeName": "Føroyar",
+    "phoneCode": "298",
+    "capital": "Torshavn",
+    "currencyCode": "DKK",
+    "currencyName": "Danish krone",
+    "currencySymbol": "Kr.",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "latitude": 62.0,
+    "longitude": -7.0,
+    "timezones": [
+      "Atlantic/Faroe"
+    ]
+  },
+  {
+    "id": 75,
+    "name": "France",
+    "iso2": "FR",
+    "iso3": "FRA",
+    "nativeName": "France",
+    "phoneCode": "33",
+    "capital": "Paris",
+    "currencyCode": "EUR",
+    "currencyName": "Euro",
+    "currencySymbol": "€",
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "latitude": 46.0,
+    "longitude": 2.0,
+    "timezones": [
+      "Europe/Paris"
+    ]
+  },
+  {
+    "id": 79,
+    "name": "Gabon",
+    "iso2": "GA",
+    "iso3": "GAB",
+    "nativeName": "Gabon",
+    "phoneCode": "241",
+    "capital": "Libreville",
+    "currencyCode": "XAF",
+    "currencyName": "Central African CFA franc",
+    "currencySymbol": "FCFA",
+    "region": "Africa",
+    "subregion": "Middle Africa",
+    "latitude": -1.0,
+    "longitude": 11.75,
+    "timezones": [
+      "Africa/Libreville"
+    ]
+  },
+  {
+    "id": 232,
+    "name": "United Kingdom",
+    "iso2": "GB",
+    "iso3": "GBR",
+    "nativeName": "United Kingdom",
+    "phoneCode": "44",
+    "capital": "London",
+    "currencyCode": "GBP",
+    "currencyName": "British pound",
+    "currencySymbol": "£",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "latitude": 54.0,
+    "longitude": -2.0,
+    "timezones": [
+      "Europe/London"
+    ]
+  },
+  {
+    "id": 87,
+    "name": "Grenada",
+    "iso2": "GD",
+    "iso3": "GRD",
+    "nativeName": "Grenada",
+    "phoneCode": "1",
+    "capital": "St. George's",
+    "currencyCode": "XCD",
+    "currencyName": "Eastern Caribbean dollar",
+    "currencySymbol": "$",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "latitude": 12.11666666,
+    "longitude": -61.66666666,
+    "timezones": [
+      "America/Grenada"
+    ]
+  },
+  {
+    "id": 81,
+    "name": "Georgia",
+    "iso2": "GE",
+    "iso3": "GEO",
+    "nativeName": "საქართველო",
+    "phoneCode": "995",
+    "capital": "Tbilisi",
+    "currencyCode": "GEL",
+    "currencyName": "Georgian lari",
+    "currencySymbol": "ლ",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "latitude": 42.0,
+    "longitude": 43.5,
+    "timezones": [
+      "Asia/Tbilisi"
+    ]
+  },
+  {
+    "id": 76,
+    "name": "French Guiana",
+    "iso2": "GF",
+    "iso3": "GUF",
+    "nativeName": "Guyane française",
+    "phoneCode": "594",
+    "capital": "Cayenne",
+    "currencyCode": "EUR",
+    "currencyName": "Euro",
+    "currencySymbol": "€",
+    "region": "Americas",
+    "subregion": "South America",
+    "latitude": 4.0,
+    "longitude": -53.0,
+    "timezones": [
+      "America/Cayenne"
+    ]
+  },
+  {
+    "id": 91,
+    "name": "Guernsey",
+    "iso2": "GG",
+    "iso3": "GGY",
+    "nativeName": "Guernsey",
+    "phoneCode": "44",
+    "capital": "St Peter Port",
+    "currencyCode": "GBP",
+    "currencyName": "British pound",
+    "currencySymbol": "£",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "latitude": 49.46666666,
+    "longitude": -2.58333333,
+    "timezones": [
+      "Europe/Guernsey"
+    ]
+  },
+  {
+    "id": 83,
+    "name": "Ghana",
+    "iso2": "GH",
+    "iso3": "GHA",
+    "nativeName": "Ghana",
+    "phoneCode": "233",
+    "capital": "Accra",
+    "currencyCode": "GHS",
+    "currencyName": "Ghanaian cedi",
+    "currencySymbol": "GH₵",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "latitude": 8.0,
+    "longitude": -2.0,
+    "timezones": [
+      "Africa/Accra"
+    ]
+  },
+  {
+    "id": 84,
+    "name": "Gibraltar",
+    "iso2": "GI",
+    "iso3": "GIB",
+    "nativeName": "Gibraltar",
+    "phoneCode": "350",
+    "capital": "Gibraltar",
+    "currencyCode": "GIP",
+    "currencyName": "Gibraltar pound",
+    "currencySymbol": "£",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "latitude": 36.13333333,
+    "longitude": -5.35,
+    "timezones": [
+      "Europe/Gibraltar"
+    ]
+  },
+  {
+    "id": 86,
+    "name": "Greenland",
+    "iso2": "GL",
+    "iso3": "GRL",
+    "nativeName": "Kalaallit Nunaat",
+    "phoneCode": "299",
+    "capital": "Nuuk",
+    "currencyCode": "DKK",
+    "currencyName": "Danish krone",
+    "currencySymbol": "Kr.",
+    "region": "Americas",
+    "subregion": "Northern America",
+    "latitude": 72.0,
+    "longitude": -40.0,
+    "timezones": [
+      "America/Danmarkshavn",
+      "America/Nuuk",
+      "America/Scoresbysund",
+      "America/Thule"
+    ]
+  },
+  {
+    "id": 80,
+    "name": "The Gambia",
+    "iso2": "GM",
+    "iso3": "GMB",
+    "nativeName": "Gambia",
+    "phoneCode": "220",
+    "capital": "Banjul",
+    "currencyCode": "GMD",
+    "currencyName": "Gambian dalasi",
+    "currencySymbol": "D",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "latitude": 13.46666666,
+    "longitude": -16.56666666,
+    "timezones": [
+      "Africa/Banjul"
+    ]
+  },
+  {
+    "id": 92,
+    "name": "Guinea",
+    "iso2": "GN",
+    "iso3": "GIN",
+    "nativeName": "Guinée",
+    "phoneCode": "224",
+    "capital": "Conakry",
+    "currencyCode": "GNF",
+    "currencyName": "Guinean franc",
+    "currencySymbol": "FG",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "latitude": 11.0,
+    "longitude": -10.0,
+    "timezones": [
+      "Africa/Conakry"
+    ]
+  },
+  {
+    "id": 88,
+    "name": "Guadeloupe",
+    "iso2": "GP",
+    "iso3": "GLP",
+    "nativeName": "Guadeloupe",
+    "phoneCode": "590",
+    "capital": "Basse-Terre",
+    "currencyCode": "EUR",
+    "currencyName": "Euro",
+    "currencySymbol": "€",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "latitude": 16.25,
+    "longitude": -61.583333,
+    "timezones": [
+      "America/Guadeloupe"
+    ]
+  },
+  {
+    "id": 67,
+    "name": "Equatorial Guinea",
+    "iso2": "GQ",
+    "iso3": "GNQ",
+    "nativeName": "Guinea Ecuatorial",
+    "phoneCode": "240",
+    "capital": "Malabo",
+    "currencyCode": "XAF",
+    "currencyName": "Central African CFA franc",
+    "currencySymbol": "FCFA",
+    "region": "Africa",
+    "subregion": "Middle Africa",
+    "latitude": 2.0,
+    "longitude": 10.0,
+    "timezones": [
+      "Africa/Malabo"
+    ]
+  },
+  {
+    "id": 85,
+    "name": "Greece",
+    "iso2": "GR",
+    "iso3": "GRC",
+    "nativeName": "Ελλάδα",
+    "phoneCode": "30",
+    "capital": "Athens",
+    "currencyCode": "EUR",
+    "currencyName": "Euro",
+    "currencySymbol": "€",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "latitude": 39.0,
+    "longitude": 22.0,
+    "timezones": [
+      "Europe/Athens"
+    ]
+  },
+  {
+    "id": 205,
+    "name": "South Georgia",
+    "iso2": "GS",
+    "iso3": "SGS",
+    "nativeName": "South Georgia",
+    "phoneCode": "500",
+    "capital": "Grytviken",
+    "currencyCode": "GBP",
+    "currencyName": "British pound",
+    "currencySymbol": "£",
+    "region": "Americas",
+    "subregion": "South America",
+    "latitude": -54.5,
+    "longitude": -37.0,
+    "timezones": [
+      "Atlantic/South_Georgia"
+    ]
+  },
+  {
+    "id": 90,
+    "name": "Guatemala",
+    "iso2": "GT",
+    "iso3": "GTM",
+    "nativeName": "Guatemala",
+    "phoneCode": "502",
+    "capital": "Guatemala City",
+    "currencyCode": "GTQ",
+    "currencyName": "Guatemalan quetzal",
+    "currencySymbol": "Q",
+    "region": "Americas",
+    "subregion": "Central America",
+    "latitude": 15.5,
+    "longitude": -90.25,
+    "timezones": [
+      "America/Guatemala"
+    ]
+  },
+  {
+    "id": 89,
+    "name": "Guam",
+    "iso2": "GU",
+    "iso3": "GUM",
+    "nativeName": "Guam",
+    "phoneCode": "1",
+    "capital": "Hagatna",
+    "currencyCode": "USD",
+    "currencyName": "United States dollar",
+    "currencySymbol": "$",
+    "region": "Oceania",
+    "subregion": "Micronesia",
+    "latitude": 13.46666666,
+    "longitude": 144.78333333,
+    "timezones": [
+      "Pacific/Guam"
+    ]
+  },
+  {
+    "id": 93,
+    "name": "Guinea-Bissau",
+    "iso2": "GW",
+    "iso3": "GNB",
+    "nativeName": "Guiné-Bissau",
+    "phoneCode": "245",
+    "capital": "Bissau",
+    "currencyCode": "XOF",
+    "currencyName": "West African CFA franc",
+    "currencySymbol": "CFA",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "latitude": 12.0,
+    "longitude": -15.0,
+    "timezones": [
+      "Africa/Bissau"
+    ]
+  },
+  {
+    "id": 94,
+    "name": "Guyana",
+    "iso2": "GY",
+    "iso3": "GUY",
+    "nativeName": "Guyana",
+    "phoneCode": "592",
+    "capital": "Georgetown",
+    "currencyCode": "GYD",
+    "currencyName": "Guyanese dollar",
+    "currencySymbol": "$",
+    "region": "Americas",
+    "subregion": "South America",
+    "latitude": 5.0,
+    "longitude": -59.0,
+    "timezones": [
+      "America/Guyana"
+    ]
+  },
+  {
+    "id": 98,
+    "name": "Hong Kong S.A.R.",
+    "iso2": "HK",
+    "iso3": "HKG",
+    "nativeName": "香港",
+    "phoneCode": "852",
+    "capital": "Hong Kong",
+    "currencyCode": "HKD",
+    "currencyName": "Hong Kong dollar",
+    "currencySymbol": "$",
+    "region": "Asia",
+    "subregion": "Eastern Asia",
+    "latitude": 22.25,
+    "longitude": 114.16666666,
+    "timezones": [
+      "Asia/Hong_Kong"
+    ]
+  },
+  {
+    "id": 96,
+    "name": "Heard Island and McDonald Islands",
+    "iso2": "HM",
+    "iso3": "HMD",
+    "nativeName": "Heard Island and McDonald Islands",
+    "phoneCode": "672",
+    "capital": null,
+    "currencyCode": "AUD",
+    "currencyName": "Australian dollar",
+    "currencySymbol": "$",
+    "region": null,
+    "subregion": null,
+    "latitude": -53.1,
+    "longitude": 72.51666666,
+    "timezones": [
+      "Indian/Kerguelen"
+    ]
+  },
+  {
+    "id": 97,
+    "name": "Honduras",
+    "iso2": "HN",
+    "iso3": "HND",
+    "nativeName": "Honduras",
+    "phoneCode": "504",
+    "capital": "Tegucigalpa",
+    "currencyCode": "HNL",
+    "currencyName": "Honduran lempira",
+    "currencySymbol": "L",
+    "region": "Americas",
+    "subregion": "Central America",
+    "latitude": 15.0,
+    "longitude": -86.5,
+    "timezones": [
+      "America/Tegucigalpa"
+    ]
+  },
+  {
+    "id": 55,
+    "name": "Croatia",
+    "iso2": "HR",
+    "iso3": "HRV",
+    "nativeName": "Hrvatska",
+    "phoneCode": "385",
+    "capital": "Zagreb",
+    "currencyCode": "EUR",
+    "currencyName": "Euro",
+    "currencySymbol": "€",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "latitude": 45.16666666,
+    "longitude": 15.5,
+    "timezones": [
+      "Europe/Zagreb"
+    ]
+  },
+  {
+    "id": 95,
+    "name": "Haiti",
+    "iso2": "HT",
+    "iso3": "HTI",
+    "nativeName": "Haïti",
+    "phoneCode": "509",
+    "capital": "Port-au-Prince",
+    "currencyCode": "HTG",
+    "currencyName": "Haitian gourde",
+    "currencySymbol": "G",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "latitude": 19.0,
+    "longitude": -72.41666666,
+    "timezones": [
+      "America/Port-au-Prince"
+    ]
+  },
+  {
+    "id": 99,
+    "name": "Hungary",
+    "iso2": "HU",
+    "iso3": "HUN",
+    "nativeName": "Magyarország",
+    "phoneCode": "36",
+    "capital": "Budapest",
+    "currencyCode": "HUF",
+    "currencyName": "Hungarian forint",
+    "currencySymbol": "Ft",
+    "region": "Europe",
+    "subregion": "Eastern Europe",
+    "latitude": 47.0,
+    "longitude": 20.0,
+    "timezones": [
+      "Europe/Budapest"
+    ]
+  },
+  {
+    "id": 102,
+    "name": "Indonesia",
+    "iso2": "ID",
+    "iso3": "IDN",
+    "nativeName": "Indonesia",
+    "phoneCode": "62",
+    "capital": "Jakarta",
+    "currencyCode": "IDR",
+    "currencyName": "Indonesian rupiah",
+    "currencySymbol": "Rp",
+    "region": "Asia",
+    "subregion": "South-Eastern Asia",
+    "latitude": -5.0,
+    "longitude": 120.0,
+    "timezones": [
+      "Asia/Jakarta",
+      "Asia/Jayapura",
+      "Asia/Makassar",
+      "Asia/Pontianak"
+    ]
+  },
+  {
+    "id": 105,
+    "name": "Ireland",
+    "iso2": "IE",
+    "iso3": "IRL",
+    "nativeName": "Éire",
+    "phoneCode": "353",
+    "capital": "Dublin",
+    "currencyCode": "EUR",
+    "currencyName": "Euro",
+    "currencySymbol": "€",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "latitude": 53.0,
+    "longitude": -8.0,
+    "timezones": [
+      "Europe/Dublin"
+    ]
+  },
+  {
+    "id": 106,
+    "name": "Israel",
+    "iso2": "IL",
+    "iso3": "ISR",
+    "nativeName": "יִשְׂרָאֵל",
+    "phoneCode": "972",
+    "capital": "Jerusalem",
+    "currencyCode": "ILS",
+    "currencyName": "Israeli new shekel",
+    "currencySymbol": "₪",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "latitude": 31.5,
+    "longitude": 34.75,
+    "timezones": [
+      "Asia/Jerusalem"
+    ]
+  },
+  {
+    "id": 136,
+    "name": "Man (Isle of)",
+    "iso2": "IM",
+    "iso3": "IMN",
+    "nativeName": "Isle of Man",
+    "phoneCode": "44",
+    "capital": "Douglas, Isle of Man",
+    "currencyCode": "GBP",
+    "currencyName": "British pound",
+    "currencySymbol": "£",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "latitude": 54.25,
+    "longitude": -4.5,
+    "timezones": [
+      "Europe/Isle_of_Man"
+    ]
+  },
+  {
+    "id": 101,
+    "name": "India",
+    "iso2": "IN",
+    "iso3": "IND",
+    "nativeName": "भारत",
+    "phoneCode": "91",
+    "capital": "New Delhi",
+    "currencyCode": "INR",
+    "currencyName": "Indian rupee",
+    "currencySymbol": "₹",
+    "region": "Asia",
+    "subregion": "Southern Asia",
+    "latitude": 20.0,
+    "longitude": 77.0,
+    "timezones": [
+      "Asia/Kolkata"
+    ]
+  },
+  {
+    "id": 32,
+    "name": "British Indian Ocean Territory",
+    "iso2": "IO",
+    "iso3": "IOT",
+    "nativeName": "British Indian Ocean Territory",
+    "phoneCode": "246",
+    "capital": "Diego Garcia",
+    "currencyCode": "USD",
+    "currencyName": "United States dollar",
+    "currencySymbol": "$",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "latitude": -6.0,
+    "longitude": 71.5,
+    "timezones": [
+      "Indian/Chagos"
+    ]
+  },
+  {
+    "id": 104,
+    "name": "Iraq",
+    "iso2": "IQ",
+    "iso3": "IRQ",
+    "nativeName": "العراق",
+    "phoneCode": "964",
+    "capital": "Baghdad",
+    "currencyCode": "IQD",
+    "currencyName": "Iraqi dinar",
+    "currencySymbol": "د.ع",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "latitude": 33.0,
+    "longitude": 44.0,
+    "timezones": [
+      "Asia/Baghdad"
+    ]
+  },
+  {
+    "id": 103,
+    "name": "Iran",
+    "iso2": "IR",
+    "iso3": "IRN",
+    "nativeName": "ایران",
+    "phoneCode": "98",
+    "capital": "Tehran",
+    "currencyCode": "IRR",
+    "currencyName": "Iranian rial",
+    "currencySymbol": "﷼",
+    "region": "Asia",
+    "subregion": "Southern Asia",
+    "latitude": 32.0,
+    "longitude": 53.0,
+    "timezones": [
+      "Asia/Tehran"
+    ]
+  },
+  {
+    "id": 100,
+    "name": "Iceland",
+    "iso2": "IS",
+    "iso3": "ISL",
+    "nativeName": "Ísland",
+    "phoneCode": "354",
+    "capital": "Reykjavik",
+    "currencyCode": "ISK",
+    "currencyName": "Icelandic króna",
+    "currencySymbol": "ko",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "latitude": 65.0,
+    "longitude": -18.0,
+    "timezones": [
+      "Atlantic/Reykjavik"
+    ]
+  },
+  {
+    "id": 107,
+    "name": "Italy",
+    "iso2": "IT",
+    "iso3": "ITA",
+    "nativeName": "Italia",
+    "phoneCode": "39",
+    "capital": "Rome",
+    "currencyCode": "EUR",
+    "currencyName": "Euro",
+    "currencySymbol": "€",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "latitude": 42.83333333,
+    "longitude": 12.83333333,
+    "timezones": [
+      "Europe/Rome"
+    ]
+  },
+  {
+    "id": 110,
+    "name": "Jersey",
+    "iso2": "JE",
+    "iso3": "JEY",
+    "nativeName": "Jersey",
+    "phoneCode": "44",
+    "capital": "Saint Helier",
+    "currencyCode": "GBP",
+    "currencyName": "British pound",
+    "currencySymbol": "£",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "latitude": 49.25,
+    "longitude": -2.16666666,
+    "timezones": [
+      "Europe/Jersey"
+    ]
+  },
+  {
+    "id": 108,
+    "name": "Jamaica",
+    "iso2": "JM",
+    "iso3": "JAM",
+    "nativeName": "Jamaica",
+    "phoneCode": "1",
+    "capital": "Kingston",
+    "currencyCode": "JMD",
+    "currencyName": "Jamaican dollar",
+    "currencySymbol": "J$",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "latitude": 18.25,
+    "longitude": -77.5,
+    "timezones": [
+      "America/Jamaica"
+    ]
+  },
+  {
+    "id": 111,
+    "name": "Jordan",
+    "iso2": "JO",
+    "iso3": "JOR",
+    "nativeName": "الأردن",
+    "phoneCode": "962",
+    "capital": "Amman",
+    "currencyCode": "JOD",
+    "currencyName": "Jordanian dinar",
+    "currencySymbol": "ا.د",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "latitude": 31.0,
+    "longitude": 36.0,
+    "timezones": [
+      "Asia/Amman"
+    ]
+  },
+  {
+    "id": 109,
+    "name": "Japan",
+    "iso2": "JP",
+    "iso3": "JPN",
+    "nativeName": "日本",
+    "phoneCode": "81",
+    "capital": "Tokyo",
+    "currencyCode": "JPY",
+    "currencyName": "Japanese yen",
+    "currencySymbol": "¥",
+    "region": "Asia",
+    "subregion": "Eastern Asia",
+    "latitude": 36.0,
+    "longitude": 138.0,
+    "timezones": [
+      "Asia/Tokyo"
+    ]
+  },
+  {
+    "id": 113,
+    "name": "Kenya",
+    "iso2": "KE",
+    "iso3": "KEN",
+    "nativeName": "Kenya",
+    "phoneCode": "254",
+    "capital": "Nairobi",
+    "currencyCode": "KES",
+    "currencyName": "Kenyan shilling",
+    "currencySymbol": "KSh",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "latitude": 1.0,
+    "longitude": 38.0,
+    "timezones": [
+      "Africa/Nairobi"
+    ]
+  },
+  {
+    "id": 118,
+    "name": "Kyrgyzstan",
+    "iso2": "KG",
+    "iso3": "KGZ",
+    "nativeName": "Кыргызстан",
+    "phoneCode": "996",
+    "capital": "Bishkek",
+    "currencyCode": "KGS",
+    "currencyName": "Kyrgyzstani som",
+    "currencySymbol": "лв",
+    "region": "Asia",
+    "subregion": "Central Asia",
+    "latitude": 41.0,
+    "longitude": 75.0,
+    "timezones": [
+      "Asia/Bishkek"
+    ]
+  },
+  {
+    "id": 37,
+    "name": "Cambodia",
+    "iso2": "KH",
+    "iso3": "KHM",
+    "nativeName": "Kâmpŭchéa",
+    "phoneCode": "855",
+    "capital": "Phnom Penh",
+    "currencyCode": "KHR",
+    "currencyName": "Cambodian riel",
+    "currencySymbol": "KHR",
+    "region": "Asia",
+    "subregion": "South-Eastern Asia",
+    "latitude": 13.0,
+    "longitude": 105.0,
+    "timezones": [
+      "Asia/Phnom_Penh"
+    ]
+  },
+  {
+    "id": 114,
+    "name": "Kiribati",
+    "iso2": "KI",
+    "iso3": "KIR",
+    "nativeName": "Kiribati",
+    "phoneCode": "686",
+    "capital": "Tarawa",
+    "currencyCode": "AUD",
+    "currencyName": "Australian dollar",
+    "currencySymbol": "$",
+    "region": "Oceania",
+    "subregion": "Micronesia",
+    "latitude": 1.41666666,
+    "longitude": 173.0,
+    "timezones": [
+      "Pacific/Enderbury",
+      "Pacific/Kiritimati",
+      "Pacific/Tarawa"
+    ]
+  },
+  {
+    "id": 49,
+    "name": "Comoros",
+    "iso2": "KM",
+    "iso3": "COM",
+    "nativeName": "Komori",
+    "phoneCode": "269",
+    "capital": "Moroni",
+    "currencyCode": "KMF",
+    "currencyName": "Comorian franc",
+    "currencySymbol": "CF",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "latitude": -12.16666666,
+    "longitude": 44.25,
+    "timezones": [
+      "Indian/Comoro"
+    ]
+  },
+  {
+    "id": 185,
+    "name": "Saint Kitts and Nevis",
+    "iso2": "KN",
+    "iso3": "KNA",
+    "nativeName": "Saint Kitts and Nevis",
+    "phoneCode": "1",
+    "capital": "Basseterre",
+    "currencyCode": "XCD",
+    "currencyName": "Eastern Caribbean dollar",
+    "currencySymbol": "$",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "latitude": 17.33333333,
+    "longitude": -62.75,
+    "timezones": [
+      "America/St_Kitts"
+    ]
+  },
+  {
+    "id": 115,
+    "name": "North Korea",
+    "iso2": "KP",
+    "iso3": "PRK",
+    "nativeName": "북한",
+    "phoneCode": "850",
+    "capital": "Pyongyang",
+    "currencyCode": "KPW",
+    "currencyName": "North Korean Won",
+    "currencySymbol": "₩",
+    "region": "Asia",
+    "subregion": "Eastern Asia",
+    "latitude": 40.0,
+    "longitude": 127.0,
+    "timezones": [
+      "Asia/Pyongyang"
+    ]
+  },
+  {
+    "id": 116,
+    "name": "South Korea",
+    "iso2": "KR",
+    "iso3": "KOR",
+    "nativeName": "대한민국",
+    "phoneCode": "82",
+    "capital": "Seoul",
+    "currencyCode": "KRW",
+    "currencyName": "Won",
+    "currencySymbol": "₩",
+    "region": "Asia",
+    "subregion": "Eastern Asia",
+    "latitude": 37.0,
+    "longitude": 127.5,
+    "timezones": [
+      "Asia/Seoul"
+    ]
+  },
+  {
+    "id": 117,
+    "name": "Kuwait",
+    "iso2": "KW",
+    "iso3": "KWT",
+    "nativeName": "الكويت",
+    "phoneCode": "965",
+    "capital": "Kuwait City",
+    "currencyCode": "KWD",
+    "currencyName": "Kuwaiti dinar",
+    "currencySymbol": "ك.د",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "latitude": 29.5,
+    "longitude": 45.75,
+    "timezones": [
+      "Asia/Kuwait"
+    ]
+  },
+  {
+    "id": 41,
+    "name": "Cayman Islands",
+    "iso2": "KY",
+    "iso3": "CYM",
+    "nativeName": "Cayman Islands",
+    "phoneCode": "1",
+    "capital": "George Town",
+    "currencyCode": "KYD",
+    "currencyName": "Cayman Islands dollar",
+    "currencySymbol": "$",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "latitude": 19.5,
+    "longitude": -80.5,
+    "timezones": [
+      "America/Cayman"
+    ]
+  },
+  {
+    "id": 112,
+    "name": "Kazakhstan",
+    "iso2": "KZ",
+    "iso3": "KAZ",
+    "nativeName": "Қазақстан",
+    "phoneCode": "7",
+    "capital": "Astana",
+    "currencyCode": "KZT",
+    "currencyName": "Kazakhstani tenge",
+    "currencySymbol": "лв",
+    "region": "Asia",
+    "subregion": "Central Asia",
+    "latitude": 48.0,
+    "longitude": 68.0,
+    "timezones": [
+      "Asia/Almaty",
+      "Asia/Aqtau",
+      "Asia/Aqtobe",
+      "Asia/Atyrau",
+      "Asia/Oral",
+      "Asia/Qostanay",
+      "Asia/Qyzylorda"
+    ]
+  },
+  {
+    "id": 119,
+    "name": "Laos",
+    "iso2": "LA",
+    "iso3": "LAO",
+    "nativeName": "ສປປລາວ",
+    "phoneCode": "856",
+    "capital": "Vientiane",
+    "currencyCode": "LAK",
+    "currencyName": "Lao kip",
+    "currencySymbol": "₭",
+    "region": "Asia",
+    "subregion": "South-Eastern Asia",
+    "latitude": 18.0,
+    "longitude": 105.0,
+    "timezones": [
+      "Asia/Vientiane"
+    ]
+  },
+  {
+    "id": 121,
+    "name": "Lebanon",
+    "iso2": "LB",
+    "iso3": "LBN",
+    "nativeName": "لبنان",
+    "phoneCode": "961",
+    "capital": "Beirut",
+    "currencyCode": "LBP",
+    "currencyName": "Lebanese pound",
+    "currencySymbol": "£",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "latitude": 33.83333333,
+    "longitude": 35.83333333,
+    "timezones": [
+      "Asia/Beirut"
+    ]
+  },
+  {
+    "id": 186,
+    "name": "Saint Lucia",
+    "iso2": "LC",
+    "iso3": "LCA",
+    "nativeName": "Saint Lucia",
+    "phoneCode": "1",
+    "capital": "Castries",
+    "currencyCode": "XCD",
+    "currencyName": "Eastern Caribbean dollar",
+    "currencySymbol": "$",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "latitude": 13.88333333,
+    "longitude": -60.96666666,
+    "timezones": [
+      "America/St_Lucia"
+    ]
+  },
+  {
+    "id": 125,
+    "name": "Liechtenstein",
+    "iso2": "LI",
+    "iso3": "LIE",
+    "nativeName": "Liechtenstein",
+    "phoneCode": "423",
+    "capital": "Vaduz",
+    "currencyCode": "CHF",
+    "currencyName": "Swiss franc",
+    "currencySymbol": "CHf",
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "latitude": 47.26666666,
+    "longitude": 9.53333333,
+    "timezones": [
+      "Europe/Vaduz"
+    ]
+  },
+  {
+    "id": 208,
+    "name": "Sri Lanka",
+    "iso2": "LK",
+    "iso3": "LKA",
+    "nativeName": "śrī laṃkāva",
+    "phoneCode": "94",
+    "capital": "Colombo",
+    "currencyCode": "LKR",
+    "currencyName": "Sri Lankan rupee",
+    "currencySymbol": "Rs",
+    "region": "Asia",
+    "subregion": "Southern Asia",
+    "latitude": 7.0,
+    "longitude": 81.0,
+    "timezones": [
+      "Asia/Colombo"
+    ]
+  },
+  {
+    "id": 123,
+    "name": "Liberia",
+    "iso2": "LR",
+    "iso3": "LBR",
+    "nativeName": "Liberia",
+    "phoneCode": "231",
+    "capital": "Monrovia",
+    "currencyCode": "LRD",
+    "currencyName": "Liberian dollar",
+    "currencySymbol": "$",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "latitude": 6.5,
+    "longitude": -9.5,
+    "timezones": [
+      "Africa/Monrovia"
+    ]
+  },
+  {
+    "id": 122,
+    "name": "Lesotho",
+    "iso2": "LS",
+    "iso3": "LSO",
+    "nativeName": "Lesotho",
+    "phoneCode": "266",
+    "capital": "Maseru",
+    "currencyCode": "LSL",
+    "currencyName": "Lesotho loti",
+    "currencySymbol": "L",
+    "region": "Africa",
+    "subregion": "Southern Africa",
+    "latitude": -29.5,
+    "longitude": 28.5,
+    "timezones": [
+      "Africa/Maseru"
+    ]
+  },
+  {
+    "id": 126,
+    "name": "Lithuania",
+    "iso2": "LT",
+    "iso3": "LTU",
+    "nativeName": "Lietuva",
+    "phoneCode": "370",
+    "capital": "Vilnius",
+    "currencyCode": "EUR",
+    "currencyName": "Euro",
+    "currencySymbol": "€",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "latitude": 56.0,
+    "longitude": 24.0,
+    "timezones": [
+      "Europe/Vilnius"
+    ]
+  },
+  {
+    "id": 127,
+    "name": "Luxembourg",
+    "iso2": "LU",
+    "iso3": "LUX",
+    "nativeName": "Luxembourg",
+    "phoneCode": "352",
+    "capital": "Luxembourg",
+    "currencyCode": "EUR",
+    "currencyName": "Euro",
+    "currencySymbol": "€",
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "latitude": 49.75,
+    "longitude": 6.16666666,
+    "timezones": [
+      "Europe/Luxembourg"
+    ]
+  },
+  {
+    "id": 120,
+    "name": "Latvia",
+    "iso2": "LV",
+    "iso3": "LVA",
+    "nativeName": "Latvija",
+    "phoneCode": "371",
+    "capital": "Riga",
+    "currencyCode": "EUR",
+    "currencyName": "Euro",
+    "currencySymbol": "€",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "latitude": 57.0,
+    "longitude": 25.0,
+    "timezones": [
+      "Europe/Riga"
+    ]
+  },
+  {
+    "id": 124,
+    "name": "Libya",
+    "iso2": "LY",
+    "iso3": "LBY",
+    "nativeName": "‏ليبيا",
+    "phoneCode": "218",
+    "capital": "Tripolis",
+    "currencyCode": "LYD",
+    "currencyName": "Libyan dinar",
+    "currencySymbol": "د.ل",
+    "region": "Africa",
+    "subregion": "Northern Africa",
+    "latitude": 25.0,
+    "longitude": 17.0,
+    "timezones": [
+      "Africa/Tripoli"
+    ]
+  },
+  {
+    "id": 149,
+    "name": "Morocco",
+    "iso2": "MA",
+    "iso3": "MAR",
+    "nativeName": "المغرب",
+    "phoneCode": "212",
+    "capital": "Rabat",
+    "currencyCode": "MAD",
+    "currencyName": "Moroccan dirham",
+    "currencySymbol": "DH",
+    "region": "Africa",
+    "subregion": "Northern Africa",
+    "latitude": 32.0,
+    "longitude": -5.0,
+    "timezones": [
+      "Africa/Casablanca",
+      "Africa/El_Aaiun"
+    ]
+  },
+  {
+    "id": 145,
+    "name": "Monaco",
+    "iso2": "MC",
+    "iso3": "MCO",
+    "nativeName": "Monaco",
+    "phoneCode": "377",
+    "capital": "Monaco",
+    "currencyCode": "EUR",
+    "currencyName": "Euro",
+    "currencySymbol": "€",
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "latitude": 43.73333333,
+    "longitude": 7.4,
+    "timezones": [
+      "Europe/Monaco"
+    ]
+  },
+  {
+    "id": 144,
+    "name": "Moldova",
+    "iso2": "MD",
+    "iso3": "MDA",
+    "nativeName": "Moldova",
+    "phoneCode": "373",
+    "capital": "Chisinau",
+    "currencyCode": "MDL",
+    "currencyName": "Moldovan leu",
+    "currencySymbol": "L",
+    "region": "Europe",
+    "subregion": "Eastern Europe",
+    "latitude": 47.0,
+    "longitude": 29.0,
+    "timezones": [
+      "Europe/Chisinau"
+    ]
+  },
+  {
+    "id": 147,
+    "name": "Montenegro",
+    "iso2": "ME",
+    "iso3": "MNE",
+    "nativeName": "Црна Гора",
+    "phoneCode": "382",
+    "capital": "Podgorica",
+    "currencyCode": "EUR",
+    "currencyName": "Euro",
+    "currencySymbol": "€",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "latitude": 42.5,
+    "longitude": 19.3,
+    "timezones": [
+      "Europe/Podgorica"
+    ]
+  },
+  {
+    "id": 190,
+    "name": "Saint-Martin (French part)",
+    "iso2": "MF",
+    "iso3": "MAF",
+    "nativeName": "Saint-Martin",
+    "phoneCode": "590",
+    "capital": "Marigot",
+    "currencyCode": "EUR",
+    "currencyName": "Euro",
+    "currencySymbol": "€",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "latitude": 18.08333333,
+    "longitude": -63.95,
+    "timezones": [
+      "America/Marigot"
+    ]
+  },
+  {
+    "id": 130,
+    "name": "Madagascar",
+    "iso2": "MG",
+    "iso3": "MDG",
+    "nativeName": "Madagasikara",
+    "phoneCode": "261",
+    "capital": "Antananarivo",
+    "currencyCode": "MGA",
+    "currencyName": "Malagasy ariary",
+    "currencySymbol": "Ar",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "latitude": -20.0,
+    "longitude": 47.0,
+    "timezones": [
+      "Indian/Antananarivo"
+    ]
+  },
+  {
+    "id": 137,
+    "name": "Marshall Islands",
+    "iso2": "MH",
+    "iso3": "MHL",
+    "nativeName": "M̧ajeļ",
+    "phoneCode": "692",
+    "capital": "Majuro",
+    "currencyCode": "USD",
+    "currencyName": "United States dollar",
+    "currencySymbol": "$",
+    "region": "Oceania",
+    "subregion": "Micronesia",
+    "latitude": 9.0,
+    "longitude": 168.0,
+    "timezones": [
+      "Pacific/Kwajalein",
+      "Pacific/Majuro"
+    ]
+  },
+  {
+    "id": 129,
+    "name": "North Macedonia",
+    "iso2": "MK",
+    "iso3": "MKD",
+    "nativeName": "Северна Македонија",
+    "phoneCode": "389",
+    "capital": "Skopje",
+    "currencyCode": "MKD",
+    "currencyName": "Denar",
+    "currencySymbol": "ден",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "latitude": 41.83333333,
+    "longitude": 22.0,
+    "timezones": [
+      "Europe/Skopje"
+    ]
+  },
+  {
+    "id": 134,
+    "name": "Mali",
+    "iso2": "ML",
+    "iso3": "MLI",
+    "nativeName": "Mali",
+    "phoneCode": "223",
+    "capital": "Bamako",
+    "currencyCode": "XOF",
+    "currencyName": "West African CFA franc",
+    "currencySymbol": "CFA",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "latitude": 17.0,
+    "longitude": -4.0,
+    "timezones": [
+      "Africa/Bamako"
+    ]
+  },
+  {
+    "id": 151,
+    "name": "Myanmar",
+    "iso2": "MM",
+    "iso3": "MMR",
+    "nativeName": "မြန်မာ",
+    "phoneCode": "95",
+    "capital": "Nay Pyi Taw",
+    "currencyCode": "MMK",
+    "currencyName": "Burmese kyat",
+    "currencySymbol": "K",
+    "region": "Asia",
+    "subregion": "South-Eastern Asia",
+    "latitude": 22.0,
+    "longitude": 98.0,
+    "timezones": [
+      "Asia/Yangon"
+    ]
+  },
+  {
+    "id": 146,
+    "name": "Mongolia",
+    "iso2": "MN",
+    "iso3": "MNG",
+    "nativeName": "Монгол улс",
+    "phoneCode": "976",
+    "capital": "Ulan Bator",
+    "currencyCode": "MNT",
+    "currencyName": "Mongolian tögrög",
+    "currencySymbol": "₮",
+    "region": "Asia",
+    "subregion": "Eastern Asia",
+    "latitude": 46.0,
+    "longitude": 105.0,
+    "timezones": [
+      "Asia/Choibalsan",
+      "Asia/Hovd",
+      "Asia/Ulaanbaatar"
+    ]
+  },
+  {
+    "id": 128,
+    "name": "Macau S.A.R.",
+    "iso2": "MO",
+    "iso3": "MAC",
+    "nativeName": "澳門",
+    "phoneCode": "853",
+    "capital": "Macao",
+    "currencyCode": "MOP",
+    "currencyName": "Macanese pataca",
+    "currencySymbol": "$",
+    "region": "Asia",
+    "subregion": "Eastern Asia",
+    "latitude": 22.16666666,
+    "longitude": 113.55,
+    "timezones": [
+      "Asia/Macau"
+    ]
+  },
+  {
+    "id": 164,
+    "name": "Northern Mariana Islands",
+    "iso2": "MP",
+    "iso3": "MNP",
+    "nativeName": "Northern Mariana Islands",
+    "phoneCode": "1",
+    "capital": "Saipan",
+    "currencyCode": "USD",
+    "currencyName": "United States dollar",
+    "currencySymbol": "$",
+    "region": "Oceania",
+    "subregion": "Micronesia",
+    "latitude": 15.2,
+    "longitude": 145.75,
+    "timezones": [
+      "Pacific/Saipan"
+    ]
+  },
+  {
+    "id": 138,
+    "name": "Martinique",
+    "iso2": "MQ",
+    "iso3": "MTQ",
+    "nativeName": "Martinique",
+    "phoneCode": "596",
+    "capital": "Fort-de-France",
+    "currencyCode": "EUR",
+    "currencyName": "Euro",
+    "currencySymbol": "€",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "latitude": 14.666667,
+    "longitude": -61.0,
+    "timezones": [
+      "America/Martinique"
+    ]
+  },
+  {
+    "id": 139,
+    "name": "Mauritania",
+    "iso2": "MR",
+    "iso3": "MRT",
+    "nativeName": "موريتانيا",
+    "phoneCode": "222",
+    "capital": "Nouakchott",
+    "currencyCode": "MRU",
+    "currencyName": "Mauritanian ouguiya",
+    "currencySymbol": "UM",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "latitude": 20.0,
+    "longitude": -12.0,
+    "timezones": [
+      "Africa/Nouakchott"
+    ]
+  },
+  {
+    "id": 148,
+    "name": "Montserrat",
+    "iso2": "MS",
+    "iso3": "MSR",
+    "nativeName": "Montserrat",
+    "phoneCode": "1",
+    "capital": "Plymouth",
+    "currencyCode": "XCD",
+    "currencyName": "Eastern Caribbean dollar",
+    "currencySymbol": "$",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "latitude": 16.75,
+    "longitude": -62.2,
+    "timezones": [
+      "America/Montserrat"
+    ]
+  },
+  {
+    "id": 135,
+    "name": "Malta",
+    "iso2": "MT",
+    "iso3": "MLT",
+    "nativeName": "Malta",
+    "phoneCode": "356",
+    "capital": "Valletta",
+    "currencyCode": "EUR",
+    "currencyName": "Euro",
+    "currencySymbol": "€",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "latitude": 35.83333333,
+    "longitude": 14.58333333,
+    "timezones": [
+      "Europe/Malta"
+    ]
+  },
+  {
+    "id": 140,
+    "name": "Mauritius",
+    "iso2": "MU",
+    "iso3": "MUS",
+    "nativeName": "Maurice",
+    "phoneCode": "230",
+    "capital": "Port Louis",
+    "currencyCode": "MUR",
+    "currencyName": "Mauritian rupee",
+    "currencySymbol": "₨",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "latitude": -20.28333333,
+    "longitude": 57.55,
+    "timezones": [
+      "Indian/Mauritius"
+    ]
+  },
+  {
+    "id": 133,
+    "name": "Maldives",
+    "iso2": "MV",
+    "iso3": "MDV",
+    "nativeName": "Maldives",
+    "phoneCode": "960",
+    "capital": "Male",
+    "currencyCode": "MVR",
+    "currencyName": "Maldivian rufiyaa",
+    "currencySymbol": "Rf",
+    "region": "Asia",
+    "subregion": "Southern Asia",
+    "latitude": 3.25,
+    "longitude": 73.0,
+    "timezones": [
+      "Indian/Maldives"
+    ]
+  },
+  {
+    "id": 131,
+    "name": "Malawi",
+    "iso2": "MW",
+    "iso3": "MWI",
+    "nativeName": "Malawi",
+    "phoneCode": "265",
+    "capital": "Lilongwe",
+    "currencyCode": "MWK",
+    "currencyName": "Malawian kwacha",
+    "currencySymbol": "MK",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "latitude": -13.5,
+    "longitude": 34.0,
+    "timezones": [
+      "Africa/Blantyre"
+    ]
+  },
+  {
+    "id": 142,
+    "name": "Mexico",
+    "iso2": "MX",
+    "iso3": "MEX",
+    "nativeName": "México",
+    "phoneCode": "52",
+    "capital": "Ciudad de México",
+    "currencyCode": "MXN",
+    "currencyName": "Mexican peso",
+    "currencySymbol": "$",
+    "region": "Americas",
+    "subregion": "Northern America",
+    "latitude": 23.0,
+    "longitude": -102.0,
+    "timezones": [
+      "America/Bahia_Banderas",
+      "America/Cancun",
+      "America/Chihuahua",
+      "America/Ciudad_Juarez",
+      "America/Hermosillo",
+      "America/Matamoros",
+      "America/Mazatlan",
+      "America/Merida",
+      "America/Mexico_City",
+      "America/Monterrey",
+      "America/Ojinaga",
+      "America/Tijuana"
+    ]
+  },
+  {
+    "id": 132,
+    "name": "Malaysia",
+    "iso2": "MY",
+    "iso3": "MYS",
+    "nativeName": "Malaysia",
+    "phoneCode": "60",
+    "capital": "Kuala Lumpur",
+    "currencyCode": "MYR",
+    "currencyName": "Malaysian ringgit",
+    "currencySymbol": "RM",
+    "region": "Asia",
+    "subregion": "South-Eastern Asia",
+    "latitude": 2.5,
+    "longitude": 112.5,
+    "timezones": [
+      "Asia/Kuala_Lumpur",
+      "Asia/Kuching"
+    ]
+  },
+  {
+    "id": 150,
+    "name": "Mozambique",
+    "iso2": "MZ",
+    "iso3": "MOZ",
+    "nativeName": "Moçambique",
+    "phoneCode": "258",
+    "capital": "Maputo",
+    "currencyCode": "MZN",
+    "currencyName": "Mozambican metical",
+    "currencySymbol": "MT",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "latitude": -18.25,
+    "longitude": 35.0,
+    "timezones": [
+      "Africa/Maputo"
+    ]
+  },
+  {
+    "id": 152,
+    "name": "Namibia",
+    "iso2": "NA",
+    "iso3": "NAM",
+    "nativeName": "Namibia",
+    "phoneCode": "264",
+    "capital": "Windhoek",
+    "currencyCode": "NAD",
+    "currencyName": "Namibian dollar",
+    "currencySymbol": "$",
+    "region": "Africa",
+    "subregion": "Southern Africa",
+    "latitude": -22.0,
+    "longitude": 17.0,
+    "timezones": [
+      "Africa/Windhoek"
+    ]
+  },
+  {
+    "id": 157,
+    "name": "New Caledonia",
+    "iso2": "NC",
+    "iso3": "NCL",
+    "nativeName": "Nouvelle-Calédonie",
+    "phoneCode": "687",
+    "capital": "Noumea",
+    "currencyCode": "XPF",
+    "currencyName": "CFP franc",
+    "currencySymbol": "₣",
+    "region": "Oceania",
+    "subregion": "Melanesia",
+    "latitude": -21.5,
+    "longitude": 165.5,
+    "timezones": [
+      "Pacific/Noumea"
+    ]
+  },
+  {
+    "id": 160,
+    "name": "Niger",
+    "iso2": "NE",
+    "iso3": "NER",
+    "nativeName": "Niger",
+    "phoneCode": "227",
+    "capital": "Niamey",
+    "currencyCode": "XOF",
+    "currencyName": "West African CFA franc",
+    "currencySymbol": "CFA",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "latitude": 16.0,
+    "longitude": 8.0,
+    "timezones": [
+      "Africa/Niamey"
+    ]
+  },
+  {
+    "id": 163,
+    "name": "Norfolk Island",
+    "iso2": "NF",
+    "iso3": "NFK",
+    "nativeName": "Norfolk Island",
+    "phoneCode": "672",
+    "capital": "Kingston",
+    "currencyCode": "AUD",
+    "currencyName": "Australian dollar",
+    "currencySymbol": "$",
+    "region": "Oceania",
+    "subregion": "Australia and New Zealand",
+    "latitude": -29.03333333,
+    "longitude": 167.95,
+    "timezones": [
+      "Pacific/Norfolk"
+    ]
+  },
+  {
+    "id": 161,
+    "name": "Nigeria",
+    "iso2": "NG",
+    "iso3": "NGA",
+    "nativeName": "Nigeria",
+    "phoneCode": "234",
+    "capital": "Abuja",
+    "currencyCode": "NGN",
+    "currencyName": "Nigerian naira",
+    "currencySymbol": "₦",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "latitude": 10.0,
+    "longitude": 8.0,
+    "timezones": [
+      "Africa/Lagos"
+    ]
+  },
+  {
+    "id": 159,
+    "name": "Nicaragua",
+    "iso2": "NI",
+    "iso3": "NIC",
+    "nativeName": "Nicaragua",
+    "phoneCode": "505",
+    "capital": "Managua",
+    "currencyCode": "NIO",
+    "currencyName": "Nicaraguan córdoba",
+    "currencySymbol": "C$",
+    "region": "Americas",
+    "subregion": "Central America",
+    "latitude": 13.0,
+    "longitude": -85.0,
+    "timezones": [
+      "America/Managua"
+    ]
+  },
+  {
+    "id": 156,
+    "name": "Netherlands",
+    "iso2": "NL",
+    "iso3": "NLD",
+    "nativeName": "Nederland",
+    "phoneCode": "31",
+    "capital": "Amsterdam",
+    "currencyCode": "EUR",
+    "currencyName": "Euro",
+    "currencySymbol": "€",
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "latitude": 52.5,
+    "longitude": 5.75,
+    "timezones": [
+      "Europe/Amsterdam"
+    ]
+  },
+  {
+    "id": 165,
+    "name": "Norway",
+    "iso2": "NO",
+    "iso3": "NOR",
+    "nativeName": "Norge",
+    "phoneCode": "47",
+    "capital": "Oslo",
+    "currencyCode": "NOK",
+    "currencyName": "Norwegian krone",
+    "currencySymbol": "ko",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "latitude": 62.0,
+    "longitude": 10.0,
+    "timezones": [
+      "Arctic/Longyearbyen",
+      "Europe/Oslo"
+    ]
+  },
+  {
+    "id": 154,
+    "name": "Nepal",
+    "iso2": "NP",
+    "iso3": "NPL",
+    "nativeName": "नेपाल",
+    "phoneCode": "977",
+    "capital": "Kathmandu",
+    "currencyCode": "NPR",
+    "currencyName": "Nepalese rupee",
+    "currencySymbol": "₨",
+    "region": "Asia",
+    "subregion": "Southern Asia",
+    "latitude": 28.0,
+    "longitude": 84.0,
+    "timezones": [
+      "Asia/Kathmandu"
+    ]
+  },
+  {
+    "id": 153,
+    "name": "Nauru",
+    "iso2": "NR",
+    "iso3": "NRU",
+    "nativeName": "Nauru",
+    "phoneCode": "674",
+    "capital": "Yaren",
+    "currencyCode": "AUD",
+    "currencyName": "Australian dollar",
+    "currencySymbol": "$",
+    "region": "Oceania",
+    "subregion": "Micronesia",
+    "latitude": -0.53333333,
+    "longitude": 166.91666666,
+    "timezones": [
+      "Pacific/Nauru"
+    ]
+  },
+  {
+    "id": 162,
+    "name": "Niue",
+    "iso2": "NU",
+    "iso3": "NIU",
+    "nativeName": "Niuē",
+    "phoneCode": "683",
+    "capital": "Alofi",
+    "currencyCode": "NZD",
+    "currencyName": "New Zealand dollar",
+    "currencySymbol": "$",
+    "region": "Oceania",
+    "subregion": "Polynesia",
+    "latitude": -19.03333333,
+    "longitude": -169.86666666,
+    "timezones": [
+      "Pacific/Niue"
+    ]
+  },
+  {
+    "id": 158,
+    "name": "New Zealand",
+    "iso2": "NZ",
+    "iso3": "NZL",
+    "nativeName": "New Zealand",
+    "phoneCode": "64",
+    "capital": "Wellington",
+    "currencyCode": "NZD",
+    "currencyName": "New Zealand dollar",
+    "currencySymbol": "$",
+    "region": "Oceania",
+    "subregion": "Australia and New Zealand",
+    "latitude": -41.0,
+    "longitude": 174.0,
+    "timezones": [
+      "Pacific/Auckland",
+      "Pacific/Chatham"
+    ]
+  },
+  {
+    "id": 166,
+    "name": "Oman",
+    "iso2": "OM",
+    "iso3": "OMN",
+    "nativeName": "عمان",
+    "phoneCode": "968",
+    "capital": "Muscat",
+    "currencyCode": "OMR",
+    "currencyName": "Omani rial",
+    "currencySymbol": ".ع.ر",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "latitude": 21.0,
+    "longitude": 57.0,
+    "timezones": [
+      "Asia/Muscat"
+    ]
+  },
+  {
+    "id": 170,
+    "name": "Panama",
+    "iso2": "PA",
+    "iso3": "PAN",
+    "nativeName": "Panamá",
+    "phoneCode": "507",
+    "capital": "Panama City",
+    "currencyCode": "PAB",
+    "currencyName": "Panamanian balboa",
+    "currencySymbol": "B/.",
+    "region": "Americas",
+    "subregion": "Central America",
+    "latitude": 9.0,
+    "longitude": -80.0,
+    "timezones": [
+      "America/Panama"
+    ]
+  },
+  {
+    "id": 173,
+    "name": "Peru",
+    "iso2": "PE",
+    "iso3": "PER",
+    "nativeName": "Perú",
+    "phoneCode": "51",
+    "capital": "Lima",
+    "currencyCode": "PEN",
+    "currencyName": "Peruvian sol",
+    "currencySymbol": "S/.",
+    "region": "Americas",
+    "subregion": "South America",
+    "latitude": -10.0,
+    "longitude": -76.0,
+    "timezones": [
+      "America/Lima"
+    ]
+  },
+  {
+    "id": 77,
+    "name": "French Polynesia",
+    "iso2": "PF",
+    "iso3": "PYF",
+    "nativeName": "Polynésie française",
+    "phoneCode": "689",
+    "capital": "Papeete",
+    "currencyCode": "XPF",
+    "currencyName": "CFP franc",
+    "currencySymbol": "₣",
+    "region": "Oceania",
+    "subregion": "Polynesia",
+    "latitude": -15.0,
+    "longitude": -140.0,
+    "timezones": [
+      "Pacific/Gambier",
+      "Pacific/Marquesas",
+      "Pacific/Tahiti"
+    ]
+  },
+  {
+    "id": 171,
+    "name": "Papua New Guinea",
+    "iso2": "PG",
+    "iso3": "PNG",
+    "nativeName": "Papua Niugini",
+    "phoneCode": "675",
+    "capital": "Port Moresby",
+    "currencyCode": "PGK",
+    "currencyName": "Papua New Guinean kina",
+    "currencySymbol": "K",
+    "region": "Oceania",
+    "subregion": "Melanesia",
+    "latitude": -6.0,
+    "longitude": 147.0,
+    "timezones": [
+      "Pacific/Bougainville",
+      "Pacific/Port_Moresby"
+    ]
+  },
+  {
+    "id": 174,
+    "name": "Philippines",
+    "iso2": "PH",
+    "iso3": "PHL",
+    "nativeName": "Pilipinas",
+    "phoneCode": "63",
+    "capital": "Manila",
+    "currencyCode": "PHP",
+    "currencyName": "Philippine peso",
+    "currencySymbol": "₱",
+    "region": "Asia",
+    "subregion": "South-Eastern Asia",
+    "latitude": 13.0,
+    "longitude": 122.0,
+    "timezones": [
+      "Asia/Manila"
+    ]
+  },
+  {
+    "id": 167,
+    "name": "Pakistan",
+    "iso2": "PK",
+    "iso3": "PAK",
+    "nativeName": "پاکستان",
+    "phoneCode": "92",
+    "capital": "Islamabad",
+    "currencyCode": "PKR",
+    "currencyName": "Pakistani rupee",
+    "currencySymbol": "₨",
+    "region": "Asia",
+    "subregion": "Southern Asia",
+    "latitude": 30.0,
+    "longitude": 70.0,
+    "timezones": [
+      "Asia/Karachi"
+    ]
+  },
+  {
+    "id": 176,
+    "name": "Poland",
+    "iso2": "PL",
+    "iso3": "POL",
+    "nativeName": "Polska",
+    "phoneCode": "48",
+    "capital": "Warsaw",
+    "currencyCode": "PLN",
+    "currencyName": "Polish złoty",
+    "currencySymbol": "zł",
+    "region": "Europe",
+    "subregion": "Eastern Europe",
+    "latitude": 52.0,
+    "longitude": 20.0,
+    "timezones": [
+      "Europe/Warsaw"
+    ]
+  },
+  {
+    "id": 187,
+    "name": "Saint Pierre and Miquelon",
+    "iso2": "PM",
+    "iso3": "SPM",
+    "nativeName": "Saint-Pierre-et-Miquelon",
+    "phoneCode": "508",
+    "capital": "Saint-Pierre",
+    "currencyCode": "EUR",
+    "currencyName": "Euro",
+    "currencySymbol": "€",
+    "region": "Americas",
+    "subregion": "Northern America",
+    "latitude": 46.83333333,
+    "longitude": -56.33333333,
+    "timezones": [
+      "America/Miquelon"
+    ]
+  },
+  {
+    "id": 175,
+    "name": "Pitcairn Island",
+    "iso2": "PN",
+    "iso3": "PCN",
+    "nativeName": "Pitcairn Islands",
+    "phoneCode": "870",
+    "capital": "Adamstown",
+    "currencyCode": "NZD",
+    "currencyName": "New Zealand dollar",
+    "currencySymbol": "$",
+    "region": "Oceania",
+    "subregion": "Polynesia",
+    "latitude": -25.06666666,
+    "longitude": -130.1,
+    "timezones": [
+      "Pacific/Pitcairn"
+    ]
+  },
+  {
+    "id": 178,
+    "name": "Puerto Rico",
+    "iso2": "PR",
+    "iso3": "PRI",
+    "nativeName": "Puerto Rico",
+    "phoneCode": "1",
+    "capital": "San Juan",
+    "currencyCode": "USD",
+    "currencyName": "United States dollar",
+    "currencySymbol": "$",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "latitude": 18.25,
+    "longitude": -66.5,
+    "timezones": [
+      "America/Puerto_Rico"
+    ]
+  },
+  {
+    "id": 169,
+    "name": "Palestinian Territory Occupied",
+    "iso2": "PS",
+    "iso3": "PSE",
+    "nativeName": "فلسطين",
+    "phoneCode": "970",
+    "capital": "East Jerusalem",
+    "currencyCode": "ILS",
+    "currencyName": "Israeli new shekel",
+    "currencySymbol": "₪",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "latitude": 31.9,
+    "longitude": 35.2,
+    "timezones": [
+      "Asia/Gaza",
+      "Asia/Hebron"
+    ]
+  },
+  {
+    "id": 177,
+    "name": "Portugal",
+    "iso2": "PT",
+    "iso3": "PRT",
+    "nativeName": "Portugal",
+    "phoneCode": "351",
+    "capital": "Lisbon",
+    "currencyCode": "EUR",
+    "currencyName": "Euro",
+    "currencySymbol": "€",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "latitude": 39.5,
+    "longitude": -8.0,
+    "timezones": [
+      "Atlantic/Azores",
+      "Atlantic/Madeira",
+      "Europe/Lisbon"
+    ]
+  },
+  {
+    "id": 168,
+    "name": "Palau",
+    "iso2": "PW",
+    "iso3": "PLW",
+    "nativeName": "Palau",
+    "phoneCode": "680",
+    "capital": "Melekeok",
+    "currencyCode": "USD",
+    "currencyName": "United States dollar",
+    "currencySymbol": "$",
+    "region": "Oceania",
+    "subregion": "Micronesia",
+    "latitude": 7.5,
+    "longitude": 134.5,
+    "timezones": [
+      "Pacific/Palau"
+    ]
+  },
+  {
+    "id": 172,
+    "name": "Paraguay",
+    "iso2": "PY",
+    "iso3": "PRY",
+    "nativeName": "Paraguay",
+    "phoneCode": "595",
+    "capital": "Asunción",
+    "currencyCode": "PYG",
+    "currencyName": "Paraguayan guarani",
+    "currencySymbol": "₲",
+    "region": "Americas",
+    "subregion": "South America",
+    "latitude": -23.0,
+    "longitude": -58.0,
+    "timezones": [
+      "America/Asuncion"
+    ]
+  },
+  {
+    "id": 179,
+    "name": "Qatar",
+    "iso2": "QA",
+    "iso3": "QAT",
+    "nativeName": "قطر",
+    "phoneCode": "974",
+    "capital": "Doha",
+    "currencyCode": "QAR",
+    "currencyName": "Qatari riyal",
+    "currencySymbol": "ق.ر",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "latitude": 25.5,
+    "longitude": 51.25,
+    "timezones": [
+      "Asia/Qatar"
+    ]
+  },
+  {
+    "id": 180,
+    "name": "Reunion",
+    "iso2": "RE",
+    "iso3": "REU",
+    "nativeName": "La Réunion",
+    "phoneCode": "262",
+    "capital": "Saint-Denis",
+    "currencyCode": "EUR",
+    "currencyName": "Euro",
+    "currencySymbol": "€",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "latitude": -21.15,
+    "longitude": 55.5,
+    "timezones": [
+      "Indian/Reunion"
+    ]
+  },
+  {
+    "id": 181,
+    "name": "Romania",
+    "iso2": "RO",
+    "iso3": "ROU",
+    "nativeName": "România",
+    "phoneCode": "40",
+    "capital": "Bucharest",
+    "currencyCode": "RON",
+    "currencyName": "Romanian leu",
+    "currencySymbol": "lei",
+    "region": "Europe",
+    "subregion": "Eastern Europe",
+    "latitude": 46.0,
+    "longitude": 25.0,
+    "timezones": [
+      "Europe/Bucharest"
+    ]
+  },
+  {
+    "id": 196,
+    "name": "Serbia",
+    "iso2": "RS",
+    "iso3": "SRB",
+    "nativeName": "Србија",
+    "phoneCode": "381",
+    "capital": "Belgrade",
+    "currencyCode": "RSD",
+    "currencyName": "Serbian dinar",
+    "currencySymbol": "din",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "latitude": 44.0,
+    "longitude": 21.0,
+    "timezones": [
+      "Europe/Belgrade"
+    ]
+  },
+  {
+    "id": 182,
+    "name": "Russia",
+    "iso2": "RU",
+    "iso3": "RUS",
+    "nativeName": "Россия",
+    "phoneCode": "7",
+    "capital": "Moscow",
+    "currencyCode": "RUB",
+    "currencyName": "Russian ruble",
+    "currencySymbol": "₽",
+    "region": "Europe",
+    "subregion": "Eastern Europe",
+    "latitude": 60.0,
+    "longitude": 100.0,
+    "timezones": [
+      "Asia/Anadyr",
+      "Asia/Barnaul",
+      "Asia/Chita",
+      "Asia/Irkutsk",
+      "Asia/Kamchatka",
+      "Asia/Khandyga",
+      "Asia/Krasnoyarsk",
+      "Asia/Magadan",
+      "Asia/Novokuznetsk",
+      "Asia/Novosibirsk",
+      "Asia/Omsk",
+      "Asia/Sakhalin",
+      "Asia/Srednekolymsk",
+      "Asia/Tomsk",
+      "Asia/Ust-Nera",
+      "Asia/Vladivostok",
+      "Asia/Yakutsk",
+      "Asia/Yekaterinburg",
+      "Europe/Astrakhan",
+      "Europe/Kaliningrad",
+      "Europe/Kirov",
+      "Europe/Moscow",
+      "Europe/Samara",
+      "Europe/Saratov",
+      "Europe/Ulyanovsk",
+      "Europe/Volgograd"
+    ]
+  },
+  {
+    "id": 183,
+    "name": "Rwanda",
+    "iso2": "RW",
+    "iso3": "RWA",
+    "nativeName": "Rwanda",
+    "phoneCode": "250",
+    "capital": "Kigali",
+    "currencyCode": "RWF",
+    "currencyName": "Rwandan franc",
+    "currencySymbol": "FRw",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "latitude": -2.0,
+    "longitude": 30.0,
+    "timezones": [
+      "Africa/Kigali"
+    ]
+  },
+  {
+    "id": 194,
+    "name": "Saudi Arabia",
+    "iso2": "SA",
+    "iso3": "SAU",
+    "nativeName": "المملكة العربية السعودية",
+    "phoneCode": "966",
+    "capital": "Riyadh",
+    "currencyCode": "SAR",
+    "currencyName": "Saudi riyal",
+    "currencySymbol": "﷼",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "latitude": 25.0,
+    "longitude": 45.0,
+    "timezones": [
+      "Asia/Riyadh"
+    ]
+  },
+  {
+    "id": 202,
+    "name": "Solomon Islands",
+    "iso2": "SB",
+    "iso3": "SLB",
+    "nativeName": "Solomon Islands",
+    "phoneCode": "677",
+    "capital": "Honiara",
+    "currencyCode": "SBD",
+    "currencyName": "Solomon Islands dollar",
+    "currencySymbol": "Si$",
+    "region": "Oceania",
+    "subregion": "Melanesia",
+    "latitude": -8.0,
+    "longitude": 159.0,
+    "timezones": [
+      "Pacific/Guadalcanal"
+    ]
+  },
+  {
+    "id": 197,
+    "name": "Seychelles",
+    "iso2": "SC",
+    "iso3": "SYC",
+    "nativeName": "Seychelles",
+    "phoneCode": "248",
+    "capital": "Victoria",
+    "currencyCode": "SCR",
+    "currencyName": "Seychellois rupee",
+    "currencySymbol": "SRe",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "latitude": -4.6574977,
+    "longitude": 55.4540146,
+    "timezones": [
+      "Indian/Mahe"
+    ]
+  },
+  {
+    "id": 209,
+    "name": "Sudan",
+    "iso2": "SD",
+    "iso3": "SDN",
+    "nativeName": "السودان",
+    "phoneCode": "249",
+    "capital": "Khartoum",
+    "currencyCode": "SDG",
+    "currencyName": "Sudanese pound",
+    "currencySymbol": ".س.ج",
+    "region": "Africa",
+    "subregion": "Northern Africa",
+    "latitude": 15.0,
+    "longitude": 30.0,
+    "timezones": [
+      "Africa/Khartoum"
+    ]
+  },
+  {
+    "id": 213,
+    "name": "Sweden",
+    "iso2": "SE",
+    "iso3": "SWE",
+    "nativeName": "Sverige",
+    "phoneCode": "46",
+    "capital": "Stockholm",
+    "currencyCode": "SEK",
+    "currencyName": "Swedish krona",
+    "currencySymbol": "ko",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "latitude": 62.0,
+    "longitude": 15.0,
+    "timezones": [
+      "Europe/Stockholm"
+    ]
+  },
+  {
+    "id": 199,
+    "name": "Singapore",
+    "iso2": "SG",
+    "iso3": "SGP",
+    "nativeName": "Singapore",
+    "phoneCode": "65",
+    "capital": "Singapur",
+    "currencyCode": "SGD",
+    "currencyName": "Singapore dollar",
+    "currencySymbol": "$",
+    "region": "Asia",
+    "subregion": "South-Eastern Asia",
+    "latitude": 1.36666666,
+    "longitude": 103.8,
+    "timezones": [
+      "Asia/Singapore"
+    ]
+  },
+  {
+    "id": 184,
+    "name": "Saint Helena",
+    "iso2": "SH",
+    "iso3": "SHN",
+    "nativeName": "Saint Helena",
+    "phoneCode": "290",
+    "capital": "Jamestown",
+    "currencyCode": "SHP",
+    "currencyName": "Saint Helena pound",
+    "currencySymbol": "£",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "latitude": -15.95,
+    "longitude": -5.7,
+    "timezones": [
+      "Atlantic/St_Helena"
+    ]
+  },
+  {
+    "id": 201,
+    "name": "Slovenia",
+    "iso2": "SI",
+    "iso3": "SVN",
+    "nativeName": "Slovenija",
+    "phoneCode": "386",
+    "capital": "Ljubljana",
+    "currencyCode": "EUR",
+    "currencyName": "Euro",
+    "currencySymbol": "€",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "latitude": 46.11666666,
+    "longitude": 14.81666666,
+    "timezones": [
+      "Europe/Ljubljana"
+    ]
+  },
+  {
+    "id": 211,
+    "name": "Svalbard and Jan Mayen Islands",
+    "iso2": "SJ",
+    "iso3": "SJM",
+    "nativeName": "Svalbard og Jan Mayen",
+    "phoneCode": "47",
+    "capital": "Longyearbyen",
+    "currencyCode": "NOK",
+    "currencyName": "Norwegian krone",
+    "currencySymbol": "ko",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "latitude": 78.0,
+    "longitude": 20.0,
+    "timezones": [
+      "Arctic/Longyearbyen"
+    ]
+  },
+  {
+    "id": 200,
+    "name": "Slovakia",
+    "iso2": "SK",
+    "iso3": "SVK",
+    "nativeName": "Slovensko",
+    "phoneCode": "421",
+    "capital": "Bratislava",
+    "currencyCode": "EUR",
+    "currencyName": "Euro",
+    "currencySymbol": "€",
+    "region": "Europe",
+    "subregion": "Eastern Europe",
+    "latitude": 48.66666666,
+    "longitude": 19.5,
+    "timezones": [
+      "Europe/Bratislava"
+    ]
+  },
+  {
+    "id": 198,
+    "name": "Sierra Leone",
+    "iso2": "SL",
+    "iso3": "SLE",
+    "nativeName": "Sierra Leone",
+    "phoneCode": "232",
+    "capital": "Freetown",
+    "currencyCode": "SLL",
+    "currencyName": "Sierra Leonean leone",
+    "currencySymbol": "Le",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "latitude": 8.5,
+    "longitude": -11.5,
+    "timezones": [
+      "Africa/Freetown"
+    ]
+  },
+  {
+    "id": 192,
+    "name": "San Marino",
+    "iso2": "SM",
+    "iso3": "SMR",
+    "nativeName": "San Marino",
+    "phoneCode": "378",
+    "capital": "San Marino",
+    "currencyCode": "EUR",
+    "currencyName": "Euro",
+    "currencySymbol": "€",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "latitude": 43.76666666,
+    "longitude": 12.41666666,
+    "timezones": [
+      "Europe/San_Marino"
+    ]
+  },
+  {
+    "id": 195,
+    "name": "Senegal",
+    "iso2": "SN",
+    "iso3": "SEN",
+    "nativeName": "Sénégal",
+    "phoneCode": "221",
+    "capital": "Dakar",
+    "currencyCode": "XOF",
+    "currencyName": "West African CFA franc",
+    "currencySymbol": "CFA",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "latitude": 14.0,
+    "longitude": -14.0,
+    "timezones": [
+      "Africa/Dakar"
+    ]
+  },
+  {
+    "id": 203,
+    "name": "Somalia",
+    "iso2": "SO",
+    "iso3": "SOM",
+    "nativeName": "Soomaaliya",
+    "phoneCode": "252",
+    "capital": "Mogadishu",
+    "currencyCode": "SOS",
+    "currencyName": "Somali shilling",
+    "currencySymbol": "Sh.so.",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "latitude": 10.0,
+    "longitude": 49.0,
+    "timezones": [
+      "Africa/Mogadishu"
+    ]
+  },
+  {
+    "id": 210,
+    "name": "Suriname",
+    "iso2": "SR",
+    "iso3": "SUR",
+    "nativeName": "Suriname",
+    "phoneCode": "597",
+    "capital": "Paramaribo",
+    "currencyCode": "SRD",
+    "currencyName": "Surinamese dollar",
+    "currencySymbol": "$",
+    "region": "Americas",
+    "subregion": "South America",
+    "latitude": 4.0,
+    "longitude": -56.0,
+    "timezones": [
+      "America/Paramaribo"
+    ]
+  },
+  {
+    "id": 206,
+    "name": "South Sudan",
+    "iso2": "SS",
+    "iso3": "SSD",
+    "nativeName": "South Sudan",
+    "phoneCode": "211",
+    "capital": "Juba",
+    "currencyCode": "SSP",
+    "currencyName": "South Sudanese pound",
+    "currencySymbol": "£",
+    "region": "Africa",
+    "subregion": "Middle Africa",
+    "latitude": 7.0,
+    "longitude": 30.0,
+    "timezones": [
+      "Africa/Juba"
+    ]
+  },
+  {
+    "id": 193,
+    "name": "Sao Tome and Principe",
+    "iso2": "ST",
+    "iso3": "STP",
+    "nativeName": "São Tomé e Príncipe",
+    "phoneCode": "239",
+    "capital": "Sao Tome",
+    "currencyCode": "STN",
+    "currencyName": "Dobra",
+    "currencySymbol": "Db",
+    "region": "Africa",
+    "subregion": "Middle Africa",
+    "latitude": 1.0,
+    "longitude": 7.0,
+    "timezones": [
+      "Africa/Sao_Tome"
+    ]
+  },
+  {
+    "id": 66,
+    "name": "El Salvador",
+    "iso2": "SV",
+    "iso3": "SLV",
+    "nativeName": "El Salvador",
+    "phoneCode": "503",
+    "capital": "San Salvador",
+    "currencyCode": "USD",
+    "currencyName": "United States dollar",
+    "currencySymbol": "$",
+    "region": "Americas",
+    "subregion": "Central America",
+    "latitude": 13.83333333,
+    "longitude": -88.91666666,
+    "timezones": [
+      "America/El_Salvador"
+    ]
+  },
+  {
+    "id": 250,
+    "name": "Sint Maarten (Dutch part)",
+    "iso2": "SX",
+    "iso3": "SXM",
+    "nativeName": "Sint Maarten",
+    "phoneCode": "1721",
+    "capital": "Philipsburg",
+    "currencyCode": "ANG",
+    "currencyName": "Netherlands Antillean guilder",
+    "currencySymbol": "ƒ",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "latitude": 18.033333,
+    "longitude": -63.05,
+    "timezones": [
+      "America/Anguilla"
+    ]
+  },
+  {
+    "id": 215,
+    "name": "Syria",
+    "iso2": "SY",
+    "iso3": "SYR",
+    "nativeName": "سوريا",
+    "phoneCode": "963",
+    "capital": "Damascus",
+    "currencyCode": "SYP",
+    "currencyName": "Syrian pound",
+    "currencySymbol": "LS",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "latitude": 35.0,
+    "longitude": 38.0,
+    "timezones": [
+      "Asia/Damascus"
+    ]
+  },
+  {
+    "id": 212,
+    "name": "Eswatini",
+    "iso2": "SZ",
+    "iso3": "SWZ",
+    "nativeName": "Swaziland",
+    "phoneCode": "268",
+    "capital": "Mbabane",
+    "currencyCode": "SZL",
+    "currencyName": "Lilangeni",
+    "currencySymbol": "E",
+    "region": "Africa",
+    "subregion": "Southern Africa",
+    "latitude": -26.5,
+    "longitude": 31.5,
+    "timezones": [
+      "Africa/Mbabane"
+    ]
+  },
+  {
+    "id": 227,
+    "name": "Turks and Caicos Islands",
+    "iso2": "TC",
+    "iso3": "TCA",
+    "nativeName": "Turks and Caicos Islands",
+    "phoneCode": "1",
+    "capital": "Cockburn Town",
+    "currencyCode": "USD",
+    "currencyName": "United States dollar",
+    "currencySymbol": "$",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "latitude": 21.75,
+    "longitude": -71.58333333,
+    "timezones": [
+      "America/Grand_Turk"
+    ]
+  },
+  {
+    "id": 43,
+    "name": "Chad",
+    "iso2": "TD",
+    "iso3": "TCD",
+    "nativeName": "Tchad",
+    "phoneCode": "235",
+    "capital": "N'Djamena",
+    "currencyCode": "XAF",
+    "currencyName": "Central African CFA franc",
+    "currencySymbol": "FCFA",
+    "region": "Africa",
+    "subregion": "Middle Africa",
+    "latitude": 15.0,
+    "longitude": 19.0,
+    "timezones": [
+      "Africa/Ndjamena"
+    ]
+  },
+  {
+    "id": 78,
+    "name": "French Southern Territories",
+    "iso2": "TF",
+    "iso3": "ATF",
+    "nativeName": "Territoire des Terres australes et antarctiques fr",
+    "phoneCode": "262",
+    "capital": "Port-aux-Francais",
+    "currencyCode": "EUR",
+    "currencyName": "Euro",
+    "currencySymbol": "€",
+    "region": "Africa",
+    "subregion": "Southern Africa",
+    "latitude": -49.25,
+    "longitude": 69.167,
+    "timezones": [
+      "Indian/Kerguelen"
+    ]
+  },
+  {
+    "id": 220,
+    "name": "Togo",
+    "iso2": "TG",
+    "iso3": "TGO",
+    "nativeName": "Togo",
+    "phoneCode": "228",
+    "capital": "Lome",
+    "currencyCode": "XOF",
+    "currencyName": "West African CFA franc",
+    "currencySymbol": "CFA",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "latitude": 8.0,
+    "longitude": 1.16666666,
+    "timezones": [
+      "Africa/Lome"
+    ]
+  },
+  {
+    "id": 219,
+    "name": "Thailand",
+    "iso2": "TH",
+    "iso3": "THA",
+    "nativeName": "ประเทศไทย",
+    "phoneCode": "66",
+    "capital": "Bangkok",
+    "currencyCode": "THB",
+    "currencyName": "Thai baht",
+    "currencySymbol": "฿",
+    "region": "Asia",
+    "subregion": "South-Eastern Asia",
+    "latitude": 15.0,
+    "longitude": 100.0,
+    "timezones": [
+      "Asia/Bangkok"
+    ]
+  },
+  {
+    "id": 217,
+    "name": "Tajikistan",
+    "iso2": "TJ",
+    "iso3": "TJK",
+    "nativeName": "Тоҷикистон",
+    "phoneCode": "992",
+    "capital": "Dushanbe",
+    "currencyCode": "TJS",
+    "currencyName": "Tajikistani somoni",
+    "currencySymbol": "SM",
+    "region": "Asia",
+    "subregion": "Central Asia",
+    "latitude": 39.0,
+    "longitude": 71.0,
+    "timezones": [
+      "Asia/Dushanbe"
+    ]
+  },
+  {
+    "id": 221,
+    "name": "Tokelau",
+    "iso2": "TK",
+    "iso3": "TKL",
+    "nativeName": "Tokelau",
+    "phoneCode": "690",
+    "capital": null,
+    "currencyCode": "NZD",
+    "currencyName": "New Zealand dollar",
+    "currencySymbol": "$",
+    "region": "Oceania",
+    "subregion": "Polynesia",
+    "latitude": -9.0,
+    "longitude": -172.0,
+    "timezones": [
+      "Pacific/Fakaofo"
+    ]
+  },
+  {
+    "id": 63,
+    "name": "Timor-Leste",
+    "iso2": "TL",
+    "iso3": "TLS",
+    "nativeName": "Timor-Leste",
+    "phoneCode": "670",
+    "capital": "Dili",
+    "currencyCode": "USD",
+    "currencyName": "United States dollar",
+    "currencySymbol": "$",
+    "region": "Asia",
+    "subregion": "South-Eastern Asia",
+    "latitude": -8.83333333,
+    "longitude": 125.91666666,
+    "timezones": [
+      "Asia/Dili"
+    ]
+  },
+  {
+    "id": 226,
+    "name": "Turkmenistan",
+    "iso2": "TM",
+    "iso3": "TKM",
+    "nativeName": "Türkmenistan",
+    "phoneCode": "993",
+    "capital": "Ashgabat",
+    "currencyCode": "TMT",
+    "currencyName": "Turkmenistan manat",
+    "currencySymbol": "T",
+    "region": "Asia",
+    "subregion": "Central Asia",
+    "latitude": 40.0,
+    "longitude": 60.0,
+    "timezones": [
+      "Asia/Ashgabat"
+    ]
+  },
+  {
+    "id": 224,
+    "name": "Tunisia",
+    "iso2": "TN",
+    "iso3": "TUN",
+    "nativeName": "تونس",
+    "phoneCode": "216",
+    "capital": "Tunis",
+    "currencyCode": "TND",
+    "currencyName": "Tunisian dinar",
+    "currencySymbol": "ت.د",
+    "region": "Africa",
+    "subregion": "Northern Africa",
+    "latitude": 34.0,
+    "longitude": 9.0,
+    "timezones": [
+      "Africa/Tunis"
+    ]
+  },
+  {
+    "id": 222,
+    "name": "Tonga",
+    "iso2": "TO",
+    "iso3": "TON",
+    "nativeName": "Tonga",
+    "phoneCode": "676",
+    "capital": "Nuku'alofa",
+    "currencyCode": "TOP",
+    "currencyName": "Tongan paʻanga",
+    "currencySymbol": "$",
+    "region": "Oceania",
+    "subregion": "Polynesia",
+    "latitude": -20.0,
+    "longitude": -175.0,
+    "timezones": [
+      "Pacific/Tongatapu"
+    ]
+  },
+  {
+    "id": 225,
+    "name": "Turkey",
+    "iso2": "TR",
+    "iso3": "TUR",
+    "nativeName": "Türkiye",
+    "phoneCode": "90",
+    "capital": "Ankara",
+    "currencyCode": "TRY",
+    "currencyName": "Turkish lira",
+    "currencySymbol": "₺",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "latitude": 39.0,
+    "longitude": 35.0,
+    "timezones": [
+      "Europe/Istanbul"
+    ]
+  },
+  {
+    "id": 223,
+    "name": "Trinidad and Tobago",
+    "iso2": "TT",
+    "iso3": "TTO",
+    "nativeName": "Trinidad and Tobago",
+    "phoneCode": "1",
+    "capital": "Port of Spain",
+    "currencyCode": "TTD",
+    "currencyName": "Trinidad and Tobago dollar",
+    "currencySymbol": "$",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "latitude": 11.0,
+    "longitude": -61.0,
+    "timezones": [
+      "America/Port_of_Spain"
+    ]
+  },
+  {
+    "id": 228,
+    "name": "Tuvalu",
+    "iso2": "TV",
+    "iso3": "TUV",
+    "nativeName": "Tuvalu",
+    "phoneCode": "688",
+    "capital": "Funafuti",
+    "currencyCode": "AUD",
+    "currencyName": "Australian dollar",
+    "currencySymbol": "$",
+    "region": "Oceania",
+    "subregion": "Polynesia",
+    "latitude": -8.0,
+    "longitude": 178.0,
+    "timezones": [
+      "Pacific/Funafuti"
+    ]
+  },
+  {
+    "id": 216,
+    "name": "Taiwan",
+    "iso2": "TW",
+    "iso3": "TWN",
+    "nativeName": "臺灣",
+    "phoneCode": "886",
+    "capital": "Taipei",
+    "currencyCode": "TWD",
+    "currencyName": "New Taiwan dollar",
+    "currencySymbol": "$",
+    "region": "Asia",
+    "subregion": "Eastern Asia",
+    "latitude": 23.5,
+    "longitude": 121.0,
+    "timezones": [
+      "Asia/Taipei"
+    ]
+  },
+  {
+    "id": 218,
+    "name": "Tanzania",
+    "iso2": "TZ",
+    "iso3": "TZA",
+    "nativeName": "Tanzania",
+    "phoneCode": "255",
+    "capital": "Dodoma",
+    "currencyCode": "TZS",
+    "currencyName": "Tanzanian shilling",
+    "currencySymbol": "TSh",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "latitude": -6.0,
+    "longitude": 35.0,
+    "timezones": [
+      "Africa/Dar_es_Salaam"
+    ]
+  },
+  {
+    "id": 230,
+    "name": "Ukraine",
+    "iso2": "UA",
+    "iso3": "UKR",
+    "nativeName": "Україна",
+    "phoneCode": "380",
+    "capital": "Kyiv",
+    "currencyCode": "UAH",
+    "currencyName": "Ukrainian hryvnia",
+    "currencySymbol": "₴",
+    "region": "Europe",
+    "subregion": "Eastern Europe",
+    "latitude": 49.0,
+    "longitude": 32.0,
+    "timezones": [
+      "Europe/Kyiv",
+      "Europe/Simferopol",
+      "Europe/Uzhgorod",
+      "Europe/Zaporozhye"
+    ]
+  },
+  {
+    "id": 229,
+    "name": "Uganda",
+    "iso2": "UG",
+    "iso3": "UGA",
+    "nativeName": "Uganda",
+    "phoneCode": "256",
+    "capital": "Kampala",
+    "currencyCode": "UGX",
+    "currencyName": "Ugandan shilling",
+    "currencySymbol": "USh",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "latitude": 1.0,
+    "longitude": 32.0,
+    "timezones": [
+      "Africa/Kampala"
+    ]
+  },
+  {
+    "id": 234,
+    "name": "United States Minor Outlying Islands",
+    "iso2": "UM",
+    "iso3": "UMI",
+    "nativeName": "United States Minor Outlying Islands",
+    "phoneCode": "1",
+    "capital": null,
+    "currencyCode": "USD",
+    "currencyName": "United States dollar",
+    "currencySymbol": "$",
+    "region": "Americas",
+    "subregion": "Northern America",
+    "latitude": 0.0,
+    "longitude": 0.0,
+    "timezones": [
+      "Pacific/Midway",
+      "Pacific/Wake"
+    ]
+  },
+  {
+    "id": 233,
+    "name": "United States",
+    "iso2": "US",
+    "iso3": "USA",
+    "nativeName": "United States",
+    "phoneCode": "1",
+    "capital": "Washington",
+    "currencyCode": "USD",
+    "currencyName": "United States dollar",
+    "currencySymbol": "$",
+    "region": "Americas",
+    "subregion": "Northern America",
+    "latitude": 38.0,
+    "longitude": -97.0,
+    "timezones": [
+      "America/Adak",
+      "America/Anchorage",
+      "America/Boise",
+      "America/Chicago",
+      "America/Denver",
+      "America/Detroit",
+      "America/Indiana/Indianapolis",
+      "America/Indiana/Knox",
+      "America/Indiana/Marengo",
+      "America/Indiana/Petersburg",
+      "America/Indiana/Tell_City",
+      "America/Indiana/Vevay",
+      "America/Indiana/Vincennes",
+      "America/Indiana/Winamac",
+      "America/Juneau",
+      "America/Kentucky/Louisville",
+      "America/Kentucky/Monticello",
+      "America/Los_Angeles",
+      "America/Menominee",
+      "America/Metlakatla",
+      "America/New_York",
+      "America/Nome",
+      "America/North_Dakota/Beulah",
+      "America/North_Dakota/Center",
+      "America/North_Dakota/New_Salem",
+      "America/Phoenix",
+      "America/Sitka",
+      "America/Yakutat",
+      "Pacific/Honolulu"
+    ]
+  },
+  {
+    "id": 235,
+    "name": "Uruguay",
+    "iso2": "UY",
+    "iso3": "URY",
+    "nativeName": "Uruguay",
+    "phoneCode": "598",
+    "capital": "Montevideo",
+    "currencyCode": "UYU",
+    "currencyName": "Uruguayan peso",
+    "currencySymbol": "$",
+    "region": "Americas",
+    "subregion": "South America",
+    "latitude": -33.0,
+    "longitude": -56.0,
+    "timezones": [
+      "America/Montevideo"
+    ]
+  },
+  {
+    "id": 236,
+    "name": "Uzbekistan",
+    "iso2": "UZ",
+    "iso3": "UZB",
+    "nativeName": "O‘zbekiston",
+    "phoneCode": "998",
+    "capital": "Tashkent",
+    "currencyCode": "UZS",
+    "currencyName": "Uzbekistani soʻm",
+    "currencySymbol": "лв",
+    "region": "Asia",
+    "subregion": "Central Asia",
+    "latitude": 41.0,
+    "longitude": 64.0,
+    "timezones": [
+      "Asia/Samarkand",
+      "Asia/Tashkent"
+    ]
+  },
+  {
+    "id": 238,
+    "name": "Vatican City State (Holy See)",
+    "iso2": "VA",
+    "iso3": "VAT",
+    "nativeName": "Vaticano",
+    "phoneCode": "379",
+    "capital": "Vatican City",
+    "currencyCode": "EUR",
+    "currencyName": "Euro",
+    "currencySymbol": "€",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "latitude": 41.9,
+    "longitude": 12.45,
+    "timezones": [
+      "Europe/Vatican"
+    ]
+  },
+  {
+    "id": 188,
+    "name": "Saint Vincent and the Grenadines",
+    "iso2": "VC",
+    "iso3": "VCT",
+    "nativeName": "Saint Vincent and the Grenadines",
+    "phoneCode": "1",
+    "capital": "Kingstown",
+    "currencyCode": "XCD",
+    "currencyName": "Eastern Caribbean dollar",
+    "currencySymbol": "$",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "latitude": 13.25,
+    "longitude": -61.2,
+    "timezones": [
+      "America/St_Vincent"
+    ]
+  },
+  {
+    "id": 239,
+    "name": "Venezuela",
+    "iso2": "VE",
+    "iso3": "VEN",
+    "nativeName": "Venezuela",
+    "phoneCode": "58",
+    "capital": "Caracas",
+    "currencyCode": "VES",
+    "currencyName": "Bolívar",
+    "currencySymbol": "Bs",
+    "region": "Americas",
+    "subregion": "South America",
+    "latitude": 8.0,
+    "longitude": -66.0,
+    "timezones": [
+      "America/Caracas"
+    ]
+  },
+  {
+    "id": 241,
+    "name": "Virgin Islands (British)",
+    "iso2": "VG",
+    "iso3": "VGB",
+    "nativeName": "British Virgin Islands",
+    "phoneCode": "1",
+    "capital": "Road Town",
+    "currencyCode": "USD",
+    "currencyName": "United States dollar",
+    "currencySymbol": "$",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "latitude": 18.431383,
+    "longitude": -64.62305,
+    "timezones": [
+      "America/Tortola"
+    ]
+  },
+  {
+    "id": 242,
+    "name": "Virgin Islands (US)",
+    "iso2": "VI",
+    "iso3": "VIR",
+    "nativeName": "United States Virgin Islands",
+    "phoneCode": "1",
+    "capital": "Charlotte Amalie",
+    "currencyCode": "USD",
+    "currencyName": "United States dollar",
+    "currencySymbol": "$",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "latitude": 18.34,
+    "longitude": -64.93,
+    "timezones": [
+      "America/St_Thomas"
+    ]
+  },
+  {
+    "id": 240,
+    "name": "Vietnam",
+    "iso2": "VN",
+    "iso3": "VNM",
+    "nativeName": "Việt Nam",
+    "phoneCode": "84",
+    "capital": "Hanoi",
+    "currencyCode": "VND",
+    "currencyName": "Vietnamese đồng",
+    "currencySymbol": "₫",
+    "region": "Asia",
+    "subregion": "South-Eastern Asia",
+    "latitude": 16.16666666,
+    "longitude": 107.83333333,
+    "timezones": [
+      "Asia/Ho_Chi_Minh"
+    ]
+  },
+  {
+    "id": 237,
+    "name": "Vanuatu",
+    "iso2": "VU",
+    "iso3": "VUT",
+    "nativeName": "Vanuatu",
+    "phoneCode": "678",
+    "capital": "Port Vila",
+    "currencyCode": "VUV",
+    "currencyName": "Vanuatu vatu",
+    "currencySymbol": "VT",
+    "region": "Oceania",
+    "subregion": "Melanesia",
+    "latitude": -16.0,
+    "longitude": 167.0,
+    "timezones": [
+      "Pacific/Efate"
+    ]
+  },
+  {
+    "id": 243,
+    "name": "Wallis and Futuna Islands",
+    "iso2": "WF",
+    "iso3": "WLF",
+    "nativeName": "Wallis et Futuna",
+    "phoneCode": "681",
+    "capital": "Mata Utu",
+    "currencyCode": "XPF",
+    "currencyName": "CFP franc",
+    "currencySymbol": "₣",
+    "region": "Oceania",
+    "subregion": "Polynesia",
+    "latitude": -13.3,
+    "longitude": -176.2,
+    "timezones": [
+      "Pacific/Wallis"
+    ]
+  },
+  {
+    "id": 191,
+    "name": "Samoa",
+    "iso2": "WS",
+    "iso3": "WSM",
+    "nativeName": "Samoa",
+    "phoneCode": "685",
+    "capital": "Apia",
+    "currencyCode": "WST",
+    "currencyName": "Samoan tālā",
+    "currencySymbol": "SAT",
+    "region": "Oceania",
+    "subregion": "Polynesia",
+    "latitude": -13.58333333,
+    "longitude": -172.33333333,
+    "timezones": [
+      "Pacific/Apia"
+    ]
+  },
+  {
+    "id": 248,
+    "name": "Kosovo",
+    "iso2": "XK",
+    "iso3": "XKX",
+    "nativeName": "Republika e Kosovës",
+    "phoneCode": "383",
+    "capital": "Pristina",
+    "currencyCode": "EUR",
+    "currencyName": "Euro",
+    "currencySymbol": "€",
+    "region": "Europe",
+    "subregion": "Eastern Europe",
+    "latitude": 42.5612909,
+    "longitude": 20.3403035,
+    "timezones": [
+      "Europe/Belgrade"
+    ]
+  },
+  {
+    "id": 245,
+    "name": "Yemen",
+    "iso2": "YE",
+    "iso3": "YEM",
+    "nativeName": "اليَمَن",
+    "phoneCode": "967",
+    "capital": "Sanaa",
+    "currencyCode": "YER",
+    "currencyName": "Yemeni rial",
+    "currencySymbol": "﷼",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "latitude": 15.0,
+    "longitude": 48.0,
+    "timezones": [
+      "Asia/Aden"
+    ]
+  },
+  {
+    "id": 141,
+    "name": "Mayotte",
+    "iso2": "YT",
+    "iso3": "MYT",
+    "nativeName": "Mayotte",
+    "phoneCode": "262",
+    "capital": "Mamoudzou",
+    "currencyCode": "EUR",
+    "currencyName": "Euro",
+    "currencySymbol": "€",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "latitude": -12.83333333,
+    "longitude": 45.16666666,
+    "timezones": [
+      "Indian/Mayotte"
+    ]
+  },
+  {
+    "id": 204,
+    "name": "South Africa",
+    "iso2": "ZA",
+    "iso3": "ZAF",
+    "nativeName": "South Africa",
+    "phoneCode": "27",
+    "capital": "Pretoria",
+    "currencyCode": "ZAR",
+    "currencyName": "South African rand",
+    "currencySymbol": "R",
+    "region": "Africa",
+    "subregion": "Southern Africa",
+    "latitude": -29.0,
+    "longitude": 24.0,
+    "timezones": [
+      "Africa/Johannesburg"
+    ]
+  },
+  {
+    "id": 246,
+    "name": "Zambia",
+    "iso2": "ZM",
+    "iso3": "ZMB",
+    "nativeName": "Zambia",
+    "phoneCode": "260",
+    "capital": "Lusaka",
+    "currencyCode": "ZMW",
+    "currencyName": "Zambian kwacha",
+    "currencySymbol": "ZK",
+    "region": "Africa",
+    "subregion": "Southern Africa",
+    "latitude": -15.0,
+    "longitude": 30.0,
+    "timezones": [
+      "Africa/Lusaka"
+    ]
+  },
+  {
+    "id": 247,
+    "name": "Zimbabwe",
+    "iso2": "ZW",
+    "iso3": "ZWE",
+    "nativeName": "Zimbabwe",
+    "phoneCode": "263",
+    "capital": "Harare",
+    "currencyCode": "ZWL",
+    "currencyName": "Zimbabwe Dollar",
+    "currencySymbol": "$",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "latitude": -20.0,
+    "longitude": 30.0,
+    "timezones": [
+      "Africa/Harare"
+    ]
+  }
+]

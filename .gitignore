@@ -1,0 +1,16 @@
+.dart_tool/
+.packages
+.pub/
+build/
+coverage/
+.idea/
+*.iml
+.flutter-plugins
+.flutter-plugins-dependencies
+pubspec.lock
+.tool_work/
+tool/.upstream/
+tool/cache/
+tool/reports/monthly_maintenance.md
+*.tmp
+*.backup
