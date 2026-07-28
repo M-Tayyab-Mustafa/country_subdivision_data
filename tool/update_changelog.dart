@@ -69,13 +69,18 @@ void main(List<String> arguments) {
       }
       buffer
         ..writeln('### Data\n')
-        ..writeln(
-          '- Updated the country, subdivision, and city snapshot.',
-        )
-        ..writeln(
+        ..writeln('- Updated the country, subdivision, and city snapshot.');
+      if (oldCommit == newCommit) {
+        buffer.writeln(
+          '- Preserved verified upstream commit `$newCommit` while '
+          'normalizing deterministic snapshot encoding.\n',
+        );
+      } else {
+        buffer.writeln(
           '- Updated the upstream database commit from '
           '`$oldCommit` to `$newCommit`.\n',
         );
+      }
     }
     buffer
       ..writeln('### Validation\n')

@@ -1,3 +1,23 @@
+## 0.0.2
+
+### Data
+
+- Updated the country, subdivision, and city snapshot.
+- Preserved verified upstream commit `81d127720a3da919c5d3da95a662316626a1ce49` while normalizing deterministic snapshot encoding.
+
+### Reliability and release automation
+
+- Made gzip snapshot generation byte-identical across macOS and Linux.
+- Added an active pull-request-only release design with strict required checks,
+  branch refresh, and squash auto-merge.
+- Added post-merge release-tag verification and tag-only pub.dev OIDC
+  publication.
+- Corrected CI formatting and pull-request version-policy validation.
+
+### Validation
+
+- Passed formatting, analysis, tests, snapshot integrity, Nigeria regression, and pub.dev publication dry-run.
+
 ## 0.0.1
 
 - Initial development release.

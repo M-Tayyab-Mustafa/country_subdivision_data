@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "package": "country_subdivision_data",
+  "previousVersion": "0.0.1",
+  "version": "0.0.2",
+  "tag": "v0.0.2",
+  "flutter": {
+    "previous": "3.44.8",
+    "latestStableChecked": "3.44.8",
+    "selected": "3.44.8",
+    "updated": false,
+    "reason": "same-major"
+  },
+  "data": {
+    "previousUpstreamCommit": "81d127720a3da919c5d3da95a662316626a1ce49",
+    "upstreamCommit": "81d127720a3da919c5d3da95a662316626a1ce49",
+    "updated": true,
+    "countries": 250,
+    "subdivisions": 5308,
+    "cities": 152970,
+    "snapshotSha256": "ccafabf2a07ea237267eeb9c6bf1eb3caf20f52d3fd7b6f1e7333342b2162b40"
+  },
+  "validation": {
+    "format": "passed",
+    "analysis": "passed",
+    "tests": "passed",
+    "nigeriaRegression": "passed",
+    "snapshot": "passed",
+    "deterministicGeneration": "passed",
+    "flutterSdk": "passed",
+    "upstreamMetadata": "passed",
+    "versionPolicy": "passed",
+    "releaseReview": "passed",
+    "publishDryRun": "passed"
+  },
+  "publication": {
+    "status": "pending"
+  }
+}
