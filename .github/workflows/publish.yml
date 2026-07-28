@@ -38,7 +38,7 @@ jobs:
           dart run tool/version_manager.dart verify --tag "$TAG"
           test -f "tool/reports/releases/$version.md"
           test -f "tool/reports/releases/$version.json"
-          rg "^# country_subdivision_data $version$" \
+          grep -Fx "# country_subdivision_data $version" \
             "tool/reports/releases/$version.md"
           test "$(jq -r .version "tool/reports/releases/$version.json")" = "$version"
           git fetch origin "$DEFAULT_BRANCH"
@@ -117,6 +117,18 @@ jobs:
         run: |
           version="${TAG#v}"
           title="Automated publication failed for $TAG"
+          gh label create automated-release-failure \
+            --color D73A4A \
+            --description "Automated release requires investigation" \
+            --force
+          gh label create pub-dev \
+            --color 0E8A16 \
+            --description "pub.dev publication" \
+            --force
+          gh label create maintenance \
+            --color 1D76DB \
+            --description "Repository maintenance" \
+            --force
           body="$(printf '%s\n' \
             "Package version: $version" \
             "Tag: $TAG" \
