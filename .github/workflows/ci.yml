@@ -25,6 +25,7 @@ jobs:
           channel: stable
           flutter-version-file: '.flutter-version'
           cache: true
+      - run: flutter pub get
       - run: dart format --output=none --set-exit-if-changed .
 
   static-analysis:
