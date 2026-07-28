@@ -6,6 +6,7 @@ import 'package:flutter_test/flutter_test.dart';
 void main() {
   late String ci;
   late String monthly;
+  late String refreshMonthly;
   late String tagMergedRelease;
   late String publish;
   late Map<String, Object?> mainRules;
@@ -15,6 +16,9 @@ void main() {
     ci = File('.github/workflows/ci.yml').readAsStringSync();
     monthly = File(
       '.github/workflows/monthly_maintenance.yml',
+    ).readAsStringSync();
+    refreshMonthly = File(
+      '.github/workflows/update_monthly_maintenance.yml',
     ).readAsStringSync();
     tagMergedRelease = File(
       '.github/workflows/tag_merged_release.yml',
@@ -26,7 +30,7 @@ void main() {
     );
   });
 
-  test('CI exposes every required check and supports merge queue events', () {
+  test('CI exposes every required check without merge queue events', () {
     const checks = <String>[
       'Formatting',
       'Static analysis',
@@ -40,7 +44,7 @@ void main() {
       'Release-review verification',
       'pub.dev publication dry-run',
     ];
-    expect(ci, contains('merge_group:'));
+    expect(ci, isNot(contains('merge_group:')));
     for (final check in checks) {
       expect(ci, contains('name: $check'), reason: check);
     }
@@ -56,6 +60,18 @@ void main() {
     expect(monthly, isNot(contains('HEAD:main')));
     expect(monthly, isNot(contains(r'HEAD:$DEFAULT_BRANCH')));
     expect(monthly, isNot(contains('refs/tags/v')));
+  });
+
+  test('main updates refresh the monthly branch and preserve auto-merge', () {
+    expect(refreshMonthly, contains('push:'));
+    expect(refreshMonthly, contains('- main'));
+    expect(
+      refreshMonthly,
+      contains('--head automation/monthly-maintenance'),
+    );
+    expect(refreshMonthly, contains('gh pr update-branch'));
+    expect(refreshMonthly, contains('--auto --squash'));
+    expect(refreshMonthly, isNot(contains('HEAD:main')));
   });
 
   test('monthly maintenance performs exactly one version bump', () {
@@ -101,15 +117,22 @@ void main() {
         'required_linear_history',
         'pull_request',
         'required_status_checks',
-        'merge_queue',
       }),
     );
+    expect(types, isNot(contains('merge_queue')));
     final pullRequest = rules.cast<Map<String, Object?>>().singleWhere(
           (rule) => rule['type'] == 'pull_request',
         );
     final parameters = pullRequest['parameters']! as Map<String, Object?>;
+    expect(parameters['allowed_merge_methods'], <String>['squash']);
     expect(parameters['required_approving_review_count'], 0);
     expect(parameters['required_review_thread_resolution'], true);
+    final requiredChecks = rules.cast<Map<String, Object?>>().singleWhere(
+          (rule) => rule['type'] == 'required_status_checks',
+        );
+    final checkParameters =
+        requiredChecks['parameters']! as Map<String, Object?>;
+    expect(checkParameters['strict_required_status_checks_policy'], true);
   });
 
   test('immutable release tags have no update or deletion bypass', () {

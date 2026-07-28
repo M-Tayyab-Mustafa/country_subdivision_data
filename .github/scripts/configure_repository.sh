@@ -20,17 +20,10 @@ upsert_ruleset() {
   fi
 }
 
-main_rules="$(mktemp)"
 tag_creation_rules="$(mktemp)"
-trap 'rm -f "$main_rules" "$tag_creation_rules"' EXIT
+trap 'rm -f "$tag_creation_rules"' EXIT
 
-if ! upsert_ruleset .github/rulesets/main.json; then
-  jq 'del(.rules[] | select(.type == "merge_queue"))' \
-    .github/rulesets/main.json >"$main_rules"
-  upsert_ruleset "$main_rules"
-  echo "Merge queue is unavailable; protected auto-merge remains required."
-fi
-
+upsert_ruleset .github/rulesets/main.json
 upsert_ruleset .github/rulesets/release-tags-immutable.json
 
 jq --argjson app_id "$RELEASE_APP_ID" '{

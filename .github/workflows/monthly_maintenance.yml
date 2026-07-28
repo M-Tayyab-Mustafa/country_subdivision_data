@@ -213,7 +213,14 @@ jobs:
               -f title="$title" -F body=@"$body_file" >/dev/null
           fi
           echo "number=$pr_number" >> "$GITHUB_OUTPUT"
-      - name: Enable policy-gated auto-merge or merge queue
+      - name: Refresh the pull request branch from main
+        if: steps.decision.outputs.eligible == 'true'
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+          PR_NUMBER: ${{ steps.pull-request.outputs.number }}
+        run: |
+          gh pr update-branch "$PR_NUMBER" --repo "$GITHUB_REPOSITORY"
+      - name: Enable policy-gated squash auto-merge
         if: steps.decision.outputs.eligible == 'true'
         env:
           GH_TOKEN: ${{ steps.app-token.outputs.token }}

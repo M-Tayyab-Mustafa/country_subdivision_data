@@ -61,10 +61,10 @@ verified upstream commit. No meaningful change leaves the repository untouched.
 An eligible run applies Flutter-major and/or data changes, validates before and
 after exactly one bump, generates a Markdown/JSON release review, and pushes
 only `automation/monthly-maintenance`. It opens or updates a pull request to
-`main` and enables auto-merge or the merge queue. After GitHub merges that pull
-request, a separate workflow verifies the commit on `main` and the dedicated
-release GitHub App creates the immutable tag. Only that tag can trigger OIDC
-publication.
+`main`, refreshes the automation branch whenever `main` changes, and enables
+squash auto-merge. After GitHub merges that pull request, a separate workflow
+verifies the commit on `main` and the dedicated release GitHub App creates the
+immutable tag. Only that tag can trigger OIDC publication.
 
 Repository setup must provide:
 
@@ -75,7 +75,8 @@ Repository setup must provide:
   and pull requests write.
 - Active `main` protection with an empty bypass list, pull-request-only changes,
   zero human approvals, conversation resolution, strict required checks, linear
-  history, force-push/deletion protection, and merge queue when supported.
+  history, and force-push/deletion protection. The bypass list must remain
+  empty.
 - Auto-merge enabled, with squash as the only allowed merge method.
 - Immutable `v*` tag protection with no update/deletion bypass. A separate tag
   creation rule permits only the dedicated release GitHub App.
@@ -88,11 +89,12 @@ GH_TOKEN=... RELEASE_APP_ID=... \
   bash .github/scripts/configure_repository.sh
 ```
 
-The workflow fails if `main` advances, credentials are absent, a tag already
-exists, validation fails, or candidate data is not meaningful. It may replace
-only its dedicated maintenance branch using a lease-protected update; it never
-pushes directly to `main`, bypasses the `main` ruleset, force-updates a release
-tag, or reuses a tag.
+The workflow refreshes its open pull-request branch and reruns required checks
+when `main` advances. It fails if credentials are absent, a tag already exists,
+validation fails, or candidate data is not meaningful. It may replace only its
+dedicated maintenance branch using a lease-protected update; it never pushes
+directly to `main`, bypasses the `main` ruleset, force-updates a release tag, or
+reuses a tag.
 
 ## One-time initial publication and OIDC
 

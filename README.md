@@ -180,10 +180,11 @@ publishable data changes. A combined run performs one package-version bump.
 No-change runs create no commit, tag, release, or publication. After the one-time
 manual publication of `0.0.1` and OIDC configuration, eligible monthly runs are
 fully automatic. They update only `automation/monthly-maintenance`, open a pull
-request to protected `main`, and enable auto-merge or the merge queue. The
-release GitHub App creates the immutable `v{{version}}` tag only after GitHub
-merges that pull request and the tagged commit is verified on `main`. Only that
-tag can trigger pub.dev OIDC publication.
+request to protected `main`, refresh that branch whenever `main` changes, and
+enable squash auto-merge. The release GitHub App creates the immutable
+`v{{version}}` tag only after GitHub merges that pull request and the tagged
+commit is verified on `main`. Only that tag can trigger pub.dev OIDC
+publication.
 
 The custom version sequence rolls `0.0.9` to `0.1.0` and `0.9.9` to `1.0.0`;
 minor and patch components never exceed nine.
