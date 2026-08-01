@@ -62,9 +62,7 @@ void main(List<String> arguments) {
           '- Updated the pinned Flutter stable SDK from '
           '`$oldFlutter` to `$newFlutter`.',
         )
-        ..writeln(
-          '- The minimum supported Flutter SDK remains unchanged.\n',
-        );
+        ..writeln('- The minimum supported Flutter SDK remains unchanged.\n');
     }
     if (trigger == 'data' || trigger == 'combined') {
       if (oldCommit == null || newCommit == null) {

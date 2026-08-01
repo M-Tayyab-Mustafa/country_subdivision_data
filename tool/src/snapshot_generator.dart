@@ -34,9 +34,7 @@ SnapshotGenerationResult generateSnapshot({
   required Directory output,
   String? expectedCommit,
 }) {
-  final source = File(
-    '${upstream.path}/json/countries+states+cities.json',
-  );
+  final source = File('${upstream.path}/json/countries+states+cities.json');
   final license = File('${upstream.path}/LICENSE');
   if (!source.existsSync() || !license.existsSync()) {
     throw StateError(
@@ -50,10 +48,10 @@ SnapshotGenerationResult generateSnapshot({
     throw StateError('The upstream checkout does not declare ODbL licensing.');
   }
 
-  final commit = runGit(
-    <String>['rev-parse', 'HEAD'],
-    workingDirectory: upstream.path,
-  );
+  final commit = runGit(<String>[
+    'rev-parse',
+    'HEAD',
+  ], workingDirectory: upstream.path);
   if (!RegExp(r'^[0-9a-f]{40}$').hasMatch(commit)) {
     throw StateError('Could not resolve a full upstream commit SHA.');
   }
@@ -61,10 +59,12 @@ SnapshotGenerationResult generateSnapshot({
     throw StateError('Resolved commit $commit does not match $expectedCommit.');
   }
   final commitTime = DateTime.parse(
-    runGit(
-      <String>['show', '-s', '--format=%cI', commit],
-      workingDirectory: upstream.path,
-    ),
+    runGit(<String>[
+      'show',
+      '-s',
+      '--format=%cI',
+      commit,
+    ], workingDirectory: upstream.path),
   ).toUtc();
 
   final rawCountries = readJsonList(source);
@@ -140,10 +140,7 @@ SnapshotGenerationResult generateSnapshot({
         'id': subdivisionId,
         'countryId': id,
         'countryCode': iso2,
-        'name': text(
-          rawSubdivision['name'],
-          '$iso2 subdivision.name',
-        ),
+        'name': text(rawSubdivision['name'], '$iso2 subdivision.name'),
         'code': subdivisionCode,
         'type': nullableText(rawSubdivision['type']),
         'latitude': nullableNumber(rawSubdivision['latitude']),
@@ -181,9 +178,8 @@ SnapshotGenerationResult generateSnapshot({
     };
   }
   countries.sort(
-    (left, right) => (left['iso2']! as String).compareTo(
-      right['iso2']! as String,
-    ),
+    (left, right) =>
+        (left['iso2']! as String).compareTo(right['iso2']! as String),
   );
 
   final parent = output.parent;
@@ -248,9 +244,9 @@ SnapshotGenerationResult generateSnapshot({
     'checksumFiles': deterministicFiles.keys.toList(growable: false),
     'files': fileIndex,
   };
-  File('${temporary.path}/manifest.json').writeAsStringSync(
-    prettyJson(manifest),
-  );
+  File(
+    '${temporary.path}/manifest.json',
+  ).writeAsStringSync(prettyJson(manifest));
   File('${temporary.path}/SIZE_REPORT.md').writeAsStringSync(
     '# Generated snapshot size\n\n'
     '- Countries: ${countries.length}\n'

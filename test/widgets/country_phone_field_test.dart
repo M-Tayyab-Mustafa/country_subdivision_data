@@ -114,32 +114,32 @@ void main() {
               pickerOpened = true;
               return null;
             },
-            phoneTextFieldBuilder: (
-              context,
-              controller,
-              focusNode,
-              country,
-              enabled,
-              openPicker,
-              onChanged,
-            ) =>
-                Row(
-              children: <Widget>[
-                IconButton(
-                  key: const Key('custom-open-picker'),
-                  onPressed: enabled ? openPicker : null,
-                  icon: Text(country?.iso2 ?? ''),
+            phoneTextFieldBuilder:
+                (
+                  context,
+                  controller,
+                  focusNode,
+                  country,
+                  enabled,
+                  openPicker,
+                  onChanged,
+                ) => Row(
+                  children: <Widget>[
+                    IconButton(
+                      key: const Key('custom-open-picker'),
+                      onPressed: enabled ? openPicker : null,
+                      icon: Text(country?.iso2 ?? ''),
+                    ),
+                    Expanded(
+                      child: TextField(
+                        key: const Key('custom-phone'),
+                        controller: controller,
+                        focusNode: focusNode,
+                        onChanged: onChanged,
+                      ),
+                    ),
+                  ],
                 ),
-                Expanded(
-                  child: TextField(
-                    key: const Key('custom-phone'),
-                    controller: controller,
-                    focusNode: focusNode,
-                    onChanged: onChanged,
-                  ),
-                ),
-              ],
-            ),
           ),
         ),
       ),

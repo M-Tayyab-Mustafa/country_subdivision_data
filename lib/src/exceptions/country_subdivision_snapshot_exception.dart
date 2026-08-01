@@ -21,7 +21,8 @@ class CountrySubdivisionSnapshotException implements Exception {
   final StackTrace? stackTrace;
 
   @override
-  String toString() => 'CountrySubdivisionSnapshotException: $message'
+  String toString() =>
+      'CountrySubdivisionSnapshotException: $message'
       '${countryCode == null ? '' : ' [country: $countryCode]'}'
       '${cause == null ? '' : ' (cause: $cause)'}';
 }

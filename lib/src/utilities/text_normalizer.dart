@@ -1,9 +1,6 @@
 /// Normalizes text for deterministic, diacritic-insensitive lookup.
 String normalizeSearchText(String value) {
-  var normalized = value.trim().toLowerCase().replaceAll(
-        RegExp(r'\s+'),
-        ' ',
-      );
+  var normalized = value.trim().toLowerCase().replaceAll(RegExp(r'\s+'), ' ');
   const replacements = <String, String>{
     'àáâãäåāăąǎ': 'a',
     'çćĉċč': 'c',

@@ -43,9 +43,7 @@ void main(List<String> arguments) {
     }
     final result = generateSnapshot(
       upstream: Directory(upstreamPath),
-      output: Directory(
-        options['output'] ?? 'assets/country_subdivision_data',
-      ),
+      output: Directory(options['output'] ?? 'assets/country_subdivision_data'),
       expectedCommit: options['upstream-commit'],
     );
     stdout.writeln(

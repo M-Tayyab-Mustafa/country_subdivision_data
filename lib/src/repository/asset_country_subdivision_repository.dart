@@ -30,9 +30,9 @@ final class AssetCountrySubdivisionRepository
     AssetBundle? assetBundle,
     String assetPrefix = _defaultPrefix,
     int maximumCachedCountries = 8,
-  })  : _assetBundle = assetBundle ?? rootBundle,
-        _assetPrefix = assetPrefix.replaceFirst(RegExp(r'/$'), ''),
-        _maximumCachedCountries = maximumCachedCountries {
+  }) : _assetBundle = assetBundle ?? rootBundle,
+       _assetPrefix = assetPrefix.replaceFirst(RegExp(r'/$'), ''),
+       _maximumCachedCountries = maximumCachedCountries {
     if (maximumCachedCountries <= 0) {
       throw ArgumentError.value(
         maximumCachedCountries,
@@ -294,9 +294,11 @@ final class AssetCountrySubdivisionRepository
   @override
   Future<void> clearCache() async {
     _cache.clear();
-    await Future.wait<void>(_inProgress.values.map((future) async {
-      await future;
-    }));
+    await Future.wait<void>(
+      _inProgress.values.map((future) async {
+        await future;
+      }),
+    );
     _cache.clear();
   }
 
@@ -315,10 +317,11 @@ final class AssetCountrySubdivisionRepository
       _cache[countryCode] = cached;
       return Future<_CountryDataset>.value(cached);
     }
-    return _inProgress[countryCode] ??=
-        _loadAsset(countryCode).whenComplete(() {
-      unawaited(_inProgress.remove(countryCode));
-    });
+    return _inProgress[countryCode] ??= _loadAsset(countryCode).whenComplete(
+      () {
+        unawaited(_inProgress.remove(countryCode));
+      },
+    );
   }
 
   Future<_CountryDataset> _loadAsset(String countryCode) async {
@@ -398,21 +401,20 @@ final class _CountryDataset {
   _CountryDataset({
     required List<Subdivision> subdivisions,
     required List<City> cities,
-  })  : subdivisions = List<Subdivision>.unmodifiable(subdivisions),
-        cities = List<City>.unmodifiable(cities),
-        subdivisionsByCode = Map<String, Subdivision>.unmodifiable(
-          <String, Subdivision>{
-            for (final value in subdivisions)
-              if (value.code != null) value.code!.toUpperCase(): value,
-          },
-        ),
-        subdivisionsById = Map<int, Subdivision>.unmodifiable(
-          <int, Subdivision>{for (final value in subdivisions) value.id: value},
-        ),
-        citiesById = Map<int, City>.unmodifiable(
-          <int, City>{for (final value in cities) value.id: value},
-        ),
-        citiesBySubdivisionCode = _groupCities(cities);
+  }) : subdivisions = List<Subdivision>.unmodifiable(subdivisions),
+       cities = List<City>.unmodifiable(cities),
+       subdivisionsByCode =
+           Map<String, Subdivision>.unmodifiable(<String, Subdivision>{
+             for (final value in subdivisions)
+               if (value.code != null) value.code!.toUpperCase(): value,
+           }),
+       subdivisionsById = Map<int, Subdivision>.unmodifiable(<int, Subdivision>{
+         for (final value in subdivisions) value.id: value,
+       }),
+       citiesById = Map<int, City>.unmodifiable(<int, City>{
+         for (final value in cities) value.id: value,
+       }),
+       citiesBySubdivisionCode = _groupCities(cities);
 
   factory _CountryDataset.fromJson(Map<String, Object?> json) {
     final subdivisionJson = json['subdivisions'];
@@ -450,10 +452,8 @@ Map<String, List<City>> _groupCities(List<City> cities) {
   }
   return Map<String, List<City>>.unmodifiable(
     grouped.map(
-      (key, value) => MapEntry<String, List<City>>(
-        key,
-        List<City>.unmodifiable(value),
-      ),
+      (key, value) =>
+          MapEntry<String, List<City>>(key, List<City>.unmodifiable(value)),
     ),
   );
 }

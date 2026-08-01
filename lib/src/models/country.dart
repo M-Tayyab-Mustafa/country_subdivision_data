@@ -94,22 +94,22 @@ final class Country {
 
   /// Converts this value to normalized snapshot JSON.
   Map<String, Object?> toJson() => <String, Object?>{
-        'id': id,
-        'name': name,
-        'iso2': iso2,
-        'iso3': iso3,
-        'nativeName': nativeName,
-        'phoneCode': phoneCode,
-        'capital': capital,
-        'currencyCode': currencyCode,
-        'currencyName': currencyName,
-        'currencySymbol': currencySymbol,
-        'region': region,
-        'subregion': subregion,
-        'latitude': latitude,
-        'longitude': longitude,
-        'timezones': timezones,
-      };
+    'id': id,
+    'name': name,
+    'iso2': iso2,
+    'iso3': iso3,
+    'nativeName': nativeName,
+    'phoneCode': phoneCode,
+    'capital': capital,
+    'currencyCode': currencyCode,
+    'currencyName': currencyName,
+    'currencySymbol': currencySymbol,
+    'region': region,
+    'subregion': subregion,
+    'latitude': latitude,
+    'longitude': longitude,
+    'timezones': timezones,
+  };
 
   @override
   bool operator ==(Object other) =>
@@ -133,22 +133,22 @@ final class Country {
 
   @override
   int get hashCode => Object.hash(
-        id,
-        name,
-        iso2,
-        iso3,
-        Object.hashAll(timezones),
-        nativeName,
-        phoneCode,
-        capital,
-        currencyCode,
-        currencyName,
-        currencySymbol,
-        region,
-        subregion,
-        latitude,
-        longitude,
-      );
+    id,
+    name,
+    iso2,
+    iso3,
+    Object.hashAll(timezones),
+    nativeName,
+    phoneCode,
+    capital,
+    currencyCode,
+    currencyName,
+    currencySymbol,
+    region,
+    subregion,
+    latitude,
+    longitude,
+  );
 
   @override
   String toString() => 'Country($iso2, $name)';

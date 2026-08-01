@@ -57,18 +57,17 @@ void main(List<String> arguments) {
     );
     _expect(markdown.contains('Git tag: v$version'), 'Markdown tag');
     _expect(
-      RegExp('^## ${RegExp.escape(version)}\$', multiLine: true)
-          .hasMatch(changelog),
+      RegExp(
+        '^## ${RegExp.escape(version)}\$',
+        multiLine: true,
+      ).hasMatch(changelog),
       'changelog heading',
     );
     _expect(
       data['upstreamCommit'] == manifest['upstreamCommit'],
       'upstream commit',
     );
-    _expect(
-      data['snapshotSha256'] == manifest['sha256'],
-      'snapshot checksum',
-    );
+    _expect(data['snapshotSha256'] == manifest['sha256'], 'snapshot checksum');
     const requiredValidations = <String>[
       'format',
       'analysis',

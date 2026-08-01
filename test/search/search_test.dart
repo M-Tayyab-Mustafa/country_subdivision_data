@@ -38,10 +38,7 @@ void main() {
     });
 
     test('empty searches are empty and invalid limits fail', () async {
-      expect(
-        await data.searchCountries(query: '   '),
-        isEmpty,
-      );
+      expect(await data.searchCountries(query: '   '), isEmpty);
       await expectLater(
         data.searchCities(query: 'Port', limit: 0),
         throwsArgumentError,

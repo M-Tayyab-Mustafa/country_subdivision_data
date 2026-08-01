@@ -10,43 +10,43 @@ import '../models/country_phone_number.dart';
 import 'country_picker_dialog.dart';
 
 /// Builds the button used to open the country picker.
-typedef CountryPhoneSelectorBuilder = Widget Function(
-  BuildContext context,
-  Country? country,
-  bool enabled,
-  VoidCallback openPicker,
-);
+typedef CountryPhoneSelectorBuilder =
+    Widget Function(
+      BuildContext context,
+      Country? country,
+      bool enabled,
+      VoidCallback openPicker,
+    );
 
 /// Completely replaces the default phone text field.
 ///
 /// The builder receives picker state and [openPicker], so a custom composition
 /// can place the country selector anywhere.
-typedef CountryPhoneTextFieldBuilder = Widget Function(
-  BuildContext context,
-  TextEditingController controller,
-  FocusNode focusNode,
-  Country? country,
-  bool enabled,
-  VoidCallback openPicker,
-  ValueChanged<String> onChanged,
-);
+typedef CountryPhoneTextFieldBuilder =
+    Widget Function(
+      BuildContext context,
+      TextEditingController controller,
+      FocusNode focusNode,
+      Country? country,
+      bool enabled,
+      VoidCallback openPicker,
+      ValueChanged<String> onChanged,
+    );
 
 /// Presents a custom country picker route.
-typedef CountryPickerPresenter = Future<Country?> Function(
-  BuildContext context,
-  List<Country> countries,
-  Country? selectedCountry,
-);
+typedef CountryPickerPresenter =
+    Future<Country?> Function(
+      BuildContext context,
+      List<Country> countries,
+      Country? selectedCountry,
+    );
 
 /// Builds a state shown while countries load.
 typedef CountryPhoneLoadingBuilder = Widget Function(BuildContext context);
 
 /// Builds a state shown when countries cannot be loaded.
-typedef CountryPhoneErrorBuilder = Widget Function(
-  BuildContext context,
-  Object error,
-  VoidCallback retry,
-);
+typedef CountryPhoneErrorBuilder =
+    Widget Function(BuildContext context, Object error, VoidCallback retry);
 
 /// Fully customizable country-aware phone-number form field.
 ///
@@ -306,8 +306,9 @@ final class _CountryPhoneFieldState extends State<CountryPhoneField> {
 
   TextEditingController get _controller =>
       widget.controller ??
-      (_internalController ??=
-          TextEditingController(text: widget.initialValue));
+      (_internalController ??= TextEditingController(
+        text: widget.initialValue,
+      ));
 
   FocusNode get _focusNode =>
       widget.focusNode ?? (_internalFocusNode ??= FocusNode());
@@ -348,9 +349,7 @@ final class _CountryPhoneFieldState extends State<CountryPhoneField> {
           oldWidget.favoriteCountryCodes,
           widget.favoriteCountryCodes,
         )) {
-      unawaited(
-        _loadCountries(preferRequestedCountry: initialCountryChanged),
-      );
+      unawaited(_loadCountries(preferRequestedCountry: initialCountryChanged));
     }
   }
 
@@ -464,9 +463,7 @@ final class _CountryPhoneFieldState extends State<CountryPhoneField> {
         );
   }
 
-  Future<void> _loadCountries({
-    bool preferRequestedCountry = false,
-  }) async {
+  Future<void> _loadCountries({bool preferRequestedCountry = false}) async {
     if (mounted) {
       setState(() {
         _loading = true;
@@ -517,28 +514,25 @@ final class _CountryPhoneFieldState extends State<CountryPhoneField> {
     if (_countries.isEmpty || !widget.enabled || widget.readOnly) {
       return;
     }
-    final selected = await (widget.pickerPresenter?.call(
-          context,
-          _countries,
-          _country,
-        ) ??
-        showCountryPickerDialog(
-          context: context,
-          countries: _countries,
-          selectedCountry: _country,
-          configuration: widget.pickerConfiguration,
-          itemBuilder: widget.pickerItemBuilder,
-          searchFieldBuilder: widget.pickerSearchFieldBuilder,
-          flagBuilder: widget.pickerFlagBuilder,
-          titleBuilder: widget.pickerTitleBuilder,
-          emptyBuilder: widget.pickerEmptyBuilder,
-          dialogBuilder: widget.pickerDialogBuilder,
-          barrierDismissible: widget.pickerBarrierDismissible,
-          barrierColor: widget.pickerBarrierColor,
-          barrierLabel: widget.pickerBarrierLabel,
-          useRootNavigator: widget.useRootNavigator,
-          routeSettings: widget.pickerRouteSettings,
-        ));
+    final selected =
+        await (widget.pickerPresenter?.call(context, _countries, _country) ??
+            showCountryPickerDialog(
+              context: context,
+              countries: _countries,
+              selectedCountry: _country,
+              configuration: widget.pickerConfiguration,
+              itemBuilder: widget.pickerItemBuilder,
+              searchFieldBuilder: widget.pickerSearchFieldBuilder,
+              flagBuilder: widget.pickerFlagBuilder,
+              titleBuilder: widget.pickerTitleBuilder,
+              emptyBuilder: widget.pickerEmptyBuilder,
+              dialogBuilder: widget.pickerDialogBuilder,
+              barrierDismissible: widget.pickerBarrierDismissible,
+              barrierColor: widget.pickerBarrierColor,
+              barrierLabel: widget.pickerBarrierLabel,
+              useRootNavigator: widget.useRootNavigator,
+              routeSettings: widget.pickerRouteSettings,
+            ));
     if (!mounted || selected == null || selected == _country) {
       return;
     }
@@ -587,8 +581,5 @@ List<Country> _favoritesFirst(
     }
   }
   favorites.sort((left, right) => left.order.compareTo(right.order));
-  return <Country>[
-    ...favorites.map((entry) => entry.country),
-    ...remaining,
-  ];
+  return <Country>[...favorites.map((entry) => entry.country), ...remaining];
 }

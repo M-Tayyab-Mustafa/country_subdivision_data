@@ -29,9 +29,9 @@ void main() {
       final first = await data.getSubdivisions(countryCode: 'NG');
       final concurrent =
           await Future.wait<List<Subdivision>>(<Future<List<Subdivision>>>[
-        data.getSubdivisions(countryCode: 'ng'),
-        data.getSubdivisions(countryCode: 'NG'),
-      ]);
+            data.getSubdivisions(countryCode: 'ng'),
+            data.getSubdivisions(countryCode: 'NG'),
+          ]);
       expect(first, hasLength(37));
       expect(concurrent.first, same(concurrent.last));
       await data.clearCache();

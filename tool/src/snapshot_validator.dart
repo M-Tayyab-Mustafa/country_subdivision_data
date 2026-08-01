@@ -128,7 +128,8 @@ SnapshotValidationResult validateSnapshot(
       if (subdivisionCode != null &&
           !subdivisionsByCountryAndCode.add('$code\u0000$subdivisionCode')) {
         throw FormatException(
-            'Duplicate subdivision code $code-$subdivisionCode.');
+          'Duplicate subdivision code $code-$subdivisionCode.',
+        );
       }
     }
     for (final cityValue in cities) {
@@ -212,13 +213,14 @@ void _validateNigeria(Map<String, Object?>? data) {
     throw FormatException('Nigeria Rivers subdivision (RI) is missing.');
   }
   final riversId = rivers.single['id'];
-  final portHarcourt =
-      cities.map((value) => objectMap(value, 'Nigeria city')).where(
-            (value) =>
-                value['name'].toString().toLowerCase() == 'port harcourt' &&
-                value['subdivisionId'] == riversId &&
-                value['subdivisionCode'] == 'RI',
-          );
+  final portHarcourt = cities
+      .map((value) => objectMap(value, 'Nigeria city'))
+      .where(
+        (value) =>
+            value['name'].toString().toLowerCase() == 'port harcourt' &&
+            value['subdivisionId'] == riversId &&
+            value['subdivisionCode'] == 'RI',
+      );
   if (portHarcourt.isEmpty) {
     throw FormatException('Port Harcourt is not assigned to Rivers.');
   }

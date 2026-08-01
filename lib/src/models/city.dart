@@ -17,19 +17,19 @@ final class City {
 
   /// Creates a city from normalized snapshot JSON.
   factory City.fromJson(Map<String, Object?> json) => City(
-        id: requiredInt(json['id'], 'id'),
-        countryId: requiredInt(json['countryId'], 'countryId'),
-        subdivisionId: optionalInt(json['subdivisionId']),
-        countryCode: requiredString(
-          json['countryCode'],
-          'countryCode',
-        ).toUpperCase(),
-        subdivisionCode: optionalString(json['subdivisionCode']),
-        name: requiredString(json['name'], 'name'),
-        latitude: optionalDouble(json['latitude']),
-        longitude: optionalDouble(json['longitude']),
-        timezone: optionalString(json['timezone']),
-      );
+    id: requiredInt(json['id'], 'id'),
+    countryId: requiredInt(json['countryId'], 'countryId'),
+    subdivisionId: optionalInt(json['subdivisionId']),
+    countryCode: requiredString(
+      json['countryCode'],
+      'countryCode',
+    ).toUpperCase(),
+    subdivisionCode: optionalString(json['subdivisionCode']),
+    name: requiredString(json['name'], 'name'),
+    latitude: optionalDouble(json['latitude']),
+    longitude: optionalDouble(json['longitude']),
+    timezone: optionalString(json['timezone']),
+  );
 
   /// Stable upstream identifier.
   final int id;
@@ -60,16 +60,16 @@ final class City {
 
   /// Converts this value to normalized snapshot JSON.
   Map<String, Object?> toJson() => <String, Object?>{
-        'id': id,
-        'countryId': countryId,
-        'subdivisionId': subdivisionId,
-        'countryCode': countryCode,
-        'subdivisionCode': subdivisionCode,
-        'name': name,
-        'latitude': latitude,
-        'longitude': longitude,
-        'timezone': timezone,
-      };
+    'id': id,
+    'countryId': countryId,
+    'subdivisionId': subdivisionId,
+    'countryCode': countryCode,
+    'subdivisionCode': subdivisionCode,
+    'name': name,
+    'latitude': latitude,
+    'longitude': longitude,
+    'timezone': timezone,
+  };
 
   @override
   bool operator ==(Object other) =>
@@ -87,16 +87,16 @@ final class City {
 
   @override
   int get hashCode => Object.hash(
-        id,
-        countryId,
-        subdivisionId,
-        countryCode,
-        subdivisionCode,
-        name,
-        latitude,
-        longitude,
-        timezone,
-      );
+    id,
+    countryId,
+    subdivisionId,
+    countryCode,
+    subdivisionCode,
+    name,
+    latitude,
+    longitude,
+    timezone,
+  );
 
   @override
   String toString() => 'City($countryCode, $name)';

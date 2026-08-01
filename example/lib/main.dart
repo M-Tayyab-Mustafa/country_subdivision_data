@@ -12,10 +12,10 @@ final class ExampleApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => MaterialApp(
-        title: 'Country subdivision data',
-        theme: ThemeData(colorSchemeSeed: Colors.indigo, useMaterial3: true),
-        home: const LocationExplorer(),
-      );
+    title: 'Country subdivision data',
+    theme: ThemeData(colorSchemeSeed: Colors.indigo, useMaterial3: true),
+    home: const LocationExplorer(),
+  );
 }
 
 final class LocationExplorer extends StatefulWidget {
@@ -252,12 +252,14 @@ final class _LocationExplorerState extends State<LocationExplorer> {
             _subdivision == null
                 ? 'Select a subdivision to load cities.'
                 : _cities.isEmpty
-                    ? 'No cities are listed for this subdivision.'
-                    : '${_cities.length} cities loaded.',
+                ? 'No cities are listed for this subdivision.'
+                : '${_cities.length} cities loaded.',
           ),
           for (final city in _results)
             ListTile(
-                title: Text(city.name), subtitle: Text(city.timezone ?? '')),
+              title: Text(city.name),
+              subtitle: Text(city.timezone ?? ''),
+            ),
           TextButton.icon(
             onPressed: () {
               ScaffoldMessenger.of(context).showSnackBar(

@@ -6,35 +6,37 @@ import '../models/country.dart';
 import '../search/location_search.dart';
 
 /// Builds one selectable country row.
-typedef CountryPickerItemBuilder = Widget Function(
-  BuildContext context,
-  Country country,
-  bool isSelected,
-  VoidCallback select,
-);
+typedef CountryPickerItemBuilder =
+    Widget Function(
+      BuildContext context,
+      Country country,
+      bool isSelected,
+      VoidCallback select,
+    );
 
 /// Builds the search field used by [CountryPickerDialog].
-typedef CountryPickerSearchFieldBuilder = Widget Function(
-  BuildContext context,
-  TextEditingController controller,
-  ValueChanged<String> onChanged,
-);
+typedef CountryPickerSearchFieldBuilder =
+    Widget Function(
+      BuildContext context,
+      TextEditingController controller,
+      ValueChanged<String> onChanged,
+    );
 
 /// Builds the country flag or other leading content.
-typedef CountryPickerFlagBuilder = Widget Function(
-    BuildContext context, Country country);
+typedef CountryPickerFlagBuilder =
+    Widget Function(BuildContext context, Country country);
 
 /// Builds the picker title.
-typedef CountryPickerTitleBuilder = Widget Function(
-    BuildContext context, VoidCallback close);
+typedef CountryPickerTitleBuilder =
+    Widget Function(BuildContext context, VoidCallback close);
 
 /// Builds the no-results state for a normalized [query].
-typedef CountryPickerEmptyBuilder = Widget Function(
-    BuildContext context, String query);
+typedef CountryPickerEmptyBuilder =
+    Widget Function(BuildContext context, String query);
 
 /// Wraps or replaces the default dialog around [content].
-typedef CountryPickerDialogBuilder = Widget Function(
-    BuildContext context, Widget content);
+typedef CountryPickerDialogBuilder =
+    Widget Function(BuildContext context, Widget content);
 
 /// Visual and behavioral defaults for [CountryPickerDialog].
 final class CountryPickerDialogConfiguration {
@@ -282,16 +284,15 @@ final class _CountryPickerDialogState extends State<CountryPickerDialog> {
           children: <Widget>[
             Padding(
               padding: configuration.titlePadding,
-              child: widget.titleBuilder?.call(context, _close) ??
-                  _DefaultTitle(
-                    configuration: configuration,
-                    close: _close,
-                  ),
+              child:
+                  widget.titleBuilder?.call(context, _close) ??
+                  _DefaultTitle(configuration: configuration, close: _close),
             ),
             if (configuration.showSearch)
               Padding(
                 padding: configuration.searchPadding,
-                child: widget.searchFieldBuilder?.call(
+                child:
+                    widget.searchFieldBuilder?.call(
                       context,
                       _controller,
                       _onSearchChanged,
@@ -302,7 +303,8 @@ final class _CountryPickerDialogState extends State<CountryPickerDialog> {
                       style: configuration.searchTextStyle,
                       cursorColor: configuration.searchCursorColor,
                       textInputAction: TextInputAction.search,
-                      decoration: configuration.searchDecoration ??
+                      decoration:
+                          configuration.searchDecoration ??
                           InputDecoration(
                             hintText: configuration.searchHintText,
                             prefixIcon: const Icon(Icons.search),
@@ -322,12 +324,12 @@ final class _CountryPickerDialogState extends State<CountryPickerDialog> {
             Flexible(
               child: countries.isEmpty
                   ? widget.emptyBuilder?.call(context, _query.trim()) ??
-                      Center(
-                        child: Padding(
-                          padding: const EdgeInsets.all(24),
-                          child: Text(configuration.noResultsText),
-                        ),
-                      )
+                        Center(
+                          child: Padding(
+                            padding: const EdgeInsets.all(24),
+                            child: Text(configuration.noResultsText),
+                          ),
+                        )
                   : ListView.builder(
                       padding: configuration.listPadding,
                       itemCount: countries.length,
@@ -406,32 +408,30 @@ final class _CountryPickerDialogState extends State<CountryPickerDialog> {
 }
 
 final class _DefaultTitle extends StatelessWidget {
-  const _DefaultTitle({
-    required this.configuration,
-    required this.close,
-  });
+  const _DefaultTitle({required this.configuration, required this.close});
 
   final CountryPickerDialogConfiguration configuration;
   final VoidCallback close;
 
   @override
   Widget build(BuildContext context) => Row(
-        children: <Widget>[
-          Expanded(
-            child: Text(
-              configuration.title,
-              style: configuration.titleTextStyle ??
-                  Theme.of(context).textTheme.titleLarge,
-            ),
-          ),
-          if (configuration.showCloseButton)
-            IconButton(
-              tooltip: MaterialLocalizations.of(context).closeButtonTooltip,
-              onPressed: close,
-              icon: configuration.closeIcon,
-            ),
-        ],
-      );
+    children: <Widget>[
+      Expanded(
+        child: Text(
+          configuration.title,
+          style:
+              configuration.titleTextStyle ??
+              Theme.of(context).textTheme.titleLarge,
+        ),
+      ),
+      if (configuration.showCloseButton)
+        IconButton(
+          tooltip: MaterialLocalizations.of(context).closeButtonTooltip,
+          onPressed: close,
+          icon: configuration.closeIcon,
+        ),
+    ],
+  );
 }
 
 final class _DefaultCountryItem extends StatelessWidget {
@@ -451,40 +451,42 @@ final class _DefaultCountryItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Padding(
-        padding: configuration.itemPadding,
-        child: Material(
-          color: selected
-              ? configuration.selectedColor ??
-                  Theme.of(context).colorScheme.secondaryContainer
-              : Colors.transparent,
-          borderRadius: BorderRadius.circular(8),
-          child: ListTile(
-            selected: selected,
-            onTap: select,
-            leading: configuration.showFlag
-                ? Padding(
-                    padding: configuration.flagPadding,
-                    child: flagBuilder?.call(context, country) ??
-                        Text(
-                          countryFlagEmoji(country.iso2),
-                          style: configuration.flagTextStyle ??
-                              const TextStyle(fontSize: 24),
-                        ),
-                  )
-                : null,
-            title: Text(country.name, style: configuration.countryNameStyle),
-            subtitle: configuration.showIsoCode
-                ? Text(country.iso2, style: configuration.isoCodeStyle)
-                : null,
-            trailing: configuration.showPhoneCode
-                ? Text(
-                    normalizedDialingCode(country),
-                    style: configuration.phoneCodeStyle,
-                  )
-                : null,
-          ),
-        ),
-      );
+    padding: configuration.itemPadding,
+    child: Material(
+      color: selected
+          ? configuration.selectedColor ??
+                Theme.of(context).colorScheme.secondaryContainer
+          : Colors.transparent,
+      borderRadius: BorderRadius.circular(8),
+      child: ListTile(
+        selected: selected,
+        onTap: select,
+        leading: configuration.showFlag
+            ? Padding(
+                padding: configuration.flagPadding,
+                child:
+                    flagBuilder?.call(context, country) ??
+                    Text(
+                      countryFlagEmoji(country.iso2),
+                      style:
+                          configuration.flagTextStyle ??
+                          const TextStyle(fontSize: 24),
+                    ),
+              )
+            : null,
+        title: Text(country.name, style: configuration.countryNameStyle),
+        subtitle: configuration.showIsoCode
+            ? Text(country.iso2, style: configuration.isoCodeStyle)
+            : null,
+        trailing: configuration.showPhoneCode
+            ? Text(
+                normalizedDialingCode(country),
+                style: configuration.phoneCodeStyle,
+              )
+            : null,
+      ),
+    ),
+  );
 }
 
 /// Presents a [CountryPickerDialog] and returns the selected country.
@@ -507,31 +509,30 @@ Future<Country?> showCountryPickerDialog({
   bool useRootNavigator = true,
   RouteSettings? routeSettings,
   Offset? anchorPoint,
-}) =>
-    showDialog<Country>(
-      context: context,
-      barrierDismissible: barrierDismissible,
-      barrierColor: barrierColor,
-      barrierLabel: barrierLabel,
-      useRootNavigator: useRootNavigator,
-      routeSettings: routeSettings,
-      anchorPoint: anchorPoint,
-      builder: (context) => CountryPickerDialog(
-        countries: countries,
-        selectedCountry: selectedCountry,
-        configuration: configuration,
-        itemBuilder: itemBuilder,
-        searchFieldBuilder: searchFieldBuilder,
-        flagBuilder: flagBuilder,
-        titleBuilder: titleBuilder,
-        emptyBuilder: emptyBuilder,
-        dialogBuilder: dialogBuilder,
-        searchController: searchController,
-        onSelected: (country) {
-          Navigator.of(context).pop(country);
-        },
-      ),
-    );
+}) => showDialog<Country>(
+  context: context,
+  barrierDismissible: barrierDismissible,
+  barrierColor: barrierColor,
+  barrierLabel: barrierLabel,
+  useRootNavigator: useRootNavigator,
+  routeSettings: routeSettings,
+  anchorPoint: anchorPoint,
+  builder: (context) => CountryPickerDialog(
+    countries: countries,
+    selectedCountry: selectedCountry,
+    configuration: configuration,
+    itemBuilder: itemBuilder,
+    searchFieldBuilder: searchFieldBuilder,
+    flagBuilder: flagBuilder,
+    titleBuilder: titleBuilder,
+    emptyBuilder: emptyBuilder,
+    dialogBuilder: dialogBuilder,
+    searchController: searchController,
+    onSelected: (country) {
+      Navigator.of(context).pop(country);
+    },
+  ),
+);
 
 /// Returns a country calling code with exactly one leading `+`.
 String normalizedDialingCode(Country country) {
@@ -545,7 +546,5 @@ String countryFlagEmoji(String iso2) {
   if (!RegExp(r'^[A-Z]{2}$').hasMatch(code)) {
     return '';
   }
-  return String.fromCharCodes(
-    code.codeUnits.map((unit) => unit + 0x1F1A5),
-  );
+  return String.fromCharCodes(code.codeUnits.map((unit) => unit + 0x1F1A5));
 }

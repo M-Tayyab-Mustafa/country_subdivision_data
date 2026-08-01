@@ -43,9 +43,7 @@ void main() {
         countryCode: 'NG',
         subdivisionCode: 'RI',
       );
-      final portHarcourt = cities.where(
-        (city) => city.name == 'Port Harcourt',
-      );
+      final portHarcourt = cities.where((city) => city.name == 'Port Harcourt');
       expect(cities, isNotEmpty);
       expect(portHarcourt, hasLength(1));
       expect(portHarcourt.single.subdivisionId, rivers.id);
