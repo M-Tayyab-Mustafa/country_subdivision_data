@@ -15,7 +15,6 @@ Usage:
   dart run tool/flutter_sdk_manager.dart current
   dart run tool/flutter_sdk_manager.dart latest [--metadata FILE|URL]
   dart run tool/flutter_sdk_manager.dart check [--metadata FILE|URL]
-  dart run tool/flutter_sdk_manager.dart check-major [--metadata FILE|URL]
   dart run tool/flutter_sdk_manager.dart update [--metadata FILE|URL] [--dry-run]
   dart run tool/flutter_sdk_manager.dart verify
   dart run tool/flutter_sdk_manager.dart --help
@@ -41,15 +40,8 @@ void main(List<String> arguments) async {
       case 'check':
         final pinned = _pinned();
         final latest = await _latest(options['metadata']);
-        _printComparison(pinned, latest, majorOnly: false);
+        _printComparison(pinned, latest);
         if (latest.version.compareTo(pinned) > 0) {
-          exitCode = 10;
-        }
-      case 'check-major':
-        final pinned = _pinned();
-        final latest = await _latest(options['metadata']);
-        _printComparison(pinned, latest, majorOnly: true);
-        if (latest.version.major > pinned.major) {
           exitCode = 10;
         }
       case 'update':
@@ -92,8 +84,10 @@ void _current() {
   final pinned = _pinned();
   SemanticVersion? installed;
   try {
-    final result =
-        Process.runSync('flutter', <String>['--version', '--machine']);
+    final result = Process.runSync('flutter', <String>[
+      '--version',
+      '--machine',
+    ]);
     if (result.exitCode == 0) {
       final json = jsonDecode(result.stdout.toString());
       if (json is Map<Object?, Object?> && json['frameworkVersion'] is String) {
@@ -118,7 +112,8 @@ SemanticVersion _pinned() {
 }
 
 Future<_FlutterRelease> _latest(String? source) async {
-  final effectiveSource = source ??
+  final effectiveSource =
+      source ??
       Platform.environment['FLUTTER_RELEASE_METADATA'] ??
       _metadataUrl;
   late String contents;
@@ -129,10 +124,7 @@ Future<_FlutterRelease> _latest(String? source) async {
       final request = await client.getUrl(uri);
       final response = await request.close();
       if (response.statusCode != HttpStatus.ok) {
-        throw HttpException(
-          'HTTP ${response.statusCode}',
-          uri: uri,
-        );
+        throw HttpException('HTTP ${response.statusCode}', uri: uri);
       }
       contents = await utf8.decoder.bind(response).join();
     } finally {
@@ -177,19 +169,11 @@ void _printRelease(_FlutterRelease release) {
     ..writeln('Release date: ${release.releaseDate.toIso8601String()}');
 }
 
-void _printComparison(
-  SemanticVersion pinned,
-  _FlutterRelease latest, {
-  required bool majorOnly,
-}) {
-  final update = majorOnly
-      ? latest.version.major > pinned.major
-      : latest.version.compareTo(pinned) > 0;
+void _printComparison(SemanticVersion pinned, _FlutterRelease latest) {
+  final update = latest.version.compareTo(pinned) > 0;
   stdout
     ..writeln('Pinned: $pinned')
     ..writeln('Latest: ${latest.version}')
-    ..writeln('Pinned major: ${pinned.major}')
-    ..writeln('Latest major: ${latest.version.major}')
     ..writeln('Action: ${update ? 'update' : 'ignore'}');
 }
 
@@ -217,9 +201,7 @@ void _verify() {
   if (metadata['schemaVersion'] != 1 ||
       metadata['channel'] != 'stable' ||
       metadata['pinnedVersion'] != pinned.toString() ||
-      !RegExp(r'^[0-9a-f]{40}$').hasMatch(
-        metadata['releaseHash'].toString(),
-      )) {
+      !RegExp(r'^[0-9a-f]{40}$').hasMatch(metadata['releaseHash'].toString())) {
     throw const FormatException('Flutter SDK metadata does not match the pin.');
   }
   final workflows = Directory('.github/workflows');
@@ -239,10 +221,10 @@ void _verify() {
       throw FormatException('${file.path} does not use .flutter-version.');
     }
   }
-  final installed = Process.runSync(
-    'flutter',
-    <String>['--version', '--machine'],
-  );
+  final installed = Process.runSync('flutter', <String>[
+    '--version',
+    '--machine',
+  ]);
   if (installed.exitCode == 0) {
     final value = jsonDecode(installed.stdout.toString());
     if (value is Map<Object?, Object?> &&

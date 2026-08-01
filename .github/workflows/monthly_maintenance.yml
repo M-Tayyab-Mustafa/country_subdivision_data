@@ -28,14 +28,14 @@ jobs:
           test -n "$BOT_EMAIL"
       - name: Create GitHub App token
         id: app-token
-        uses: actions/create-github-app-token@v2
+        uses: actions/create-github-app-token@v3
         with:
           app-id: ${{ vars.RELEASE_APP_ID }}
           private-key: ${{ secrets.RELEASE_APP_PRIVATE_KEY }}
           permission-contents: write
           permission-pull-requests: write
       - name: Check out main with full history
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           ref: main
           fetch-depth: 0
@@ -59,7 +59,7 @@ jobs:
         id: decision
         run: |
           set +e
-          flutter_output="$(dart run tool/flutter_sdk_manager.dart check-major 2>&1)"
+          flutter_output="$(dart run tool/flutter_sdk_manager.dart check 2>&1)"
           flutter_status=$?
           set -e
           printf '%s\n' "$flutter_output"

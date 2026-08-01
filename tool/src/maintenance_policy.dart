@@ -9,7 +9,7 @@ MaintenanceTrigger decideMaintenance({
   required bool publishableDataChanged,
   required bool upstreamValid,
 }) {
-  final flutter = latestFlutter.major > pinnedFlutter.major;
+  final flutter = latestFlutter.compareTo(pinnedFlutter) > 0;
   final data = upstreamCommitChanged && publishableDataChanged && upstreamValid;
   if (flutter && data) {
     return MaintenanceTrigger.combined;

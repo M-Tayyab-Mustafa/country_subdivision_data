@@ -39,7 +39,6 @@ values.
 ```bash
 dart run tool/flutter_sdk_manager.dart current
 dart run tool/flutter_sdk_manager.dart check
-dart run tool/flutter_sdk_manager.dart check-major
 dart run tool/flutter_sdk_manager.dart update --dry-run
 dart run tool/flutter_sdk_manager.dart verify
 
@@ -49,8 +48,9 @@ dart run tool/version_manager.dart bump --reason data --dry-run
 dart run tool/version_manager.dart verify
 ```
 
-Flutter maintenance ignores same-major minor and patch releases, prereleases,
-and downgrades. It never mutates a developer's global SDK or automatically
+Flutter maintenance accepts any newer official stable semantic version while
+ignoring prereleases, identical versions, and downgrades. It never mutates a
+developer's global SDK or automatically
 raises package SDK constraints. The package version uses decimal-digit rollover:
 `0.0.9 → 0.1.0` and `0.9.9 → 1.0.0`.
 
@@ -62,7 +62,7 @@ claim a toolchain or geographic-data update.
 
 The single monthly workflow checks official Flutter stable metadata and the
 verified upstream commit. No meaningful change leaves the repository untouched.
-An eligible run applies Flutter-major and/or data changes, validates before and
+An eligible run applies Flutter and/or data changes, validates before and
 after exactly one bump, generates a Markdown/JSON release review, and pushes
 only `automation/monthly-maintenance`. It opens or updates a pull request to
 `main`, refreshes the automation branch whenever `main` changes, and enables

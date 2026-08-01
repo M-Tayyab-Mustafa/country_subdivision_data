@@ -21,10 +21,7 @@ void main(List<String> arguments) {
     return;
   }
   try {
-    final options = parseOptions(
-      arguments,
-      flags: <String>{'validated'},
-    );
+    final options = parseOptions(arguments, flags: <String>{'validated'});
     final oldVersion = _required(options, 'old-version');
     final newVersion = _required(options, 'new-version');
     final trigger = options['trigger'] ?? 'context-unavailable';
@@ -59,12 +56,12 @@ void main(List<String> arguments) {
       ..writeln(
         trigger == 'context-unavailable'
             ? 'Release change context was not provided; no change claims '
-                'were generated.\n'
+                  'were generated.\n'
             : 'This release was created by the automated maintenance '
-                'process.\n',
+                  'process.\n',
       )
       ..writeln('Eligible changes:\n')
-      ..writeln('- Flutter major update: ${flutterUpdated ? 'yes' : 'no'}')
+      ..writeln('- Flutter stable update: ${flutterUpdated ? 'yes' : 'no'}')
       ..writeln('- Geographic snapshot update: ${dataUpdated ? 'yes' : 'no'}')
       ..writeln(
         '- Release automation maintenance: '
@@ -78,7 +75,11 @@ void main(List<String> arguments) {
       ..writeln('Latest official stable version checked: $latestFlutter\n')
       ..writeln('New pinned version: $newFlutter\n')
       ..writeln(
-        'Update reason: ${flutterUpdated ? 'A higher stable major version was available.' : automationUpdated ? 'The pinned Flutter SDK was outside the scope of this automation-maintenance release.' : 'No higher stable major version was available.'}\n',
+        'Update reason: ${flutterUpdated
+            ? 'A newer stable version was available.'
+            : automationUpdated
+            ? 'The pinned Flutter SDK was outside the scope of this automation-maintenance release.'
+            : 'No newer stable version was available.'}\n',
       )
       ..writeln('Minimum supported Flutter version: unchanged\n');
     if (dataUpdated) {
@@ -148,7 +149,7 @@ void main(List<String> arguments) {
         'latestStableChecked': latestFlutter,
         'selected': newFlutter,
         'updated': flutterUpdated,
-        'reason': flutterUpdated ? 'new-major' : 'same-major',
+        'reason': flutterUpdated ? 'newer-stable' : 'no-newer-stable',
       },
       'data': <String, Object?>{
         'previousUpstreamCommit': oldManifest['upstreamCommit'],
@@ -179,9 +180,9 @@ void main(List<String> arguments) {
             },
       'publication': <String, Object?>{'status': 'pending'},
     };
-    File(output.replaceFirst(RegExp(r'\.md$'), '.json')).writeAsStringSync(
-      prettyJson(audit),
-    );
+    File(
+      output.replaceFirst(RegExp(r'\.md$'), '.json'),
+    ).writeAsStringSync(prettyJson(audit));
     stdout.writeln('Generated release review for $newVersion.');
   } on Object catch (error) {
     stderr.writeln('Release review generation failed: $error');

@@ -45,13 +45,8 @@ void main() {
   group('monthly decision matrix', () {
     final pinned = SemanticVersion.parse('3.38.0');
 
-    test('same, minor, patch, and downgrade releases are ignored', () {
-      for (final remote in <String>[
-        '3.38.0',
-        '3.39.0',
-        '3.38.1',
-        '2.99.0',
-      ]) {
+    test('same and downgrade releases are ignored', () {
+      for (final remote in <String>['3.38.0', '2.99.0']) {
         expect(
           decideMaintenance(
             pinnedFlutter: pinned,
@@ -65,24 +60,27 @@ void main() {
       }
     });
 
-    test('new major creates a Flutter-only release', () {
-      expect(
-        decideMaintenance(
-          pinnedFlutter: pinned,
-          latestFlutter: SemanticVersion.parse('4.2.1'),
-          upstreamCommitChanged: false,
-          publishableDataChanged: false,
-          upstreamValid: true,
-        ),
-        MaintenanceTrigger.flutter,
-      );
+    test('new patch, minor, or major creates a Flutter-only release', () {
+      for (final remote in <String>['3.38.1', '3.39.0', '4.2.1']) {
+        expect(
+          decideMaintenance(
+            pinnedFlutter: pinned,
+            latestFlutter: SemanticVersion.parse(remote),
+            upstreamCommitChanged: false,
+            publishableDataChanged: false,
+            upstreamValid: true,
+          ),
+          MaintenanceTrigger.flutter,
+          reason: remote,
+        );
+      }
     });
 
     test('meaningful verified upstream data creates a data release', () {
       expect(
         decideMaintenance(
           pinnedFlutter: pinned,
-          latestFlutter: SemanticVersion.parse('3.41.0'),
+          latestFlutter: pinned,
           upstreamCommitChanged: true,
           publishableDataChanged: true,
           upstreamValid: true,
@@ -95,7 +93,7 @@ void main() {
       expect(
         decideMaintenance(
           pinnedFlutter: pinned,
-          latestFlutter: SemanticVersion.parse('4.2.1'),
+          latestFlutter: SemanticVersion.parse('3.38.1'),
           upstreamCommitChanged: true,
           publishableDataChanged: true,
           upstreamValid: true,
@@ -109,7 +107,7 @@ void main() {
         expect(
           decideMaintenance(
             pinnedFlutter: pinned,
-            latestFlutter: SemanticVersion.parse('3.41.0'),
+            latestFlutter: pinned,
             upstreamCommitChanged: true,
             publishableDataChanged: false,
             upstreamValid: valid,
@@ -119,17 +117,21 @@ void main() {
       }
     });
 
-    test('major components compare numerically', () {
+    test('major, minor, and patch components compare numerically', () {
       const cases = <(String, String, bool)>[
         ('3.41.0', '4.0.0', true),
         ('9.9.9', '10.0.0', true),
-        ('10.1.0', '10.9.0', false),
+        ('10.1.0', '10.9.0', true),
+        ('10.9.1', '10.9.2', true),
+        ('10.9.2', '10.9.1', false),
         ('10.1.0', '11.0.0', true),
       ];
       for (final value in cases) {
         expect(
-          SemanticVersion.parse(value.$2).major >
-              SemanticVersion.parse(value.$1).major,
+          SemanticVersion.parse(
+                value.$2,
+              ).compareTo(SemanticVersion.parse(value.$1)) >
+              0,
           value.$3,
         );
       }
