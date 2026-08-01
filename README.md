@@ -173,9 +173,9 @@ and relationships reject generation. Missing codes are never fabricated.
 Generation writes to a temporary directory, validates it, and only then replaces
 the committed snapshot.
 
-Flutter and upstream data are checked together monthly. Flutter minor and patch
-releases are ignored; only a higher official stable major updates the
-development pin. A verified upstream commit releases only when normalized
+Flutter and upstream data are checked together monthly. Any newer official
+stable Flutter version updates the exact development pin, including minor and
+patch releases. A verified upstream commit releases only when normalized
 publishable data changes. A combined run performs one package-version bump.
 No-change runs create no commit, tag, release, or publication. After the one-time
 manual publication of `0.0.1` and OIDC configuration, eligible monthly runs are

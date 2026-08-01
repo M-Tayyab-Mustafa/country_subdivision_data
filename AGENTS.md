@@ -43,8 +43,9 @@ bump.
 Only official stable Flutter versions may be pinned. Never use `latest` in CI,
 downgrade automatically, mutate a developer's global Flutter installation,
 or raise minimum SDK constraints just because the development pin changed.
-Monthly automation checks Flutter and upstream together: Flutter requires a new
-stable major; upstream requires meaningful verified publishable differences.
+Monthly automation checks Flutter and upstream together: Flutter requires a
+newer stable semantic version; upstream requires meaningful verified
+publishable differences.
 
 After the one-time manual `0.0.1` publication, eligible monthly releases are
 fully automated. Complete validation is mandatory before commit and again

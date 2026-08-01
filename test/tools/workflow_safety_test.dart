@@ -25,9 +25,7 @@ void main() {
     ).readAsStringSync();
     publish = File('.github/workflows/publish.yml').readAsStringSync();
     mainRules = _json('.github/rulesets/main.json');
-    immutableTagRules = _json(
-      '.github/rulesets/release-tags-immutable.json',
-    );
+    immutableTagRules = _json('.github/rulesets/release-tags-immutable.json');
   });
 
   test('CI exposes every required check without merge queue events', () {
@@ -51,7 +49,9 @@ void main() {
   });
 
   test('monthly maintenance pushes only its PR branch', () {
-    expect(monthly, contains('actions/create-github-app-token@v2'));
+    expect(monthly, contains('actions/create-github-app-token@v3'));
+    expect(monthly, contains('flutter_sdk_manager.dart check 2>&1'));
+    expect(monthly, isNot(contains('check-major')));
     expect(monthly, contains('RELEASE_APP_PRIVATE_KEY'));
     expect(monthly, contains('automation/monthly-maintenance'));
     expect(monthly, contains('gh pr create'));
@@ -65,10 +65,7 @@ void main() {
   test('main updates refresh the monthly branch and preserve auto-merge', () {
     expect(refreshMonthly, contains('push:'));
     expect(refreshMonthly, contains('- main'));
-    expect(
-      refreshMonthly,
-      contains('--head automation/monthly-maintenance'),
-    );
+    expect(refreshMonthly, contains('--head automation/monthly-maintenance'));
     expect(refreshMonthly, contains('gh pr update-branch'));
     expect(refreshMonthly, contains('--auto --squash'));
     expect(refreshMonthly, isNot(contains('HEAD:main')));
@@ -107,8 +104,10 @@ void main() {
     expect(mainRules['target'], 'branch');
     expect(mainRules['bypass_actors'], isEmpty);
     final rules = mainRules['rules']! as List<Object?>;
-    final types =
-        rules.cast<Map<String, Object?>>().map((rule) => rule['type']).toSet();
+    final types = rules
+        .cast<Map<String, Object?>>()
+        .map((rule) => rule['type'])
+        .toSet();
     expect(
       types,
       containsAll(<String>{
@@ -121,15 +120,15 @@ void main() {
     );
     expect(types, isNot(contains('merge_queue')));
     final pullRequest = rules.cast<Map<String, Object?>>().singleWhere(
-          (rule) => rule['type'] == 'pull_request',
-        );
+      (rule) => rule['type'] == 'pull_request',
+    );
     final parameters = pullRequest['parameters']! as Map<String, Object?>;
     expect(parameters['allowed_merge_methods'], <String>['squash']);
     expect(parameters['required_approving_review_count'], 0);
     expect(parameters['required_review_thread_resolution'], true);
     final requiredChecks = rules.cast<Map<String, Object?>>().singleWhere(
-          (rule) => rule['type'] == 'required_status_checks',
-        );
+      (rule) => rule['type'] == 'required_status_checks',
+    );
     final checkParameters =
         requiredChecks['parameters']! as Map<String, Object?>;
     expect(checkParameters['strict_required_status_checks_policy'], true);
@@ -140,10 +139,14 @@ void main() {
     expect(immutableTagRules['target'], 'tag');
     expect(immutableTagRules['bypass_actors'], isEmpty);
     final rules = immutableTagRules['rules']! as List<Object?>;
-    final types =
-        rules.cast<Map<String, Object?>>().map((rule) => rule['type']).toSet();
+    final types = rules
+        .cast<Map<String, Object?>>()
+        .map((rule) => rule['type'])
+        .toSet();
     expect(
-        types, containsAll(<String>{'update', 'deletion', 'non_fast_forward'}));
+      types,
+      containsAll(<String>{'update', 'deletion', 'non_fast_forward'}),
+    );
   });
 
   test('publication is tag-only and uses OIDC without credentials', () {

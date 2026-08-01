@@ -80,15 +80,12 @@ SemanticVersion _readVersion() {
   );
 }
 
-void _replacePubspecVersion(
-  SemanticVersion current,
-  SemanticVersion next,
-) {
+void _replacePubspecVersion(SemanticVersion current, SemanticVersion next) {
   final file = File('pubspec.yaml');
   final updated = file.readAsStringSync().replaceFirst(
-        RegExp(r'^version:\s*\S+\s*$', multiLine: true),
-        'version: $next',
-      );
+    RegExp(r'^version:\s*\S+\s*$', multiLine: true),
+    'version: $next',
+  );
   final temporary = File('pubspec.yaml.tmp')..writeAsStringSync(updated);
   temporary.renameSync(file.path);
 }
@@ -98,16 +95,14 @@ void _prependChangelog(SemanticVersion version, String reason) {
   final existing = file.existsSync() ? file.readAsStringSync() : '';
   final changes = <String>[
     if (reason == 'flutter' || reason == 'combined')
-      '- Updated the pinned development Flutter stable major.',
+      '- Updated the pinned development Flutter stable version.',
     if (reason == 'data' || reason == 'combined')
       '- Updated the bundled country, subdivision, and city snapshot.',
     if (reason == 'maintenance')
       '- Repaired release automation and publication validation.',
   ];
   final temporary = File('CHANGELOG.md.tmp')
-    ..writeAsStringSync(
-      '## $version\n\n${changes.join('\n')}\n\n$existing',
-    );
+    ..writeAsStringSync('## $version\n\n${changes.join('\n')}\n\n$existing');
   temporary.renameSync(file.path);
 }
 
@@ -120,7 +115,8 @@ void _verify(SemanticVersion version, String? explicitTag) {
       ).hasMatch(changelog.readAsStringSync())) {
     throw FormatException('CHANGELOG.md does not contain $version.');
   }
-  final tag = explicitTag ??
+  final tag =
+      explicitTag ??
       (Platform.environment['GITHUB_REF_TYPE'] == 'tag'
           ? Platform.environment['GITHUB_REF_NAME']
           : null);
