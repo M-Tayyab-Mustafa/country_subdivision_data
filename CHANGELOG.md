@@ -1,3 +1,14 @@
+## 0.0.4
+
+### Toolchain
+
+- Updated the pinned Flutter stable SDK from `3.44.8` to `3.47.2`.
+- The minimum supported Flutter SDK remains unchanged.
+
+### Validation
+
+- Passed formatting, analysis, tests, snapshot integrity, Nigeria regression, and pub.dev publication dry-run.
+
 ## 0.0.3
 
 ### Automation
