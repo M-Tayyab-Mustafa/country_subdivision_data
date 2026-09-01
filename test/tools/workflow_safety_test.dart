@@ -113,7 +113,7 @@ void main() {
     final bump = monthly.indexOf('tool/version_manager.dart bump');
     expect(decision, greaterThan(0));
     expect(bump, greaterThan(decision));
-    expect(monthly, contains('eligible=false'));
+    expect(monthly, contains('write_output eligible false'));
   });
 
   test('unchanged upstream data keeps deterministic validation aligned', () {
