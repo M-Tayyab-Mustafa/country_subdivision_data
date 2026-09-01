@@ -56,9 +56,9 @@ void main(List<String> arguments) {
       ..writeln(
         trigger == 'context-unavailable'
             ? 'Release change context was not provided; no change claims '
-                  'were generated.\n'
+                'were generated.\n'
             : 'This release was created by the automated maintenance '
-                  'process.\n',
+                'process.\n',
       )
       ..writeln('Eligible changes:\n')
       ..writeln('- Flutter stable update: ${flutterUpdated ? 'yes' : 'no'}')
@@ -75,11 +75,7 @@ void main(List<String> arguments) {
       ..writeln('Latest official stable version checked: $latestFlutter\n')
       ..writeln('New pinned version: $newFlutter\n')
       ..writeln(
-        'Update reason: ${flutterUpdated
-            ? 'A newer stable version was available.'
-            : automationUpdated
-            ? 'The pinned Flutter SDK was outside the scope of this automation-maintenance release.'
-            : 'No newer stable version was available.'}\n',
+        'Update reason: ${flutterUpdated ? 'A newer stable version was available.' : automationUpdated ? 'The pinned Flutter SDK was outside the scope of this automation-maintenance release.' : 'No newer stable version was available.'}\n',
       )
       ..writeln('Minimum supported Flutter version: unchanged\n');
     if (dataUpdated) {

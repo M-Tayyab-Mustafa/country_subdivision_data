@@ -61,11 +61,7 @@ jobs:
           fetch-depth: 0
           token: ${{ steps.app-token.outputs.token }}
           persist-credentials: true
-      - uses: subosito/flutter-action@v2
-        with:
-          channel: stable
-          flutter-version-file: '.flutter-version'
-          cache: true
+      - uses: ./.github/actions/setup-flutter
       - name: Verify the immutable release identity on main
         env:
           VERSION: ${{ needs.identify.outputs.version }}

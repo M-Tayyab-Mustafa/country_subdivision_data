@@ -16,18 +16,18 @@ final class Subdivision {
 
   /// Creates a subdivision from normalized snapshot JSON.
   factory Subdivision.fromJson(Map<String, Object?> json) => Subdivision(
-    id: requiredInt(json['id'], 'id'),
-    countryId: requiredInt(json['countryId'], 'countryId'),
-    countryCode: requiredString(
-      json['countryCode'],
-      'countryCode',
-    ).toUpperCase(),
-    name: requiredString(json['name'], 'name'),
-    code: optionalString(json['code']),
-    type: optionalString(json['type']),
-    latitude: optionalDouble(json['latitude']),
-    longitude: optionalDouble(json['longitude']),
-  );
+        id: requiredInt(json['id'], 'id'),
+        countryId: requiredInt(json['countryId'], 'countryId'),
+        countryCode: requiredString(
+          json['countryCode'],
+          'countryCode',
+        ).toUpperCase(),
+        name: requiredString(json['name'], 'name'),
+        code: optionalString(json['code']),
+        type: optionalString(json['type']),
+        latitude: optionalDouble(json['latitude']),
+        longitude: optionalDouble(json['longitude']),
+      );
 
   /// Stable upstream identifier.
   final int id;
@@ -55,15 +55,15 @@ final class Subdivision {
 
   /// Converts this value to normalized snapshot JSON.
   Map<String, Object?> toJson() => <String, Object?>{
-    'id': id,
-    'countryId': countryId,
-    'countryCode': countryCode,
-    'name': name,
-    'code': code,
-    'type': type,
-    'latitude': latitude,
-    'longitude': longitude,
-  };
+        'id': id,
+        'countryId': countryId,
+        'countryCode': countryCode,
+        'name': name,
+        'code': code,
+        'type': type,
+        'latitude': latitude,
+        'longitude': longitude,
+      };
 
   @override
   bool operator ==(Object other) =>
@@ -80,15 +80,15 @@ final class Subdivision {
 
   @override
   int get hashCode => Object.hash(
-    id,
-    countryId,
-    countryCode,
-    name,
-    code,
-    type,
-    latitude,
-    longitude,
-  );
+        id,
+        countryId,
+        countryCode,
+        name,
+        code,
+        type,
+        latitude,
+        longitude,
+      );
 
   @override
   String toString() => 'Subdivision($countryCode-${code ?? id}, $name)';

@@ -17,7 +17,6 @@ class CountrySubdivisionInitializationException implements Exception {
   final StackTrace? stackTrace;
 
   @override
-  String toString() =>
-      'CountrySubdivisionInitializationException: $message'
+  String toString() => 'CountrySubdivisionInitializationException: $message'
       '${cause == null ? '' : ' (cause: $cause)'}';
 }

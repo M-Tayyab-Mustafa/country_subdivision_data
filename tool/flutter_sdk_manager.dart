@@ -112,8 +112,7 @@ SemanticVersion _pinned() {
 }
 
 Future<_FlutterRelease> _latest(String? source) async {
-  final effectiveSource =
-      source ??
+  final effectiveSource = source ??
       Platform.environment['FLUTTER_RELEASE_METADATA'] ??
       _metadataUrl;
   late String contents;
@@ -216,9 +215,28 @@ void _verify() {
     ).hasMatch(contents)) {
       throw FormatException('${file.path} uses a forbidden Flutter pin.');
     }
-    if (contents.contains('subosito/flutter-action') &&
-        !contents.contains("flutter-version-file: '.flutter-version'")) {
-      throw FormatException('${file.path} does not use .flutter-version.');
+    if (contents.contains('subosito/flutter-action')) {
+      throw FormatException(
+        '${file.path} bypasses the repository Flutter setup action.',
+      );
+    }
+  }
+  final setupAction = File('.github/actions/setup-flutter/action.yml');
+  if (!setupAction.existsSync()) {
+    throw const FormatException(
+        'The repository Flutter setup action is missing.');
+  }
+  final setupContents = setupAction.readAsStringSync();
+  for (final required in <String>[
+    'subosito/flutter-action@v2',
+    "< .flutter-version",
+    r'flutter-version: ${{ steps.pin.outputs.version }}',
+    'channel: stable',
+  ]) {
+    if (!setupContents.contains(required)) {
+      throw const FormatException(
+        'The repository Flutter setup action does not use the exact stable pin.',
+      );
     }
   }
   final installed = Process.runSync('flutter', <String>[

@@ -22,29 +22,31 @@ final class CountrySubdivisionSnapshotMetadata {
   /// Creates metadata from the snapshot manifest.
   factory CountrySubdivisionSnapshotMetadata.fromJson(
     Map<String, Object?> json,
-  ) => CountrySubdivisionSnapshotMetadata(
-    schemaVersion: requiredInt(json['schemaVersion'], 'schemaVersion'),
-    generatedAt: DateTime.parse(
-      requiredString(json['generatedAt'], 'generatedAt'),
-    ).toUtc(),
-    upstreamRepository: requiredString(
-      json['upstreamRepository'],
-      'upstreamRepository',
-    ),
-    upstreamCommit: requiredString(json['upstreamCommit'], 'upstreamCommit'),
-    upstreamRelease: optionalString(json['upstreamRelease']),
-    countryCount: requiredInt(json['countries'], 'countries'),
-    subdivisionCount: requiredInt(json['subdivisions'], 'subdivisions'),
-    cityCount: requiredInt(json['cities'], 'cities'),
-    snapshotSha256: requiredString(json['sha256'], 'sha256'),
-    generatorVersion: requiredString(
-      json['generatorVersion'],
-      'generatorVersion',
-    ),
-    dataLicense: requiredString(json['license'], 'license'),
-    compressedBytes: optionalInt(json['compressedBytes']),
-    uncompressedBytes: optionalInt(json['uncompressedBytes']),
-  );
+  ) =>
+      CountrySubdivisionSnapshotMetadata(
+        schemaVersion: requiredInt(json['schemaVersion'], 'schemaVersion'),
+        generatedAt: DateTime.parse(
+          requiredString(json['generatedAt'], 'generatedAt'),
+        ).toUtc(),
+        upstreamRepository: requiredString(
+          json['upstreamRepository'],
+          'upstreamRepository',
+        ),
+        upstreamCommit:
+            requiredString(json['upstreamCommit'], 'upstreamCommit'),
+        upstreamRelease: optionalString(json['upstreamRelease']),
+        countryCount: requiredInt(json['countries'], 'countries'),
+        subdivisionCount: requiredInt(json['subdivisions'], 'subdivisions'),
+        cityCount: requiredInt(json['cities'], 'cities'),
+        snapshotSha256: requiredString(json['sha256'], 'sha256'),
+        generatorVersion: requiredString(
+          json['generatorVersion'],
+          'generatorVersion',
+        ),
+        dataLicense: requiredString(json['license'], 'license'),
+        compressedBytes: optionalInt(json['compressedBytes']),
+        uncompressedBytes: optionalInt(json['uncompressedBytes']),
+      );
 
   /// Snapshot format version.
   final int schemaVersion;
@@ -87,20 +89,20 @@ final class CountrySubdivisionSnapshotMetadata {
 
   /// Converts this value to normalized manifest JSON.
   Map<String, Object?> toJson() => <String, Object?>{
-    'schemaVersion': schemaVersion,
-    'generatedAt': generatedAt.toUtc().toIso8601String(),
-    'upstreamRepository': upstreamRepository,
-    'upstreamCommit': upstreamCommit,
-    'upstreamRelease': upstreamRelease,
-    'countries': countryCount,
-    'subdivisions': subdivisionCount,
-    'cities': cityCount,
-    'sha256': snapshotSha256,
-    'generatorVersion': generatorVersion,
-    'license': dataLicense,
-    'compressedBytes': compressedBytes,
-    'uncompressedBytes': uncompressedBytes,
-  };
+        'schemaVersion': schemaVersion,
+        'generatedAt': generatedAt.toUtc().toIso8601String(),
+        'upstreamRepository': upstreamRepository,
+        'upstreamCommit': upstreamCommit,
+        'upstreamRelease': upstreamRelease,
+        'countries': countryCount,
+        'subdivisions': subdivisionCount,
+        'cities': cityCount,
+        'sha256': snapshotSha256,
+        'generatorVersion': generatorVersion,
+        'license': dataLicense,
+        'compressedBytes': compressedBytes,
+        'uncompressedBytes': uncompressedBytes,
+      };
 
   @override
   bool operator ==(Object other) =>
@@ -122,24 +124,23 @@ final class CountrySubdivisionSnapshotMetadata {
 
   @override
   int get hashCode => Object.hash(
-    schemaVersion,
-    generatedAt,
-    upstreamRepository,
-    upstreamCommit,
-    upstreamRelease,
-    countryCount,
-    subdivisionCount,
-    cityCount,
-    snapshotSha256,
-    generatorVersion,
-    dataLicense,
-    compressedBytes,
-    uncompressedBytes,
-  );
+        schemaVersion,
+        generatedAt,
+        upstreamRepository,
+        upstreamCommit,
+        upstreamRelease,
+        countryCount,
+        subdivisionCount,
+        cityCount,
+        snapshotSha256,
+        generatorVersion,
+        dataLicense,
+        compressedBytes,
+        uncompressedBytes,
+      );
 
   @override
-  String toString() =>
-      'CountrySubdivisionSnapshotMetadata('
+  String toString() => 'CountrySubdivisionSnapshotMetadata('
       '$countryCount countries, $subdivisionCount subdivisions, '
       '$cityCount cities, $upstreamCommit)';
 }

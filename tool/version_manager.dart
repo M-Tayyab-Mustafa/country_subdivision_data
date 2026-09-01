@@ -83,9 +83,9 @@ SemanticVersion _readVersion() {
 void _replacePubspecVersion(SemanticVersion current, SemanticVersion next) {
   final file = File('pubspec.yaml');
   final updated = file.readAsStringSync().replaceFirst(
-    RegExp(r'^version:\s*\S+\s*$', multiLine: true),
-    'version: $next',
-  );
+        RegExp(r'^version:\s*\S+\s*$', multiLine: true),
+        'version: $next',
+      );
   final temporary = File('pubspec.yaml.tmp')..writeAsStringSync(updated);
   temporary.renameSync(file.path);
 }
@@ -115,8 +115,7 @@ void _verify(SemanticVersion version, String? explicitTag) {
       ).hasMatch(changelog.readAsStringSync())) {
     throw FormatException('CHANGELOG.md does not contain $version.');
   }
-  final tag =
-      explicitTag ??
+  final tag = explicitTag ??
       (Platform.environment['GITHUB_REF_TYPE'] == 'tag'
           ? Platform.environment['GITHUB_REF_NAME']
           : null);

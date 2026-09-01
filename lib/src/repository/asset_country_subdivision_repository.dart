@@ -30,9 +30,9 @@ final class AssetCountrySubdivisionRepository
     AssetBundle? assetBundle,
     String assetPrefix = _defaultPrefix,
     int maximumCachedCountries = 8,
-  }) : _assetBundle = assetBundle ?? rootBundle,
-       _assetPrefix = assetPrefix.replaceFirst(RegExp(r'/$'), ''),
-       _maximumCachedCountries = maximumCachedCountries {
+  })  : _assetBundle = assetBundle ?? rootBundle,
+        _assetPrefix = assetPrefix.replaceFirst(RegExp(r'/$'), ''),
+        _maximumCachedCountries = maximumCachedCountries {
     if (maximumCachedCountries <= 0) {
       throw ArgumentError.value(
         maximumCachedCountries,
@@ -401,20 +401,21 @@ final class _CountryDataset {
   _CountryDataset({
     required List<Subdivision> subdivisions,
     required List<City> cities,
-  }) : subdivisions = List<Subdivision>.unmodifiable(subdivisions),
-       cities = List<City>.unmodifiable(cities),
-       subdivisionsByCode =
-           Map<String, Subdivision>.unmodifiable(<String, Subdivision>{
-             for (final value in subdivisions)
-               if (value.code != null) value.code!.toUpperCase(): value,
-           }),
-       subdivisionsById = Map<int, Subdivision>.unmodifiable(<int, Subdivision>{
-         for (final value in subdivisions) value.id: value,
-       }),
-       citiesById = Map<int, City>.unmodifiable(<int, City>{
-         for (final value in cities) value.id: value,
-       }),
-       citiesBySubdivisionCode = _groupCities(cities);
+  })  : subdivisions = List<Subdivision>.unmodifiable(subdivisions),
+        cities = List<City>.unmodifiable(cities),
+        subdivisionsByCode =
+            Map<String, Subdivision>.unmodifiable(<String, Subdivision>{
+          for (final value in subdivisions)
+            if (value.code != null) value.code!.toUpperCase(): value,
+        }),
+        subdivisionsById =
+            Map<int, Subdivision>.unmodifiable(<int, Subdivision>{
+          for (final value in subdivisions) value.id: value,
+        }),
+        citiesById = Map<int, City>.unmodifiable(<int, City>{
+          for (final value in cities) value.id: value,
+        }),
+        citiesBySubdivisionCode = _groupCities(cities);
 
   factory _CountryDataset.fromJson(Map<String, Object?> json) {
     final subdivisionJson = json['subdivisions'];

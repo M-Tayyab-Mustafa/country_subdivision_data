@@ -1,0 +1,19 @@
+name: Set up pinned Flutter
+description: Install the exact stable Flutter version recorded by the repository.
+
+runs:
+  using: composite
+  steps:
+    - name: Read the exact Flutter pin
+      id: pin
+      shell: bash
+      run: |
+        version="$(tr -d '[:space:]' < .flutter-version)"
+        printf '%s\n' "$version" | grep -Eq '^[0-9]+\.[0-9]+\.[0-9]+$'
+        echo "version=$version" >> "$GITHUB_OUTPUT"
+    - name: Install pinned Flutter
+      uses: subosito/flutter-action@v2
+      with:
+        channel: stable
+        flutter-version: ${{ steps.pin.outputs.version }}
+        cache: true

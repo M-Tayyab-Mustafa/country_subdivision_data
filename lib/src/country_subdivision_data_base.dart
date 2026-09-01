@@ -9,7 +9,7 @@ import 'repository/country_subdivision_repository.dart';
 final class CountrySubdivisionData {
   /// Creates a facade, optionally with a custom repository.
   CountrySubdivisionData({CountrySubdivisionRepository? repository})
-    : _repository = repository ?? AssetCountrySubdivisionRepository();
+      : _repository = repository ?? AssetCountrySubdivisionRepository();
 
   /// Shared facade backed by package assets.
   static final CountrySubdivisionData instance = CountrySubdivisionData();
@@ -49,10 +49,11 @@ final class CountrySubdivisionData {
   Future<Subdivision?> getSubdivisionByCode({
     required String countryCode,
     required String subdivisionCode,
-  }) => _repository.getSubdivisionByCode(
-    countryCode: countryCode,
-    subdivisionCode: subdivisionCode,
-  );
+  }) =>
+      _repository.getSubdivisionByCode(
+        countryCode: countryCode,
+        subdivisionCode: subdivisionCode,
+      );
 
   /// Looks up a subdivision by stable identifier.
   Future<Subdivision?> getSubdivisionById(int id) =>
@@ -62,10 +63,11 @@ final class CountrySubdivisionData {
   Future<List<City>> getCities({
     required String countryCode,
     String? subdivisionCode,
-  }) => _repository.getCities(
-    countryCode: countryCode,
-    subdivisionCode: subdivisionCode,
-  );
+  }) =>
+      _repository.getCities(
+        countryCode: countryCode,
+        subdivisionCode: subdivisionCode,
+      );
 
   /// Looks up a city by stable identifier.
   Future<City?> getCityById(int id) => _repository.getCityById(id);
@@ -74,18 +76,20 @@ final class CountrySubdivisionData {
   Future<List<Country>> searchCountries({
     required String query,
     int limit = 20,
-  }) => _repository.searchCountries(query: query, limit: limit);
+  }) =>
+      _repository.searchCountries(query: query, limit: limit);
 
   /// Searches subdivision names and codes.
   Future<List<Subdivision>> searchSubdivisions({
     required String query,
     String? countryCode,
     int limit = 20,
-  }) => _repository.searchSubdivisions(
-    query: query,
-    countryCode: countryCode,
-    limit: limit,
-  );
+  }) =>
+      _repository.searchSubdivisions(
+        query: query,
+        countryCode: countryCode,
+        limit: limit,
+      );
 
   /// Searches city names with optional country and subdivision scopes.
   Future<List<City>> searchCities({
@@ -93,12 +97,13 @@ final class CountrySubdivisionData {
     String? countryCode,
     String? subdivisionCode,
     int limit = 20,
-  }) => _repository.searchCities(
-    query: query,
-    countryCode: countryCode,
-    subdivisionCode: subdivisionCode,
-    limit: limit,
-  );
+  }) =>
+      _repository.searchCities(
+        query: query,
+        countryCode: countryCode,
+        subdivisionCode: subdivisionCode,
+        limit: limit,
+      );
 
   /// Loads one country into the bounded cache.
   Future<void> preloadCountry(String countryCode) =>

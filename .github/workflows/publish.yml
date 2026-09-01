@@ -22,11 +22,7 @@ jobs:
       - uses: actions/checkout@v5
         with:
           fetch-depth: 0
-      - uses: subosito/flutter-action@v2
-        with:
-          channel: stable
-          flutter-version-file: '.flutter-version'
-          cache: true
+      - uses: ./.github/actions/setup-flutter
       - name: Verify immutable release identity
         env:
           TAG: ${{ github.ref_name }}

@@ -10,43 +10,40 @@ import '../models/country_phone_number.dart';
 import 'country_picker_dialog.dart';
 
 /// Builds the button used to open the country picker.
-typedef CountryPhoneSelectorBuilder =
-    Widget Function(
-      BuildContext context,
-      Country? country,
-      bool enabled,
-      VoidCallback openPicker,
-    );
+typedef CountryPhoneSelectorBuilder = Widget Function(
+  BuildContext context,
+  Country? country,
+  bool enabled,
+  VoidCallback openPicker,
+);
 
 /// Completely replaces the default phone text field.
 ///
 /// The builder receives picker state and [openPicker], so a custom composition
 /// can place the country selector anywhere.
-typedef CountryPhoneTextFieldBuilder =
-    Widget Function(
-      BuildContext context,
-      TextEditingController controller,
-      FocusNode focusNode,
-      Country? country,
-      bool enabled,
-      VoidCallback openPicker,
-      ValueChanged<String> onChanged,
-    );
+typedef CountryPhoneTextFieldBuilder = Widget Function(
+  BuildContext context,
+  TextEditingController controller,
+  FocusNode focusNode,
+  Country? country,
+  bool enabled,
+  VoidCallback openPicker,
+  ValueChanged<String> onChanged,
+);
 
 /// Presents a custom country picker route.
-typedef CountryPickerPresenter =
-    Future<Country?> Function(
-      BuildContext context,
-      List<Country> countries,
-      Country? selectedCountry,
-    );
+typedef CountryPickerPresenter = Future<Country?> Function(
+  BuildContext context,
+  List<Country> countries,
+  Country? selectedCountry,
+);
 
 /// Builds a state shown while countries load.
 typedef CountryPhoneLoadingBuilder = Widget Function(BuildContext context);
 
 /// Builds a state shown when countries cannot be loaded.
-typedef CountryPhoneErrorBuilder =
-    Widget Function(BuildContext context, Object error, VoidCallback retry);
+typedef CountryPhoneErrorBuilder = Widget Function(
+    BuildContext context, Object error, VoidCallback retry);
 
 /// Fully customizable country-aware phone-number form field.
 ///

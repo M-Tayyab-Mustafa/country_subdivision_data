@@ -5,21 +5,24 @@ import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   final flutterRoot = Platform.environment['FLUTTER_ROOT'];
-  final executable = flutterRoot == null
-      ? 'dart'
-      : '$flutterRoot/bin/cache/dart-sdk/bin/dart';
+  final executable =
+      flutterRoot == null ? 'dart' : '$flutterRoot/bin/cache/dart-sdk/bin/dart';
   final fixture = 'test/fixtures/flutter/releases.json';
 
   Future<ProcessResult> run(
     String command, {
     String metadata = 'test/fixtures/flutter/releases.json',
-  }) => Process.run(executable, <String>[
-    'run',
-    'tool/flutter_sdk_manager.dart',
-    command,
-    '--metadata',
-    metadata,
-  ], workingDirectory: Directory.current.path);
+  }) =>
+      Process.run(
+          executable,
+          <String>[
+            'run',
+            'tool/flutter_sdk_manager.dart',
+            command,
+            '--metadata',
+            metadata,
+          ],
+          workingDirectory: Directory.current.path);
 
   test('parses official metadata and selects only current stable', () async {
     final result = await run('latest');
@@ -73,14 +76,17 @@ void main() {
 
   test('update dry run does not alter the pin', () async {
     final before = File('.flutter-version').readAsStringSync();
-    final result = await Process.run(executable, <String>[
-      'run',
-      'tool/flutter_sdk_manager.dart',
-      'update',
-      '--metadata',
-      fixture,
-      '--dry-run',
-    ], workingDirectory: Directory.current.path);
+    final result = await Process.run(
+        executable,
+        <String>[
+          'run',
+          'tool/flutter_sdk_manager.dart',
+          'update',
+          '--metadata',
+          fixture,
+          '--dry-run',
+        ],
+        workingDirectory: Directory.current.path);
     expect(result.exitCode, 0);
     expect(result.stdout, contains('Dry run'));
     expect(File('.flutter-version').readAsStringSync(), before);

@@ -25,8 +25,7 @@ class CountrySubdivisionDataFormatException implements Exception {
   final StackTrace? stackTrace;
 
   @override
-  String toString() =>
-      'CountrySubdivisionDataFormatException: $message'
+  String toString() => 'CountrySubdivisionDataFormatException: $message'
       '${asset == null ? '' : ' [asset: $asset]'}'
       '${countryCode == null ? '' : ' [country: $countryCode]'}'
       '${cause == null ? '' : ' (cause: $cause)'}';

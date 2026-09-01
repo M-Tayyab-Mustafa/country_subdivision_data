@@ -61,18 +61,18 @@ void main() {
     test('Snapshot metadata round-trips', () {
       final metadata =
           CountrySubdivisionSnapshotMetadata.fromJson(<String, Object?>{
-            'schemaVersion': 1,
-            'generatedAt': '2026-07-25T09:01:20.000Z',
-            'upstreamRepository': 'dr5hn/countries-states-cities-database',
-            'upstreamCommit': List<String>.filled(40, 'a').join(),
-            'upstreamRelease': null,
-            'countries': 250,
-            'subdivisions': 5308,
-            'cities': 152970,
-            'sha256': List<String>.filled(64, 'b').join(),
-            'generatorVersion': '1.0.0',
-            'license': 'ODbL-1.0',
-          });
+        'schemaVersion': 1,
+        'generatedAt': '2026-07-25T09:01:20.000Z',
+        'upstreamRepository': 'dr5hn/countries-states-cities-database',
+        'upstreamCommit': List<String>.filled(40, 'a').join(),
+        'upstreamRelease': null,
+        'countries': 250,
+        'subdivisions': 5308,
+        'cities': 152970,
+        'sha256': List<String>.filled(64, 'b').join(),
+        'generatorVersion': '1.0.0',
+        'license': 'ODbL-1.0',
+      });
       expect(
         CountrySubdivisionSnapshotMetadata.fromJson(metadata.toJson()),
         metadata,

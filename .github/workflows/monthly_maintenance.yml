@@ -41,11 +41,7 @@ jobs:
           fetch-depth: 0
           token: ${{ steps.app-token.outputs.token }}
           persist-credentials: true
-      - uses: subosito/flutter-action@v2
-        with:
-          channel: stable
-          flutter-version-file: '.flutter-version'
-          cache: true
+      - uses: ./.github/actions/setup-flutter
       - name: Capture starting state
         id: start
         run: |
@@ -115,11 +111,7 @@ jobs:
           echo "latest_flutter=$latest_flutter" >> "$GITHUB_OUTPUT"
       - name: Install selected Flutter pin
         if: steps.decision.outputs.eligible == 'true'
-        uses: subosito/flutter-action@v2
-        with:
-          channel: stable
-          flutter-version-file: '.flutter-version'
-          cache: true
+        uses: ./.github/actions/setup-flutter
       - name: Format sources with the selected Flutter SDK
         if: >-
           steps.decision.outputs.trigger == 'flutter' ||

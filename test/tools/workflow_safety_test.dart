@@ -9,6 +9,7 @@ void main() {
   late String refreshMonthly;
   late String tagMergedRelease;
   late String publish;
+  late String setupFlutter;
   late Map<String, Object?> mainRules;
   late Map<String, Object?> immutableTagRules;
 
@@ -24,6 +25,9 @@ void main() {
       '.github/workflows/tag_merged_release.yml',
     ).readAsStringSync();
     publish = File('.github/workflows/publish.yml').readAsStringSync();
+    setupFlutter = File(
+      '.github/actions/setup-flutter/action.yml',
+    ).readAsStringSync();
     mainRules = _json('.github/rulesets/main.json');
     immutableTagRules = _json('.github/rulesets/release-tags-immutable.json');
   });
@@ -46,6 +50,25 @@ void main() {
     for (final check in checks) {
       expect(ci, contains('name: $check'), reason: check);
     }
+  });
+
+  test('workflows install the exact repository Flutter pin', () {
+    for (final workflow in <String>[
+      ci,
+      monthly,
+      publish,
+      tagMergedRelease,
+    ]) {
+      expect(workflow, contains('uses: ./.github/actions/setup-flutter'));
+      expect(workflow, isNot(contains('subosito/flutter-action')));
+      expect(workflow, isNot(contains('flutter-version-file:')));
+    }
+    expect(setupFlutter, contains("< .flutter-version"));
+    expect(
+      setupFlutter,
+      contains(r'flutter-version: ${{ steps.pin.outputs.version }}'),
+    );
+    expect(setupFlutter, contains('channel: stable'));
   });
 
   test('monthly maintenance pushes only its PR branch', () {
@@ -99,7 +122,8 @@ void main() {
     );
   });
 
-  test('Flutter maintenance formats with the selected SDK before validation', () {
+  test('Flutter maintenance formats with the selected SDK before validation',
+      () {
     final install = monthly.indexOf('Install selected Flutter pin');
     final format = monthly.indexOf(
       'Format sources with the selected Flutter SDK',
@@ -134,10 +158,8 @@ void main() {
     expect(mainRules['target'], 'branch');
     expect(mainRules['bypass_actors'], isEmpty);
     final rules = mainRules['rules']! as List<Object?>;
-    final types = rules
-        .cast<Map<String, Object?>>()
-        .map((rule) => rule['type'])
-        .toSet();
+    final types =
+        rules.cast<Map<String, Object?>>().map((rule) => rule['type']).toSet();
     expect(
       types,
       containsAll(<String>{
@@ -150,15 +172,15 @@ void main() {
     );
     expect(types, isNot(contains('merge_queue')));
     final pullRequest = rules.cast<Map<String, Object?>>().singleWhere(
-      (rule) => rule['type'] == 'pull_request',
-    );
+          (rule) => rule['type'] == 'pull_request',
+        );
     final parameters = pullRequest['parameters']! as Map<String, Object?>;
     expect(parameters['allowed_merge_methods'], <String>['squash']);
     expect(parameters['required_approving_review_count'], 0);
     expect(parameters['required_review_thread_resolution'], true);
     final requiredChecks = rules.cast<Map<String, Object?>>().singleWhere(
-      (rule) => rule['type'] == 'required_status_checks',
-    );
+          (rule) => rule['type'] == 'required_status_checks',
+        );
     final checkParameters =
         requiredChecks['parameters']! as Map<String, Object?>;
     expect(checkParameters['strict_required_status_checks_policy'], true);
@@ -169,10 +191,8 @@ void main() {
     expect(immutableTagRules['target'], 'tag');
     expect(immutableTagRules['bypass_actors'], isEmpty);
     final rules = immutableTagRules['rules']! as List<Object?>;
-    final types = rules
-        .cast<Map<String, Object?>>()
-        .map((rule) => rule['type'])
-        .toSet();
+    final types =
+        rules.cast<Map<String, Object?>>().map((rule) => rule['type']).toSet();
     expect(
       types,
       containsAll(<String>{'update', 'deletion', 'non_fast_forward'}),
