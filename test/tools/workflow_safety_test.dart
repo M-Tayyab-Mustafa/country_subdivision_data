@@ -83,6 +83,22 @@ void main() {
     expect(monthly, contains('eligible=false'));
   });
 
+  test('unchanged upstream data keeps deterministic validation aligned', () {
+    expect(
+      monthly,
+      contains(
+        'git -C .tool_work/upstream fetch --depth=1 origin '
+        r'"$current_commit"',
+      ),
+    );
+    expect(
+      monthly,
+      contains(
+        'git -C .tool_work/upstream checkout --detach FETCH_HEAD',
+      ),
+    );
+  });
+
   test('release tag is created only after the maintenance PR is merged', () {
     expect(tagMergedRelease, contains('branches:'));
     expect(tagMergedRelease, contains('- main'));

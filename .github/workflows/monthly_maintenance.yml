@@ -84,6 +84,11 @@ jobs:
               rm -rf assets/country_subdivision_data
               mv .tool_work/candidate assets/country_subdivision_data
               data_changed=true
+            else
+              # Determinism must validate the retained snapshot against the
+              # upstream commit recorded in its manifest.
+              git -C .tool_work/upstream fetch --depth=1 origin "$current_commit"
+              git -C .tool_work/upstream checkout --detach FETCH_HEAD
             fi
           fi
 
