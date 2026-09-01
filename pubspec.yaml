@@ -1,6 +1,6 @@
 name: country_subdivision_data
 description: Offline country, subdivision, city, and calling-code data with lazy loading, customizable phone fields, and searchable country pickers.
-version: 0.0.3
+version: 0.0.4
 homepage: https://github.com/M-Tayyab-Mustafa/country_subdivision_data
 repository: https://github.com/M-Tayyab-Mustafa/country_subdivision_data
 issue_tracker: https://github.com/M-Tayyab-Mustafa/country_subdivision_data/issues
