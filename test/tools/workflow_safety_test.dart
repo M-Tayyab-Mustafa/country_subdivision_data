@@ -99,6 +99,20 @@ void main() {
     );
   });
 
+  test('Flutter maintenance formats with the selected SDK before validation', () {
+    final install = monthly.indexOf('Install selected Flutter pin');
+    final format = monthly.indexOf(
+      'Format sources with the selected Flutter SDK',
+    );
+    final validation = monthly.indexOf('Pre-version verification');
+    expect(install, greaterThan(0));
+    expect(format, greaterThan(install));
+    expect(validation, greaterThan(format));
+    expect(monthly, contains("outputs.trigger == 'flutter'"));
+    expect(monthly, contains("outputs.trigger == 'combined'"));
+    expect(monthly, contains('run: dart format .'));
+  });
+
   test('release tag is created only after the maintenance PR is merged', () {
     expect(tagMergedRelease, contains('branches:'));
     expect(tagMergedRelease, contains('- main'));

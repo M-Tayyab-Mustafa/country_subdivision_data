@@ -120,6 +120,11 @@ jobs:
           channel: stable
           flutter-version-file: '.flutter-version'
           cache: true
+      - name: Format sources with the selected Flutter SDK
+        if: >-
+          steps.decision.outputs.trigger == 'flutter' ||
+          steps.decision.outputs.trigger == 'combined'
+        run: dart format .
       - name: Pre-version verification
         if: steps.decision.outputs.eligible == 'true'
         run: |
