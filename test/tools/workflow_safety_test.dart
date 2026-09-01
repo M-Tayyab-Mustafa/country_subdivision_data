@@ -10,6 +10,8 @@ void main() {
   late String tagMergedRelease;
   late String publish;
   late String setupFlutter;
+  late String verify;
+  late String publishDryRun;
   late Map<String, Object?> mainRules;
   late Map<String, Object?> immutableTagRules;
 
@@ -27,6 +29,10 @@ void main() {
     publish = File('.github/workflows/publish.yml').readAsStringSync();
     setupFlutter = File(
       '.github/actions/setup-flutter/action.yml',
+    ).readAsStringSync();
+    verify = File('.github/scripts/verify.sh').readAsStringSync();
+    publishDryRun = File(
+      '.github/scripts/check_publish_dry_run.sh',
     ).readAsStringSync();
     mainRules = _json('.github/rulesets/main.json');
     immutableTagRules = _json('.github/rulesets/release-tags-immutable.json');
@@ -135,6 +141,24 @@ void main() {
     expect(monthly, contains("outputs.trigger == 'flutter'"));
     expect(monthly, contains("outputs.trigger == 'combined'"));
     expect(monthly, contains('run: dart format .'));
+  });
+
+  test('maintenance validates a clean copy of the uncommitted candidate', () {
+    expect(verify, contains('check_publish_dry_run.sh'));
+    expect(verify, isNot(contains('dart pub publish --dry-run')));
+    expect(publishDryRun, contains('git rev-parse --show-toplevel'));
+    expect(publishDryRun, contains(r'git -C "$repository" ls-files'));
+    expect(publishDryRun, contains('--cached'));
+    expect(publishDryRun, contains('--others'));
+    expect(publishDryRun, contains('--exclude-standard'));
+    expect(publishDryRun, contains(r'git -C "$candidate" add --all'));
+    expect(publishDryRun, contains('commit --quiet --allow-empty'));
+    expect(
+      publishDryRun,
+      contains('dart pub publish --dry-run'),
+    );
+    expect(publishDryRun, isNot(contains('--ignore-warnings')));
+    expect(publishDryRun, isNot(contains('--skip-validation')));
   });
 
   test('release tag is created only after the maintenance PR is merged', () {

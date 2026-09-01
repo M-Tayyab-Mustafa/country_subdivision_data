@@ -12,4 +12,4 @@ dart run tool/flutter_sdk_manager.dart verify
 dart run tool/upstream_data_manager.dart verify
 dart run tool/version_manager.dart verify
 dart run tool/verify_release_review.dart
-dart pub publish --dry-run
+bash .github/scripts/check_publish_dry_run.sh
