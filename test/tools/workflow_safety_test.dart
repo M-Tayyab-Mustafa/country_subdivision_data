@@ -161,6 +161,14 @@ void main() {
     expect(publishDryRun, isNot(contains('--skip-validation')));
   });
 
+  test('workflow validation uses runner-portable shell tools', () {
+    expect(monthly, isNot(contains(r'rg "^##')));
+    expect(monthly, contains('grep -Fx "##'));
+    expect(monthly, contains('Unexpected generated artifact found'));
+    expect(ci, isNot(contains("! rg 'world_admin_data")));
+    expect(ci, contains('if grep -ERq'));
+  });
+
   test('release tag is created only after the maintenance PR is merged', () {
     expect(tagMergedRelease, contains('branches:'));
     expect(tagMergedRelease, contains('- main'));

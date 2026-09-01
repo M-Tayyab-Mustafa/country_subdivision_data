@@ -165,8 +165,12 @@ jobs:
           bash .github/scripts/verify.sh
           test -f "tool/reports/releases/${{ steps.version.outputs.version }}.md"
           test -f "tool/reports/releases/${{ steps.version.outputs.version }}.json"
-          rg "^## ${{ steps.version.outputs.version }}$" CHANGELOG.md
-          ! git status --short | rg '(^|/)(build|coverage|\.dart_tool|\.tool_work)/'
+          grep -Fx "## ${{ steps.version.outputs.version }}" CHANGELOG.md
+          if git status --short | grep -Eq \
+            '(^|[[:space:]]|/)(build|coverage|\.dart_tool|\.tool_work)/'; then
+            echo "Unexpected generated artifact found in the release candidate."
+            exit 1
+          fi
       - name: Commit and update the maintenance branch
         if: steps.decision.outputs.eligible == 'true'
         env:

@@ -140,5 +140,9 @@ jobs:
           ! find . -path './.tool_work/*' -type f -print -quit | grep -q .
       - name: Verify no obsolete public names
         run: |
-          ! rg 'world_admin_data|WorldAdminData|WorldAdminRepository|AssetWorldAdminRepository|AdministrativeArea' \
-            lib test README.md CONTRIBUTING.md
+          if grep -ERq \
+            'world_admin_data|WorldAdminData|WorldAdminRepository|AssetWorldAdminRepository|AdministrativeArea' \
+            lib test README.md CONTRIBUTING.md; then
+            echo "Obsolete public name found."
+            exit 1
+          fi
