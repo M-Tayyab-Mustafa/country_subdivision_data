@@ -30,7 +30,7 @@ jobs:
         id: app-token
         uses: actions/create-github-app-token@v3
         with:
-          app-id: ${{ vars.RELEASE_APP_ID }}
+          client-id: ${{ vars.RELEASE_APP_ID }}
           private-key: ${{ secrets.RELEASE_APP_PRIVATE_KEY }}
           permission-contents: write
           permission-pull-requests: write
@@ -47,13 +47,19 @@ jobs:
         run: |
           mkdir -p .tool_work
           cp assets/country_subdivision_data/manifest.json .tool_work/old_manifest.json
-          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
-          echo "version=$(dart run tool/version_manager.dart current)" >> "$GITHUB_OUTPUT"
-          echo "next_version=$(dart run tool/version_manager.dart next)" >> "$GITHUB_OUTPUT"
-          echo "flutter=$(tr -d '[:space:]' < .flutter-version)" >> "$GITHUB_OUTPUT"
+          {
+            echo "sha=$(git rev-parse HEAD)"
+            echo "version=$(dart run tool/version_manager.dart current)"
+            echo "next_version=$(dart run tool/version_manager.dart next)"
+            echo "flutter=$(tr -d '[:space:]' < .flutter-version)"
+          } >> "$GITHUB_OUTPUT"
       - name: Resolve eligible changes
         id: decision
         run: |
+          write_output() {
+            printf '%s=%s\n' "$1" "$2" >> "$GITHUB_OUTPUT"
+          }
+
           set +e
           flutter_output="$(dart run tool/flutter_sdk_manager.dart check 2>&1)"
           flutter_status=$?
@@ -95,7 +101,7 @@ jobs:
           fi
 
           if [ "$flutter_changed" = false ] && [ "$data_changed" = false ]; then
-            echo "eligible=false" >> "$GITHUB_OUTPUT"
+            write_output eligible false
             echo "No eligible update; repository remains unchanged."
             exit 0
           fi
@@ -106,9 +112,9 @@ jobs:
           else
             trigger=data
           fi
-          echo "eligible=true" >> "$GITHUB_OUTPUT"
-          echo "trigger=$trigger" >> "$GITHUB_OUTPUT"
-          echo "latest_flutter=$latest_flutter" >> "$GITHUB_OUTPUT"
+          write_output eligible true
+          write_output trigger "$trigger"
+          write_output latest_flutter "$latest_flutter"
       - name: Install selected Flutter pin
         if: steps.decision.outputs.eligible == 'true'
         uses: ./.github/actions/setup-flutter
@@ -121,7 +127,7 @@ jobs:
         if: steps.decision.outputs.eligible == 'true'
         run: |
           bash .github/scripts/check_determinism.sh .tool_work/upstream
-          bash .github/scripts/verify.sh
+          bash .github/scripts/verify.sh --pre-release
           test -n "$(git status --short -- . ':!.tool_work')"
       - name: Create exactly one versioned release record
         if: steps.decision.outputs.eligible == 'true'

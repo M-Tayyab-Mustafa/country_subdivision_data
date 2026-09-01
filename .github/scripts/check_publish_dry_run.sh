@@ -9,6 +9,9 @@ trap 'rm -rf "$candidate"' EXIT
 # validate its exact candidate before committing it, so copy every tracked or
 # publishable untracked file into a clean, temporary repository first.
 while IFS= read -r -d '' path; do
+  if [ ! -e "$repository/$path" ] && [ ! -L "$repository/$path" ]; then
+    continue
+  fi
   mkdir -p "$candidate/$(dirname "$path")"
   cp -p "$repository/$path" "$candidate/$path"
 done < <(

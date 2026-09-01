@@ -53,7 +53,7 @@ jobs:
         id: app-token
         uses: actions/create-github-app-token@v3
         with:
-          app-id: ${{ vars.RELEASE_APP_ID }}
+          client-id: ${{ vars.RELEASE_APP_ID }}
           private-key: ${{ secrets.RELEASE_APP_PRIVATE_KEY }}
           permission-contents: write
       - uses: actions/checkout@v5
@@ -73,9 +73,15 @@ jobs:
           dart run tool/version_manager.dart verify --tag "v$VERSION"
           test -f "tool/reports/releases/$VERSION.md"
           test -f "tool/reports/releases/$VERSION.json"
-          ! git rev-parse "refs/tags/v$VERSION" >/dev/null 2>&1
-          ! git ls-remote --exit-code --tags origin \
-            "refs/tags/v$VERSION" >/dev/null 2>&1
+          if git rev-parse "refs/tags/v$VERSION" >/dev/null 2>&1; then
+            echo "Release tag v$VERSION already exists locally."
+            exit 1
+          fi
+          if git ls-remote --exit-code --tags origin \
+            "refs/tags/v$VERSION" >/dev/null 2>&1; then
+            echo "Release tag v$VERSION already exists on origin."
+            exit 1
+          fi
       - name: Run complete post-merge validation
         run: bash .github/scripts/verify.sh
       - name: Create and push only the protected release tag

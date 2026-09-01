@@ -79,6 +79,8 @@ void main() {
 
   test('monthly maintenance pushes only its PR branch', () {
     expect(monthly, contains('actions/create-github-app-token@v3'));
+    expect(monthly, contains('client-id:'));
+    expect(monthly, isNot(contains('app-id:')));
     expect(monthly, contains('flutter_sdk_manager.dart check 2>&1'));
     expect(monthly, isNot(contains('check-major')));
     expect(monthly, contains('RELEASE_APP_PRIVATE_KEY'));
@@ -97,6 +99,8 @@ void main() {
     expect(refreshMonthly, contains('--head automation/monthly-maintenance'));
     expect(refreshMonthly, contains('gh pr update-branch'));
     expect(refreshMonthly, contains('--auto --squash'));
+    expect(refreshMonthly, contains('client-id:'));
+    expect(refreshMonthly, isNot(contains('app-id:')));
     expect(refreshMonthly, isNot(contains('HEAD:main')));
   });
 
@@ -165,8 +169,27 @@ void main() {
     expect(monthly, isNot(contains(r'rg "^##')));
     expect(monthly, contains('grep -Fx "##'));
     expect(monthly, contains('Unexpected generated artifact found'));
-    expect(ci, isNot(contains("! rg 'world_admin_data")));
+    expect(ci, isNot(contains('! rg ')));
     expect(ci, contains('if grep -ERq'));
+  });
+
+  test('pre-release validation defers release-record verification', () {
+    final preVersion = monthly.indexOf('Pre-version verification');
+    final releaseRecord = monthly.indexOf(
+      'Create exactly one versioned release record',
+    );
+    final finalValidation = monthly.indexOf('Final complete validation');
+    final commit = monthly.indexOf('Commit and update the maintenance branch');
+    expect(
+      monthly.substring(preVersion, releaseRecord),
+      contains('verify.sh --pre-release'),
+    );
+    expect(
+      monthly.substring(finalValidation, commit),
+      contains('bash .github/scripts/verify.sh\n'),
+    );
+    expect(verify, contains("case \"\${1:-}\" in"));
+    expect(verify, contains("'--pre-release'"));
   });
 
   test('release tag is created only after the maintenance PR is merged', () {
@@ -183,6 +206,8 @@ void main() {
       contains(r'git push origin "refs/tags/v$VERSION"'),
     );
     expect(tagMergedRelease, isNot(contains('HEAD:main')));
+    expect(tagMergedRelease, contains('client-id:'));
+    expect(tagMergedRelease, isNot(contains('app-id:')));
   });
 
   test('main ruleset has no bypass and requires policy checks', () {
