@@ -1,3 +1,19 @@
+## 0.0.5
+
+### Toolchain
+
+- Updated the pinned Flutter stable SDK from `3.47.2` to `3.47.5`.
+- The minimum supported Flutter SDK remains unchanged.
+
+### Data
+
+- Updated the country, subdivision, and city snapshot.
+- Updated the upstream database commit from `81d127720a3da919c5d3da95a662316626a1ce49` to `54ab470dae7d13d3af505c9e0217d5d1e3f1cce0`.
+
+### Validation
+
+- Passed formatting, analysis, tests, snapshot integrity, Nigeria regression, and pub.dev publication dry-run.
+
 ## 0.0.4
 
 ### Toolchain
