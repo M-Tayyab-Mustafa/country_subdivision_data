@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "pinnedVersion": "3.47.5",
-  "releaseHash": "6a19cca56475dbfba1478ee68d7bd0c2ef891da1",
-  "releaseDate": "2026-09-18",
-  "checkedAt": "2026-10-01T11:05:25.895787Z"
+  "pinnedVersion": "3.47.9",
+  "releaseHash": "c197ca5199e9ee5661e865596c9c07294dfab51c",
+  "releaseDate": "2026-10-29",
+  "checkedAt": "2026-11-01T11:25:28.619264Z"
 }
