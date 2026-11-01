@@ -1,17 +1,17 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-28T16:47:38.000Z",
+  "generatedAt": "2026-10-31T11:45:40.000Z",
   "upstreamRepository": "dr5hn/countries-states-cities-database",
-  "upstreamCommit": "54ab470dae7d13d3af505c9e0217d5d1e3f1cce0",
+  "upstreamCommit": "925204e26d6a478f6b8af56eb516030b00e38e0a",
   "upstreamRelease": null,
   "countries": 250,
-  "subdivisions": 5308,
-  "cities": 153312,
-  "sha256": "2f5be20b7ff6982b49eb6d4937156622c5698954e58e5a1b3139f526e63acbd0",
+  "subdivisions": 5327,
+  "cities": 152375,
+  "sha256": "192f808d7b4876e5a6780a53f0c9be133b22f378f96dfe14f8cf4a847fb90d43",
   "generatorVersion": "1.0.1",
   "license": "ODbL-1.0",
-  "compressedBytes": 3597721,
-  "uncompressedBytes": 41668577,
+  "compressedBytes": 3582207,
+  "uncompressedBytes": 41393197,
   "checksumFiles": [
     "countries.json",
     "countries/AD.json.gz",
@@ -278,29 +278,29 @@
     {
       "countryCode": "AE",
       "path": "countries/AE.json.gz",
-      "sha256": "3df170e50a1c4dfda908428b4eed8ec9b1387769efee4c9adfc2471a20df57c6",
+      "sha256": "76fe833b75c6f963b18d8674f94001efcd8392b95577b27e20131d851d38c1cf",
       "subdivisions": 7,
-      "cities": 43,
-      "compressedBytes": 1419,
-      "uncompressedBytes": 12571
+      "cities": 44,
+      "compressedBytes": 1447,
+      "uncompressedBytes": 12828
     },
     {
       "countryCode": "AF",
       "path": "countries/AF.json.gz",
-      "sha256": "f211cf5b1189da75f0d984b36fde336ec101550a53fd08546a4240729f0a7d1c",
+      "sha256": "46efab4f8e6fa5c4261cbeff60632ab56c4932d894f089a8ecf8c1292fe4ec3f",
       "subdivisions": 34,
-      "cities": 100,
-      "compressedBytes": 3902,
-      "uncompressedBytes": 32683
+      "cities": 136,
+      "compressedBytes": 4856,
+      "uncompressedBytes": 41994
     },
     {
       "countryCode": "AG",
       "path": "countries/AG.json.gz",
-      "sha256": "ba41ec237aed71b1ee63010c3dfd0daf2332ffc1eeae28966b59a2c45a6c93b7",
+      "sha256": "422b851da8963763128c03a7e490bf77393be75f9cb35efb8b2d180703c61ef5",
       "subdivisions": 8,
-      "cities": 9,
-      "compressedBytes": 671,
-      "uncompressedBytes": 4131
+      "cities": 10,
+      "compressedBytes": 702,
+      "uncompressedBytes": 4394
     },
     {
       "countryCode": "AI",
@@ -314,29 +314,29 @@
     {
       "countryCode": "AL",
       "path": "countries/AL.json.gz",
-      "sha256": "7d0a12d206dcb2887e670881d6b2c8c99501dbf281bf8d1ac250b9f47c6ebf28",
+      "sha256": "9f01f1a3c3d332a44c02e0aea9bb99c857aace33788e69e2e74881fa49aa5b75",
       "subdivisions": 12,
-      "cities": 143,
-      "compressedBytes": 3578,
-      "uncompressedBytes": 39433
+      "cities": 144,
+      "compressedBytes": 3600,
+      "uncompressedBytes": 39690
     },
     {
       "countryCode": "AM",
       "path": "countries/AM.json.gz",
-      "sha256": "30559953e0d404c7a70309cd642c5ed1687626277389ddecca1c9d84d7b9ab15",
+      "sha256": "57827ae85c7daf23f6cf45029d83cdd72dcbb2f1e259b05a92fdd2756af375c1",
       "subdivisions": 11,
-      "cities": 308,
-      "compressedBytes": 6823,
-      "uncompressedBytes": 81224
+      "cities": 319,
+      "compressedBytes": 7074,
+      "uncompressedBytes": 84061
     },
     {
       "countryCode": "AO",
       "path": "countries/AO.json.gz",
-      "sha256": "37bede6d9c147a31e3505ce8b0fdd939beff12ad5cc4763cc91878fd06f70de0",
-      "subdivisions": 18,
-      "cities": 72,
-      "compressedBytes": 2456,
-      "uncompressedBytes": 22284
+      "sha256": "816b99a6e4da37005501e2d71e7eb1b8afdfe023b00a143a9000caa0ea8cbf3c",
+      "subdivisions": 19,
+      "cities": 83,
+      "compressedBytes": 2736,
+      "uncompressedBytes": 25324
     },
     {
       "countryCode": "AQ",
@@ -350,11 +350,11 @@
     {
       "countryCode": "AR",
       "path": "countries/AR.json.gz",
-      "sha256": "c319ff9f8dfdd568eed0b958e4ff9329bc03e37b7d6e64f0df97df4168dea281",
+      "sha256": "f77e646a4e2cc8c01fa27b97e22c35535576b1f2ef1b9c6201e14a91dc662681",
       "subdivisions": 24,
-      "cities": 1136,
-      "compressedBytes": 28886,
-      "uncompressedBytes": 322716
+      "cities": 1022,
+      "compressedBytes": 27054,
+      "uncompressedBytes": 288524
     },
     {
       "countryCode": "AS",
@@ -368,20 +368,20 @@
     {
       "countryCode": "AT",
       "path": "countries/AT.json.gz",
-      "sha256": "c7d65f0f32ab3ac95b82a73376a94f2dadbf05922ff38ac32f9674f9f0bb8c2a",
+      "sha256": "46bde89229f5a906f6ca8ee094b6cba400bc62c4f695047bc8a797f95dd4d932",
       "subdivisions": 9,
-      "cities": 2360,
-      "compressedBytes": 47862,
-      "uncompressedBytes": 616741
+      "cities": 2347,
+      "compressedBytes": 47633,
+      "uncompressedBytes": 613311
     },
     {
       "countryCode": "AU",
       "path": "countries/AU.json.gz",
-      "sha256": "50c3b66df2c54a6a64f054788b48e9796bacd1dc966452744324e3524e180fcc",
+      "sha256": "939c6ebc525caa19798d496e4752580762bf71e2b0f2b32dbd08a57a079806ec",
       "subdivisions": 8,
-      "cities": 4147,
-      "compressedBytes": 88800,
-      "uncompressedBytes": 1106033
+      "cities": 4145,
+      "compressedBytes": 88578,
+      "uncompressedBytes": 1105384
     },
     {
       "countryCode": "AW",
@@ -404,20 +404,20 @@
     {
       "countryCode": "AZ",
       "path": "countries/AZ.json.gz",
-      "sha256": "e5db1fdfc227721a5aa12e7fcd64ab256a0ec0498661feb8fa3a8e747ba8692f",
+      "sha256": "dc89d4dba7f2545d60ca9a0b03bf19612960d63d7e514a6193f1f2ddeaaa83bf",
       "subdivisions": 78,
-      "cities": 180,
-      "compressedBytes": 7053,
-      "uncompressedBytes": 62332
+      "cities": 183,
+      "compressedBytes": 7085,
+      "uncompressedBytes": 63063
     },
     {
       "countryCode": "BA",
       "path": "countries/BA.json.gz",
-      "sha256": "46b72f772517db2fb98fe5d07fb3c3385a340d1a5923d88f4158d554bc5a4f90",
+      "sha256": "e4a41116c57f6ec1416f6591b76d972b699c262d06770a3af0ead8bc32dfcd94",
       "subdivisions": 3,
-      "cities": 232,
-      "compressedBytes": 5301,
-      "uncompressedBytes": 61172
+      "cities": 237,
+      "compressedBytes": 5416,
+      "uncompressedBytes": 62487
     },
     {
       "countryCode": "BB",
@@ -431,29 +431,29 @@
     {
       "countryCode": "BD",
       "path": "countries/BD.json.gz",
-      "sha256": "c7466963b07f70c6683bace8a4cdbad6d172a703af3798d0bfb55a17da002395",
+      "sha256": "3d2338cfda87a6031119d0ab4e4fd9e633878ca2c87e389802fb1b3bc872595b",
       "subdivisions": 72,
-      "cities": 64,
-      "compressedBytes": 3720,
-      "uncompressedBytes": 31657
+      "cities": 80,
+      "compressedBytes": 4173,
+      "uncompressedBytes": 35784
     },
     {
       "countryCode": "BE",
       "path": "countries/BE.json.gz",
-      "sha256": "939bc5e8b01645b76b0360423e7eef7af4333f07a7dd85a07f806b6cd242f34d",
+      "sha256": "066295cedbfe1b860c42287e64932448b7f33e03589c205109e7f19eb2497fcc",
       "subdivisions": 13,
-      "cities": 549,
-      "compressedBytes": 11968,
-      "uncompressedBytes": 145816
+      "cities": 541,
+      "compressedBytes": 12245,
+      "uncompressedBytes": 143653
     },
     {
       "countryCode": "BF",
       "path": "countries/BF.json.gz",
-      "sha256": "52f585658beea954203a969cacc71dbbb13400a14480772692fdddb782ddbe76",
+      "sha256": "d03af46082afe701b9c0a46908343e514d79d67bdd5f7eb340f1d23ea703fd88",
       "subdivisions": 58,
-      "cities": 92,
-      "compressedBytes": 3776,
-      "uncompressedBytes": 36833
+      "cities": 105,
+      "compressedBytes": 4160,
+      "uncompressedBytes": 40272
     },
     {
       "countryCode": "BG",
@@ -485,11 +485,11 @@
     {
       "countryCode": "BJ",
       "path": "countries/BJ.json.gz",
-      "sha256": "24e2d0a34122d9e90ad954169b115de0bb4dcd69f8a405b15547cabd7a2b5584",
+      "sha256": "1b6cfa35f4b913d028f48be12540d3b9dda211fe3df683a16cf935f0dcc6a5c8",
       "subdivisions": 12,
-      "cities": 36,
-      "compressedBytes": 1481,
-      "uncompressedBytes": 11968
+      "cities": 39,
+      "compressedBytes": 1558,
+      "uncompressedBytes": 12757
     },
     {
       "countryCode": "BL",
@@ -521,29 +521,29 @@
     {
       "countryCode": "BO",
       "path": "countries/BO.json.gz",
-      "sha256": "885dd3c4ed670183ff30e4d7e1696c4532d7901b199b8562ed12105fa9fa1fdf",
+      "sha256": "f76e97d9410270b9a1f9db2e0550998f2e2dc598766d47070b0d68d37843dc0c",
       "subdivisions": 9,
-      "cities": 228,
-      "compressedBytes": 5390,
-      "uncompressedBytes": 62158
+      "cities": 233,
+      "compressedBytes": 5479,
+      "uncompressedBytes": 63453
     },
     {
       "countryCode": "BQ",
       "path": "countries/BQ.json.gz",
-      "sha256": "e2cb5f513db2b579935e084736c081f63d071d6959b72a449013bdfb78e7da78",
+      "sha256": "bb9433056ee884f06d9a1907aab56b01957d2214908847102360ac7653614645",
       "subdivisions": 3,
       "cities": 8,
-      "compressedBytes": 511,
+      "compressedBytes": 527,
       "uncompressedBytes": 2931
     },
     {
       "countryCode": "BR",
       "path": "countries/BR.json.gz",
-      "sha256": "4c75f0294c43c737c56db54ce92ef4e4a7e97e1e6a04f230c5c34638b5d7adb3",
+      "sha256": "c31de5e2cbf4d98f96eda5576a52435364d2fd1f129fd7f940764cc3128765f4",
       "subdivisions": 27,
-      "cities": 5629,
-      "compressedBytes": 132724,
-      "uncompressedBytes": 1516093
+      "cities": 5628,
+      "compressedBytes": 132849,
+      "uncompressedBytes": 1515692
     },
     {
       "countryCode": "BS",
@@ -575,20 +575,20 @@
     {
       "countryCode": "BW",
       "path": "countries/BW.json.gz",
-      "sha256": "45695769160f718ffa8e80ee7e22b413686dde74e7c5c6e2e0406e43d86fecfa",
+      "sha256": "49f73482246e21f0219c489ff443c3c6964959e6f301ff6779b32e87ee02f004",
       "subdivisions": 16,
-      "cities": 75,
-      "compressedBytes": 2361,
-      "uncompressedBytes": 23005
+      "cities": 79,
+      "compressedBytes": 2470,
+      "uncompressedBytes": 24051
     },
     {
       "countryCode": "BY",
       "path": "countries/BY.json.gz",
-      "sha256": "66b0237123d10bbe843d0ce83546bfc0162bd69e132c6d9be3a4934092a58663",
+      "sha256": "9b2f39e5610ee2a22bfa1e56cd8de89f96ff84012248d1a4372c137e5e509910",
       "subdivisions": 7,
       "cities": 329,
-      "compressedBytes": 7183,
-      "uncompressedBytes": 86624
+      "compressedBytes": 7211,
+      "uncompressedBytes": 86622
     },
     {
       "countryCode": "BZ",
@@ -602,11 +602,11 @@
     {
       "countryCode": "CA",
       "path": "countries/CA.json.gz",
-      "sha256": "702b8499c3c088e16c15347e70efc6ce9976c075340bd7f2da54e762c712aa53",
+      "sha256": "76d89b7f9b80b7d69ebf9366c408e32b968ff913c5b090f65ccb316a43772586",
       "subdivisions": 13,
-      "cities": 1080,
-      "compressedBytes": 26034,
-      "uncompressedBytes": 288072
+      "cities": 1091,
+      "compressedBytes": 26216,
+      "uncompressedBytes": 290998
     },
     {
       "countryCode": "CC",
@@ -620,47 +620,47 @@
     {
       "countryCode": "CD",
       "path": "countries/CD.json.gz",
-      "sha256": "b535b854530a3bb668e074dd1b0ea92e9782a81247beac116e604a3f82b38a49",
+      "sha256": "d5727d69687fd393107768d0a2f720b3054056030993dbc5d18313cfa2befcfd",
       "subdivisions": 26,
-      "cities": 67,
-      "compressedBytes": 2747,
-      "uncompressedBytes": 23055
+      "cities": 83,
+      "compressedBytes": 3164,
+      "uncompressedBytes": 27260
     },
     {
       "countryCode": "CF",
       "path": "countries/CF.json.gz",
-      "sha256": "5c95dbd0ea986fbacf4c10b3a2981b316623847918ea67c0d3abde229365d464",
+      "sha256": "d7d9f7e76940f557dc1a101e3dce145559f109cf679b421db7a133a22dc0bf54",
       "subdivisions": 17,
-      "cities": 42,
-      "compressedBytes": 1833,
-      "uncompressedBytes": 14522
+      "cities": 46,
+      "compressedBytes": 1920,
+      "uncompressedBytes": 15552
     },
     {
       "countryCode": "CG",
       "path": "countries/CG.json.gz",
-      "sha256": "64a3bdc7a2e00bbff5beedbf53b7a029199aedd8744e70d009cd63724a086a71",
+      "sha256": "545c89c493b712cbef528b8c18566897eec3e9865ee3f3b99e009bfb1fdd184f",
       "subdivisions": 12,
-      "cities": 17,
-      "compressedBytes": 1042,
-      "uncompressedBytes": 7105
+      "cities": 24,
+      "compressedBytes": 1199,
+      "uncompressedBytes": 8937
     },
     {
       "countryCode": "CH",
       "path": "countries/CH.json.gz",
-      "sha256": "9027fab9d44d4c961af35da931f9a10c5d671d44c95dd455d9749fcb8a5b8389",
+      "sha256": "2c256312233ad95984143f0ac6cdc928e5a9aa06396a8193c72c3262610525cc",
       "subdivisions": 26,
-      "cities": 1507,
-      "compressedBytes": 33077,
-      "uncompressedBytes": 401033
+      "cities": 1385,
+      "compressedBytes": 30755,
+      "uncompressedBytes": 368944
     },
     {
       "countryCode": "CI",
       "path": "countries/CI.json.gz",
-      "sha256": "eafec06e368de2b57395bb24eaf5a81d7b511ee00651417c7470181e44c1893b",
+      "sha256": "6f0f2c379edf6bb272ee6b580577a57b5d995ce9ea2254a6a7f0307e731cb20e",
       "subdivisions": 14,
-      "cities": 95,
-      "compressedBytes": 2924,
-      "uncompressedBytes": 27644
+      "cities": 103,
+      "compressedBytes": 3111,
+      "uncompressedBytes": 29701
     },
     {
       "countryCode": "CK",
@@ -674,65 +674,65 @@
     {
       "countryCode": "CL",
       "path": "countries/CL.json.gz",
-      "sha256": "a31b871274efa2660abcc56787172d11757b204a389c1f266c9552dd805e482a",
+      "sha256": "9c69431669828c884dc9d47251345fee92fff00d1deb949110e24ae7707bbe9e",
       "subdivisions": 16,
-      "cities": 300,
-      "compressedBytes": 7609,
-      "uncompressedBytes": 83494
+      "cities": 308,
+      "compressedBytes": 7799,
+      "uncompressedBytes": 85621
     },
     {
       "countryCode": "CM",
       "path": "countries/CM.json.gz",
-      "sha256": "1c2b6b947400ec5125b2f889be33395ef19ad254b1527908db6baceb67bdaee0",
+      "sha256": "9a99ba2fe62f1ebc5491ae01468342efc8a583781318247214dde735d2e511e3",
       "subdivisions": 10,
-      "cities": 139,
-      "compressedBytes": 3456,
-      "uncompressedBytes": 37665
+      "cities": 141,
+      "compressedBytes": 3502,
+      "uncompressedBytes": 38178
     },
     {
       "countryCode": "CN",
       "path": "countries/CN.json.gz",
-      "sha256": "a6e7b33760dfe2a7f943a42584fa281b8cd195303913c6cde927c3ca63a67151",
+      "sha256": "ee53ca3e15e4793ce681d132b6c442f87fd748649ea251cea293404b3e30f50e",
       "subdivisions": 34,
-      "cities": 4133,
-      "compressedBytes": 90705,
-      "uncompressedBytes": 1091645
+      "cities": 4104,
+      "compressedBytes": 88605,
+      "uncompressedBytes": 1081994
     },
     {
       "countryCode": "CO",
       "path": "countries/CO.json.gz",
-      "sha256": "3eb29af30bf63605b25b11d3bc540696b0151098d08311572ddf046c4902670e",
+      "sha256": "c4546787c01b977570826ab8c6d237bbeced21c72fe6372c390ceb628028fcdc",
       "subdivisions": 33,
       "cities": 1122,
-      "compressedBytes": 27170,
-      "uncompressedBytes": 301590
+      "compressedBytes": 27174,
+      "uncompressedBytes": 301593
     },
     {
       "countryCode": "CR",
       "path": "countries/CR.json.gz",
-      "sha256": "6536fefb099f3db895b3eecfc4fb1c9f2be20ba65fe65e01ef62db27a848160d",
+      "sha256": "fc8de08d6ea4cd0c24f0cec39ad83cd88cdb5dbaef9ed4db6124d0aa74bd177c",
       "subdivisions": 7,
       "cities": 159,
-      "compressedBytes": 3656,
-      "uncompressedBytes": 43356
+      "compressedBytes": 3648,
+      "uncompressedBytes": 43346
     },
     {
       "countryCode": "CU",
       "path": "countries/CU.json.gz",
-      "sha256": "84b093ad62da33d9fd88f0f5e43066ff5c9bf4b6df19733cfe48cfe44d03055f",
+      "sha256": "597c28c4055ac957c03f6cf8c513f805ca657bd65ba8fc2cafc7f23e80875fa1",
       "subdivisions": 16,
-      "cities": 192,
-      "compressedBytes": 5328,
-      "uncompressedBytes": 54249
+      "cities": 195,
+      "compressedBytes": 5387,
+      "uncompressedBytes": 55028
     },
     {
       "countryCode": "CV",
       "path": "countries/CV.json.gz",
-      "sha256": "76ae1316c017e600ff90f8472f7ccc5e640dbd8b89fdc8291b7328e49b95986d",
+      "sha256": "0514faf012be1e9e7a0ec74161254f073d05e327dc7c1adf45867c1e1b6e6a6c",
       "subdivisions": 24,
       "cities": 28,
-      "compressedBytes": 1726,
-      "uncompressedBytes": 12907
+      "compressedBytes": 1732,
+      "uncompressedBytes": 12922
     },
     {
       "countryCode": "CW",
@@ -755,47 +755,47 @@
     {
       "countryCode": "CY",
       "path": "countries/CY.json.gz",
-      "sha256": "5fab91f55b921e85b5e068f3b76ba737772e18a09220f55f88ff357f43d25f1b",
+      "sha256": "8f9601843e2280e81a37668548b8b0f367de372021fd286802442c5dc0905c14",
       "subdivisions": 6,
-      "cities": 95,
-      "compressedBytes": 2635,
-      "uncompressedBytes": 25974
+      "cities": 96,
+      "compressedBytes": 2663,
+      "uncompressedBytes": 26241
     },
     {
       "countryCode": "CZ",
       "path": "countries/CZ.json.gz",
-      "sha256": "6de6c77c2adf0d1d1c31f050721bd11a504be55a394115f09645bace74d80f43",
+      "sha256": "4da104f6995b8f484d226f44a4e9e1a58c5da53dde308361dfc09b856cfb9e10",
       "subdivisions": 90,
-      "cities": 1355,
-      "compressedBytes": 32218,
-      "uncompressedBytes": 373948
+      "cities": 1281,
+      "compressedBytes": 32626,
+      "uncompressedBytes": 355418
     },
     {
       "countryCode": "DE",
       "path": "countries/DE.json.gz",
-      "sha256": "7a2b7568fc8dade74ce804a26bfee3a8d9c1516441a3b28fca4ee8de4ba4aa84",
+      "sha256": "89490e63a86bc1939404c104967487bcedcc4af251a7a31dc27f24e7bffa7d21",
       "subdivisions": 16,
       "cities": 7107,
-      "compressedBytes": 143313,
-      "uncompressedBytes": 1849620
+      "compressedBytes": 143340,
+      "uncompressedBytes": 1849650
     },
     {
       "countryCode": "DJ",
       "path": "countries/DJ.json.gz",
-      "sha256": "368004865b9ed6c2126fae87026b7cd1fc8b0d0e16141330971bf34ffaa85f27",
+      "sha256": "cd10ec2b1972f42f27f9ffa6556005a7a7494af1bda96301f149d76dede89da0",
       "subdivisions": 6,
       "cities": 12,
       "compressedBytes": 708,
-      "uncompressedBytes": 4459
+      "uncompressedBytes": 4458
     },
     {
       "countryCode": "DK",
       "path": "countries/DK.json.gz",
-      "sha256": "f712353f1b4f1d08678b5c1f6307c392c4ee5aabb2479669a6adcecbf9efeeea",
+      "sha256": "9f5d14675a6a26cdd47b0d64e7d06cfd7a389e71011c3b1775350d6481b1416f",
       "subdivisions": 5,
-      "cities": 430,
-      "compressedBytes": 9147,
-      "uncompressedBytes": 114725
+      "cities": 431,
+      "compressedBytes": 9187,
+      "uncompressedBytes": 115007
     },
     {
       "countryCode": "DM",
@@ -818,38 +818,38 @@
     {
       "countryCode": "DZ",
       "path": "countries/DZ.json.gz",
-      "sha256": "f3db5a4a3de3c310509c9d2e61a6abd9676104f6df706ee3b916929a303de6a0",
+      "sha256": "dd3167ce9a130135b2f1f1662ebdc0ce0432769ac4b34c2269ee57c86c701667",
       "subdivisions": 58,
-      "cities": 293,
-      "compressedBytes": 9280,
-      "uncompressedBytes": 88496
+      "cities": 289,
+      "compressedBytes": 9263,
+      "uncompressedBytes": 87429
     },
     {
       "countryCode": "EC",
       "path": "countries/EC.json.gz",
-      "sha256": "0de4fcde4eaa2ce6c59e09c0a7cecea4b97e8fe16dd503ff6efac8123f6c141f",
+      "sha256": "215e9a965dfe0ba34705f632fc5c980c76197fc90a04a1f8d9bfaee0ffd7ead4",
       "subdivisions": 24,
-      "cities": 114,
-      "compressedBytes": 3815,
-      "uncompressedBytes": 35333
+      "cities": 133,
+      "compressedBytes": 4297,
+      "uncompressedBytes": 40379
     },
     {
       "countryCode": "EE",
       "path": "countries/EE.json.gz",
-      "sha256": "3b85bdf1a32c047e4bcc421ac74c290e13323091e0bcc0719a521c820085a443",
-      "subdivisions": 94,
-      "cities": 162,
-      "compressedBytes": 5650,
-      "uncompressedBytes": 62377
+      "sha256": "e75b1f6198e4986b284657478293071d7c38903a01287e58f0b029326beea256",
+      "subdivisions": 93,
+      "cities": 141,
+      "compressedBytes": 5667,
+      "uncompressedBytes": 56777
     },
     {
       "countryCode": "EG",
       "path": "countries/EG.json.gz",
-      "sha256": "41b1add6b09e9de14b935ddc6045a1f1c4b7b9eb00b7dcfeb36d35acf0f3617e",
+      "sha256": "c05c91e4167534766d14de9f81afa3982b0456a811d7b6aa97823cc2ff554176",
       "subdivisions": 27,
-      "cities": 163,
-      "compressedBytes": 5313,
-      "uncompressedBytes": 48376
+      "cities": 203,
+      "compressedBytes": 6304,
+      "uncompressedBytes": 58855
     },
     {
       "countryCode": "EH",
@@ -872,38 +872,38 @@
     {
       "countryCode": "ES",
       "path": "countries/ES.json.gz",
-      "sha256": "8de0d94988aebec40d2c90b37907732722a15d0e08cb3592974e5d95e5dbd703",
+      "sha256": "f7fdaed1c3a10b007bdee309bf134b87dfe1575b803f0f98a13385f829b89f26",
       "subdivisions": 69,
-      "cities": 8405,
-      "compressedBytes": 196941,
-      "uncompressedBytes": 2242452
+      "cities": 8301,
+      "compressedBytes": 194170,
+      "uncompressedBytes": 2214326
     },
     {
       "countryCode": "ET",
       "path": "countries/ET.json.gz",
-      "sha256": "e105abc869587f65f4d768a3827d6a78ff2ac385ab6189e374b7ab07969b39f4",
-      "subdivisions": 13,
-      "cities": 144,
-      "compressedBytes": 3741,
-      "uncompressedBytes": 40192
+      "sha256": "a1d1fa03ada5890c2a6fda115928bb6c5761f759f4d03c906fd471a271d5bd01",
+      "subdivisions": 14,
+      "cities": 180,
+      "compressedBytes": 4527,
+      "uncompressedBytes": 49826
     },
     {
       "countryCode": "FI",
       "path": "countries/FI.json.gz",
-      "sha256": "5a45bad45e105935e135573f2f11b8591bd00974285544792884fb55eedb6ad9",
-      "subdivisions": 18,
-      "cities": 437,
-      "compressedBytes": 9834,
-      "uncompressedBytes": 117711
+      "sha256": "94449b0524a804d3f5f61e035876a71e3e864c203e33ed1ee07246020a101aee",
+      "subdivisions": 19,
+      "cities": 441,
+      "compressedBytes": 9963,
+      "uncompressedBytes": 118952
     },
     {
       "countryCode": "FJ",
       "path": "countries/FJ.json.gz",
-      "sha256": "1c82f9632035134c076c6f66c13df49a6634ec41cd3b242292205771561f7c77",
+      "sha256": "5e23878ca6bc4886b2c29c3153d12a31d1a44f9e93e3be85e56d413bcd93a943",
       "subdivisions": 19,
-      "cities": 20,
-      "compressedBytes": 1151,
-      "uncompressedBytes": 9216
+      "cities": 25,
+      "compressedBytes": 1258,
+      "uncompressedBytes": 10493
     },
     {
       "countryCode": "FK",
@@ -917,47 +917,47 @@
     {
       "countryCode": "FM",
       "path": "countries/FM.json.gz",
-      "sha256": "7c685a2e0764643880e53dd9662c694f9fd307d4a4b67d2830c52254280b4329",
+      "sha256": "3489175e6da6e9cd5e680d4bf0f18d319355c61f4503da67cef078ff89868087",
       "subdivisions": 4,
       "cities": 80,
-      "compressedBytes": 2044,
-      "uncompressedBytes": 21551
+      "compressedBytes": 2018,
+      "uncompressedBytes": 21537
     },
     {
       "countryCode": "FO",
       "path": "countries/FO.json.gz",
-      "sha256": "8bc7df2760ae93f6a00c3e22e0caed89a1c8c513612e1d07f2b779e50bb67428",
+      "sha256": "1f10794b1078e58095a5f8d942b530a998940336cb988874a3136fe9e4d90298",
       "subdivisions": 6,
       "cities": 27,
-      "compressedBytes": 1008,
-      "uncompressedBytes": 8332
+      "compressedBytes": 1013,
+      "uncompressedBytes": 8340
     },
     {
       "countryCode": "FR",
       "path": "countries/FR.json.gz",
-      "sha256": "6d487f2ad5ebae3cba158c5367ee4a8ad61d96275a1c009b05203c2d8ada7264",
+      "sha256": "5fe70e653582f4db3229f8022af5a8e980d1583abfdd5e017e7be26052c46d41",
       "subdivisions": 124,
-      "cities": 10534,
-      "compressedBytes": 244704,
-      "uncompressedBytes": 2785133
+      "cities": 10429,
+      "compressedBytes": 241584,
+      "uncompressedBytes": 2757842
     },
     {
       "countryCode": "GA",
       "path": "countries/GA.json.gz",
-      "sha256": "b69dc7f7d35690c638e93a459fbe76f56efdb8a55014196f89dab5a96592a47d",
+      "sha256": "ef08f2cdc7c1d13db9e4d8e3b71548bd9d12064c71ec18cb46bd63da6b112e5b",
       "subdivisions": 9,
-      "cities": 28,
-      "compressedBytes": 1199,
-      "uncompressedBytes": 9289
+      "cities": 30,
+      "compressedBytes": 1253,
+      "uncompressedBytes": 9803
     },
     {
       "countryCode": "GB",
       "path": "countries/GB.json.gz",
-      "sha256": "67ce49b1077b18bc7d536858aaa5758eda9d0a3519c8fdedbe4e435a3ae23a2d",
+      "sha256": "3fd6b1a51f93fa0355b09de02b6673e9ed3ac7daf86e166e24f205947900ee12",
       "subdivisions": 221,
-      "cities": 3881,
-      "compressedBytes": 97684,
-      "uncompressedBytes": 1066406
+      "cities": 3747,
+      "compressedBytes": 93690,
+      "uncompressedBytes": 1030716
     },
     {
       "countryCode": "GD",
@@ -971,11 +971,11 @@
     {
       "countryCode": "GE",
       "path": "countries/GE.json.gz",
-      "sha256": "7dbcd9da72c8bc8aa5efc12995478bf4bb5d61cd9e3951217f26507359ed4bb1",
+      "sha256": "38d489940014efa2cb651f027cc71fe7f7bab0e2f5658845f7a0ba3e3c4d6944",
       "subdivisions": 12,
-      "cities": 110,
-      "compressedBytes": 3185,
-      "uncompressedBytes": 31300
+      "cities": 117,
+      "compressedBytes": 3355,
+      "uncompressedBytes": 33106
     },
     {
       "countryCode": "GF",
@@ -998,11 +998,11 @@
     {
       "countryCode": "GH",
       "path": "countries/GH.json.gz",
-      "sha256": "abe50599bc5ec5fd22261b4596a701492f1cb914657bc55385fbe7a96b5ac751",
+      "sha256": "7c2b7e4bbc54182de63848e6b39ed1121dbadf60837c4a411c939136190611cc",
       "subdivisions": 16,
-      "cities": 121,
-      "compressedBytes": 3669,
-      "uncompressedBytes": 34678
+      "cities": 150,
+      "compressedBytes": 4308,
+      "uncompressedBytes": 42082
     },
     {
       "countryCode": "GI",
@@ -1016,38 +1016,38 @@
     {
       "countryCode": "GL",
       "path": "countries/GL.json.gz",
-      "sha256": "10c99731cb9c55d4efdc10d218e6a184a564e6c6ccfa45400668aa6da4632684",
+      "sha256": "12c3b57d15f4226a6afcdb4d1dd0ffe84e0531197a5eceda9d1a49bf4fd676c1",
       "subdivisions": 5,
       "cities": 18,
-      "compressedBytes": 904,
-      "uncompressedBytes": 5902
+      "compressedBytes": 889,
+      "uncompressedBytes": 5892
     },
     {
       "countryCode": "GM",
       "path": "countries/GM.json.gz",
-      "sha256": "0cd6d5b88dc8bf8c557f84345cb693a4820141025e98f89a3afa403ee6df764e",
+      "sha256": "366323264e5fb26a25f73c7e97ce4ab0eb799c12b8ad3d0b528d764610c1dddd",
       "subdivisions": 6,
-      "cities": 104,
-      "compressedBytes": 2247,
-      "uncompressedBytes": 28192
+      "cities": 110,
+      "compressedBytes": 2362,
+      "uncompressedBytes": 29741
     },
     {
       "countryCode": "GN",
       "path": "countries/GN.json.gz",
-      "sha256": "a83011bdbd6bd5eabccaee2a0203a2d2f26d034bf155842e7d9aaa6967b20c59",
+      "sha256": "93a1f35bdfa94bc57e58462f8ea5468adfe39d4c1f60a8b4717d10552514795d",
       "subdivisions": 41,
-      "cities": 54,
-      "compressedBytes": 2360,
-      "uncompressedBytes": 22973
+      "cities": 59,
+      "compressedBytes": 2500,
+      "uncompressedBytes": 24272
     },
     {
       "countryCode": "GP",
       "path": "countries/GP.json.gz",
-      "sha256": "4538f57f2c18625553f73fcf27ff2724809a6a7e4d39aeadd96d2aab7a3af098",
+      "sha256": "648b8af2be8e8cbbbcf984f3f9b7e47df561782f0582387a7628587e8399a8b6",
       "subdivisions": 2,
       "cities": 32,
-      "compressedBytes": 1122,
-      "uncompressedBytes": 9264
+      "compressedBytes": 1105,
+      "uncompressedBytes": 9275
     },
     {
       "countryCode": "GQ",
@@ -1061,11 +1061,11 @@
     {
       "countryCode": "GR",
       "path": "countries/GR.json.gz",
-      "sha256": "11c49fc68c6df8bf8fd236bdbfcbc8a6b240755005fc105d6b03c60300bbc3a1",
+      "sha256": "7866d744c32d34e38bee9196fae8cc4965450c8823db7fbe9f7c857fafe0e77e",
       "subdivisions": 15,
-      "cities": 1103,
-      "compressedBytes": 25317,
-      "uncompressedBytes": 290008
+      "cities": 1079,
+      "compressedBytes": 24722,
+      "uncompressedBytes": 283593
     },
     {
       "countryCode": "GS",
@@ -1079,10 +1079,10 @@
     {
       "countryCode": "GT",
       "path": "countries/GT.json.gz",
-      "sha256": "405f88a8ee6515cdbddc2e59920e9f3addf4435f347182d86db9f95719aac5b9",
+      "sha256": "c4d73878af7d1b509786a7404bbc80d9614b978568557e82bdbd722d0a227c24",
       "subdivisions": 22,
       "cities": 382,
-      "compressedBytes": 9425,
+      "compressedBytes": 9428,
       "uncompressedBytes": 108345
     },
     {
@@ -1097,11 +1097,11 @@
     {
       "countryCode": "GW",
       "path": "countries/GW.json.gz",
-      "sha256": "1ea8ee26867d7aaaa18c88bdc86dc0309f7e9776e07d06c3766b02fcbbe4aee5",
+      "sha256": "fdaab3e378ee2a197822c808457de5d02c0749778228d60827d24d90ee2d7fb3",
       "subdivisions": 12,
-      "cities": 15,
-      "compressedBytes": 941,
-      "uncompressedBytes": 6459
+      "cities": 16,
+      "compressedBytes": 954,
+      "uncompressedBytes": 6716
     },
     {
       "countryCode": "GY",
@@ -1115,11 +1115,11 @@
     {
       "countryCode": "HK",
       "path": "countries/HK.json.gz",
-      "sha256": "3dfa182f29460470386e3a3888d53b1a202b61b5da528b1c780ab9fe57fde467",
+      "sha256": "45cf56a58764cdf86d87ac05e0c05de2bf5cacba42f5105d7c296fbc8ab7d89b",
       "subdivisions": 18,
       "cities": 27,
-      "compressedBytes": 1307,
-      "uncompressedBytes": 10942
+      "compressedBytes": 1310,
+      "uncompressedBytes": 10944
     },
     {
       "countryCode": "HM",
@@ -1142,56 +1142,56 @@
     {
       "countryCode": "HR",
       "path": "countries/HR.json.gz",
-      "sha256": "4033f3733815a56a8ffca81317877708e4aab2bbcdfe3ec92e1efe230b21554d",
-      "subdivisions": 20,
-      "cities": 663,
-      "compressedBytes": 14456,
-      "uncompressedBytes": 175859
+      "sha256": "4c370aa59b86fab6be31b49ff434a2199648be6ccd0a3506166d5cef29363acc",
+      "subdivisions": 21,
+      "cities": 680,
+      "compressedBytes": 14922,
+      "uncompressedBytes": 180509
     },
     {
       "countryCode": "HT",
       "path": "countries/HT.json.gz",
-      "sha256": "7e8dbcb14c8097e134924c9bcffcf1986e47fd4bead6e70b155bdbea94e43a00",
+      "sha256": "e0e9d8b1137b459bdf1847295037c3874599b7ca30edf5e9fa93d50d9d01059e",
       "subdivisions": 10,
-      "cities": 124,
-      "compressedBytes": 3389,
-      "uncompressedBytes": 36078
+      "cities": 126,
+      "compressedBytes": 3439,
+      "uncompressedBytes": 36627
     },
     {
       "countryCode": "HU",
       "path": "countries/HU.json.gz",
-      "sha256": "dd255452c5dc366fb58b6d1c3cf5bc93cd2ef439ea8734c751c0156d93e0ba92",
+      "sha256": "9abbd16dba8306e60d10336b374aa34fb0eb4a46763cfd0de7f0b675bd3d7c1e",
       "subdivisions": 43,
-      "cities": 1074,
-      "compressedBytes": 24079,
-      "uncompressedBytes": 292786
+      "cities": 909,
+      "compressedBytes": 21253,
+      "uncompressedBytes": 248110
     },
     {
       "countryCode": "ID",
       "path": "countries/ID.json.gz",
-      "sha256": "1bb5f4d2ff57ce34b97d0be489382aced74ac78a90302c4285e6abe51aba2590",
+      "sha256": "2bcff7bf038ec6a69ff23af67716a1c03e337124597931e34c47e8a80f5c7485",
       "subdivisions": 45,
-      "cities": 799,
-      "compressedBytes": 18937,
-      "uncompressedBytes": 218238
+      "cities": 710,
+      "compressedBytes": 18218,
+      "uncompressedBytes": 194881
     },
     {
       "countryCode": "IE",
       "path": "countries/IE.json.gz",
-      "sha256": "bae68d3cb044058158940ed39593e3164d289a60eba8125069aa009eae11d134",
+      "sha256": "ea7bb2b3845571c223fc3cc0cd28178640a4538da5f62d536ea8d2bac12cb965",
       "subdivisions": 30,
-      "cities": 370,
-      "compressedBytes": 8508,
-      "uncompressedBytes": 102264
+      "cities": 371,
+      "compressedBytes": 9094,
+      "uncompressedBytes": 102725
     },
     {
       "countryCode": "IL",
       "path": "countries/IL.json.gz",
-      "sha256": "8106b84cc47e5dec70a2ef6d288ab2cd45b5694cd9cabe791d5e768c32a1d2dc",
+      "sha256": "17f3b029a35756d087a3c0b88e2af8972c65befa0c50ccec2e798ece365556b9",
       "subdivisions": 6,
-      "cities": 150,
-      "compressedBytes": 3877,
-      "uncompressedBytes": 40599
+      "cities": 160,
+      "compressedBytes": 4146,
+      "uncompressedBytes": 43271
     },
     {
       "countryCode": "IM",
@@ -1205,11 +1205,11 @@
     {
       "countryCode": "IN",
       "path": "countries/IN.json.gz",
-      "sha256": "9eb1bbeb1ab082262ff99c8abd289347b46270a2524224c123985cafdd5c6c1a",
+      "sha256": "6d4e3964ece4b9d98c17b6740c1d84d3d48d5f98c8e55e8970a53b752c28df09",
       "subdivisions": 36,
-      "cities": 4198,
-      "compressedBytes": 88929,
-      "uncompressedBytes": 1096698
+      "cities": 4335,
+      "compressedBytes": 92545,
+      "uncompressedBytes": 1133009
     },
     {
       "countryCode": "IO",
@@ -1223,38 +1223,38 @@
     {
       "countryCode": "IQ",
       "path": "countries/IQ.json.gz",
-      "sha256": "8ef8d0f9208467daf43d214194ea68bffbd307b0fcace30da9d8dc34dd6cf373",
-      "subdivisions": 19,
-      "cities": 135,
-      "compressedBytes": 4201,
-      "uncompressedBytes": 39675
+      "sha256": "596dacb094090e15d6219e56ba4b26e99d9fb2eaba6f9ff62e15b81a08e35daf",
+      "subdivisions": 20,
+      "cities": 152,
+      "compressedBytes": 4653,
+      "uncompressedBytes": 44319
     },
     {
       "countryCode": "IR",
       "path": "countries/IR.json.gz",
-      "sha256": "00e7f9992e14757f50f75421ac6a6f9965c1bee5d25980371b1ce3ee7e0f04cc",
+      "sha256": "7a0ce5995093df13a1e3141224acb2c4d6272640adae69e5438e1381d44ef050",
       "subdivisions": 31,
-      "cities": 1847,
-      "compressedBytes": 42588,
-      "uncompressedBytes": 490602
+      "cities": 1854,
+      "compressedBytes": 42782,
+      "uncompressedBytes": 492433
     },
     {
       "countryCode": "IS",
       "path": "countries/IS.json.gz",
-      "sha256": "4d5ad9e35140aca6a5c48435795c869bcbe963e06ead06df0b8f09582fcce47d",
+      "sha256": "3e7e16a57c169e1338fe94c04f1024b3f05201b7134087b329e3f41f1cdce0ce",
       "subdivisions": 72,
-      "cities": 73,
-      "compressedBytes": 3926,
-      "uncompressedBytes": 35543
+      "cities": 74,
+      "compressedBytes": 3950,
+      "uncompressedBytes": 35811
     },
     {
       "countryCode": "IT",
       "path": "countries/IT.json.gz",
-      "sha256": "b0490fb6f458e28c8d4e6f3e094939b806bc34a1f8da4e8e1cdd848a75a3b8a6",
-      "subdivisions": 126,
-      "cities": 9852,
-      "compressedBytes": 226252,
-      "uncompressedBytes": 2599439
+      "sha256": "8b7db2a6dcdccc2d6faf3a909b4ba5eaca30c33f36d664c92648326ccdcdc4d9",
+      "subdivisions": 129,
+      "cities": 10216,
+      "compressedBytes": 234540,
+      "uncompressedBytes": 2697498
     },
     {
       "countryCode": "JE",
@@ -1268,65 +1268,65 @@
     {
       "countryCode": "JM",
       "path": "countries/JM.json.gz",
-      "sha256": "f9663e4fdde609d3b5581c6021dabaffc0d85f5f250ae392dd86e9f24c6cae02",
+      "sha256": "0c0920187638919ae0819349935703df5630908e4560962387812860cbbae63c",
       "subdivisions": 14,
-      "cities": 837,
-      "compressedBytes": 18526,
-      "uncompressedBytes": 225029
+      "cities": 835,
+      "compressedBytes": 18490,
+      "uncompressedBytes": 224500
     },
     {
       "countryCode": "JO",
       "path": "countries/JO.json.gz",
-      "sha256": "ff9b7dabce2c2ce5e185677e69f04ffd3b7279f19840db356edd19bcf378cb4a",
+      "sha256": "d8a82e85a725193aeed68015a0a3a3808ad912f2a1305a4bd7690f04d0c53ac7",
       "subdivisions": 12,
-      "cities": 82,
-      "compressedBytes": 2490,
-      "uncompressedBytes": 23689
+      "cities": 86,
+      "compressedBytes": 2594,
+      "uncompressedBytes": 24728
     },
     {
       "countryCode": "JP",
       "path": "countries/JP.json.gz",
-      "sha256": "999b388fb5fe2627ed8755efc8d711030f2762871244f3d66623c175897ed935",
+      "sha256": "d2db8fe07a4e2478c574dfdbecc5bf60d0bbda4c1122abc8d1aeab35834f7eaa",
       "subdivisions": 47,
-      "cities": 1655,
-      "compressedBytes": 34131,
-      "uncompressedBytes": 436993
+      "cities": 1235,
+      "compressedBytes": 26920,
+      "uncompressedBytes": 327859
     },
     {
       "countryCode": "KE",
       "path": "countries/KE.json.gz",
-      "sha256": "e770f6db2c2b8697deecbe6895d9b99330c005b2353b798c7f7020ec3120eba4",
+      "sha256": "68d4732d930b482ee03fc7fb75b8e1f39a966b1966554bbe26ab95306c281be6",
       "subdivisions": 47,
-      "cities": 145,
-      "compressedBytes": 4906,
-      "uncompressedBytes": 47222
+      "cities": 155,
+      "compressedBytes": 5185,
+      "uncompressedBytes": 49824
     },
     {
       "countryCode": "KG",
       "path": "countries/KG.json.gz",
-      "sha256": "775f70890b8ffe0acbe7faaf272056ea7b47c9128d09e67194e9f177d4a5eefd",
+      "sha256": "728044ff7355f317d6ccd640642df59212f32cc0fa6efa9255c436c4c5796d59",
       "subdivisions": 9,
-      "cities": 53,
-      "compressedBytes": 1727,
-      "uncompressedBytes": 15603
+      "cities": 59,
+      "compressedBytes": 1877,
+      "uncompressedBytes": 17149
     },
     {
       "countryCode": "KH",
       "path": "countries/KH.json.gz",
-      "sha256": "03f37c110eb291665481ad292c3a5a0a6e2d9d0b50ba9d0c6d1bdd18ce3a6efe",
+      "sha256": "14ff908ba7f48785d9dcdd2919962475d0630ad914c2d00c85e1c9dfd14ee150",
       "subdivisions": 25,
-      "cities": 107,
-      "compressedBytes": 3770,
-      "uncompressedBytes": 33948
+      "cities": 111,
+      "compressedBytes": 3885,
+      "uncompressedBytes": 35003
     },
     {
       "countryCode": "KI",
       "path": "countries/KI.json.gz",
-      "sha256": "f7ee384e2b58a491f021dc8ed795cebcbec65a20b13855fc27860effecc3bad9",
+      "sha256": "9dbdea64a827da2bac5914c2fc0575604972d7703572dfff9649c2c16102b974",
       "subdivisions": 3,
       "cities": 37,
-      "compressedBytes": 1164,
-      "uncompressedBytes": 10460
+      "compressedBytes": 1145,
+      "uncompressedBytes": 10423
     },
     {
       "countryCode": "KM",
@@ -1340,29 +1340,29 @@
     {
       "countryCode": "KN",
       "path": "countries/KN.json.gz",
-      "sha256": "4c9064f37627b51fa209d5a06d67f24f1b15aca852d23d621e30a87f9928a321",
+      "sha256": "b1170f98a55972313c0037eaf66ba66ec10cece9d4ebc8080bb20b8a0f3bee83",
       "subdivisions": 16,
-      "cities": 13,
-      "compressedBytes": 1072,
-      "uncompressedBytes": 7124
+      "cities": 14,
+      "compressedBytes": 1097,
+      "uncompressedBytes": 7390
     },
     {
       "countryCode": "KP",
       "path": "countries/KP.json.gz",
-      "sha256": "edb632ab0de5c8c7f20b39fdaf4b07598fcdd05eabd6a0e46feb8cac0313e8c7",
+      "sha256": "656531ccf698c5c74ffbc689aa56b4130e002858291d6b934201a04db2ea2053",
       "subdivisions": 13,
-      "cities": 80,
-      "compressedBytes": 2472,
-      "uncompressedBytes": 23975
+      "cities": 82,
+      "compressedBytes": 2523,
+      "uncompressedBytes": 24508
     },
     {
       "countryCode": "KR",
       "path": "countries/KR.json.gz",
-      "sha256": "e506b4068968c0d3ad5d223e915786c400fa6d9cbe6cd6c669c6fe119b269033",
-      "subdivisions": 17,
-      "cities": 308,
-      "compressedBytes": 6906,
-      "uncompressedBytes": 83423
+      "sha256": "d48c1d845719fd31d6723f69cab61209e3bed0300319a6e924e8436184355d8e",
+      "subdivisions": 16,
+      "cities": 309,
+      "compressedBytes": 6933,
+      "uncompressedBytes": 83496
     },
     {
       "countryCode": "KW",
@@ -1385,29 +1385,29 @@
     {
       "countryCode": "KZ",
       "path": "countries/KZ.json.gz",
-      "sha256": "294987688c2774a7d2b9015e7cf34f175ccc6690d5ee0534c0146cfe5c71e31e",
+      "sha256": "53c42372c1a11a957c61103a7e324dc3714a535bdeeed63960658cd70c892a38",
       "subdivisions": 20,
-      "cities": 259,
-      "compressedBytes": 7164,
-      "uncompressedBytes": 70841
+      "cities": 270,
+      "compressedBytes": 7502,
+      "uncompressedBytes": 73670
     },
     {
       "countryCode": "LA",
       "path": "countries/LA.json.gz",
-      "sha256": "09bf32183d622b60d5288380c8201f6ad7e37cfed3861317d3fa2340aa73e17a",
+      "sha256": "8dc9e302bc7099f3b04109295486333b41c30fc1c9bdc29036475a7399c5af9f",
       "subdivisions": 18,
-      "cities": 76,
-      "compressedBytes": 2623,
-      "uncompressedBytes": 24099
+      "cities": 81,
+      "compressedBytes": 2738,
+      "uncompressedBytes": 25411
     },
     {
       "countryCode": "LB",
       "path": "countries/LB.json.gz",
-      "sha256": "bf2977b38e668c08588718ce4b70af9c6df8889a1a93dd1c8721034a6d6c67c6",
+      "sha256": "2f647139b8553e4f30f83d79eb47492d9c63549bd30f0b39eba2353448ceb6d8",
       "subdivisions": 8,
-      "cities": 26,
-      "compressedBytes": 1097,
-      "uncompressedBytes": 8537
+      "cities": 35,
+      "compressedBytes": 1297,
+      "uncompressedBytes": 10851
     },
     {
       "countryCode": "LC",
@@ -1430,74 +1430,74 @@
     {
       "countryCode": "LK",
       "path": "countries/LK.json.gz",
-      "sha256": "e6f3639688b9d516397b9e2fd3daa115a93d0b8090d1454ce9f5615eabb0a182",
+      "sha256": "f0b8d8a087f2d17021c9244e886adcbbc8b9e1292a4997a3f7231863301861c9",
       "subdivisions": 34,
-      "cities": 147,
-      "compressedBytes": 4473,
-      "uncompressedBytes": 45612
+      "cities": 151,
+      "compressedBytes": 4716,
+      "uncompressedBytes": 46673
     },
     {
       "countryCode": "LR",
       "path": "countries/LR.json.gz",
-      "sha256": "ac211c7956e407cb48cf4d75604415735243a234e93a94e9eb45b27a3cb4751b",
+      "sha256": "17b1c23a6aa20f437e020c79d7d1d0ebd5d99c7d711e381373968597c7f9cab5",
       "subdivisions": 15,
-      "cities": 18,
-      "compressedBytes": 1172,
-      "uncompressedBytes": 7947
+      "cities": 21,
+      "compressedBytes": 1244,
+      "uncompressedBytes": 8730
     },
     {
       "countryCode": "LS",
       "path": "countries/LS.json.gz",
-      "sha256": "9bc467451b0be8d2bdcaed370cbcf1d382f1056aa4e92f82a70cacd298f898f4",
+      "sha256": "c9886aaaa6dd0d1301181b34e51d238a84d283c6010cfae81423f073ef95a075",
       "subdivisions": 10,
       "cities": 12,
-      "compressedBytes": 830,
+      "compressedBytes": 833,
       "uncompressedBytes": 5347
     },
     {
       "countryCode": "LT",
       "path": "countries/LT.json.gz",
-      "sha256": "e48c9e41b30782c4af1f03f4509a84564dce3d571cbc29afe5a488810e8b7ad0",
+      "sha256": "6155884224810798d0ee71d4cb797050c12c1908304b6350f9b21a6752313b7a",
       "subdivisions": 70,
       "cities": 128,
-      "compressedBytes": 4750,
-      "uncompressedBytes": 49280
+      "compressedBytes": 5027,
+      "uncompressedBytes": 49282
     },
     {
       "countryCode": "LU",
       "path": "countries/LU.json.gz",
-      "sha256": "1e6b4f6d300e6a0f4b834e8b9327b506b5d9aafe5f04b30cb491a0cd7171f2bc",
+      "sha256": "f8f3d7873622091828e70fe072037f668204b81c8e75b376cde50a7fb1333f87",
       "subdivisions": 12,
       "cities": 144,
-      "compressedBytes": 3622,
-      "uncompressedBytes": 40536
+      "compressedBytes": 3618,
+      "uncompressedBytes": 40562
     },
     {
       "countryCode": "LV",
       "path": "countries/LV.json.gz",
-      "sha256": "998691f46efb5ab6d05c9728f1aec3f29526a08d2e1aa3939ad3b74986bc5695",
-      "subdivisions": 43,
+      "sha256": "f7a97b22e0800b34a85041f88323ccd5b006b1dc41c1975c12bc5f745742a5a0",
+      "subdivisions": 42,
       "cities": 125,
-      "compressedBytes": 4482,
-      "uncompressedBytes": 41733
+      "compressedBytes": 4453,
+      "uncompressedBytes": 41507
     },
     {
       "countryCode": "LY",
       "path": "countries/LY.json.gz",
-      "sha256": "40718ec5c49051e9cd950d0860502b17b311cd17bbeed77f6dad5bb20967bb80",
+      "sha256": "dee8ab9e4065d495fa12ff17fdc032a743b51708dc78f44359a2e121f9423b9d",
       "subdivisions": 22,
-      "cities": 54,
-      "compressedBytes": 2304,
-      "uncompressedBytes": 18869
+      "cities": 57,
+      "compressedBytes": 2388,
+      "uncompressedBytes": 19663
     },
     {
       "countryCode": "MA",
       "path": "countries/MA.json.gz",
-      "sha256": "02372978706d0596c35836fd48eb898df9371a1d77fc1a52017911e6abf159dc",
+      "sha256": "871adb6a52e6f78bb4d13d2be40736e3aebded30498b8f105b8335d545119d17",
       "subdivisions": 87,
-      "cities": 222,
-      "compressedBytes": 8041,
-      "uncompressedBytes": 77740
+      "cities": 220,
+      "compressedBytes": 8407,
+      "uncompressedBytes": 77266
     },
     {
       "countryCode": "MC",
@@ -1511,20 +1511,20 @@
     {
       "countryCode": "MD",
       "path": "countries/MD.json.gz",
-      "sha256": "a015ebf146f133f137ed4bc4d0d08b7d2eaf181e2aae206d62eca6f006d994ea",
+      "sha256": "9b89b50056d072f3604be5cdbe476208ee74cc0e52c19dc281c691b197ba2e7a",
       "subdivisions": 37,
-      "cities": 72,
-      "compressedBytes": 3152,
-      "uncompressedBytes": 26903
+      "cities": 73,
+      "compressedBytes": 3181,
+      "uncompressedBytes": 27167
     },
     {
       "countryCode": "ME",
       "path": "countries/ME.json.gz",
-      "sha256": "7a2c5eef7ba02a9b9b54a8e16d6baa3d93b98a86de47debcffa1d3692edb4ce6",
+      "sha256": "57ba5ff3534cfa550d8e95dfc5a735adaacd5989e41748ed6d309308ac1cf00f",
       "subdivisions": 25,
-      "cities": 40,
-      "compressedBytes": 1873,
-      "uncompressedBytes": 15863
+      "cities": 41,
+      "compressedBytes": 1899,
+      "uncompressedBytes": 16125
     },
     {
       "countryCode": "MF",
@@ -1538,56 +1538,56 @@
     {
       "countryCode": "MG",
       "path": "countries/MG.json.gz",
-      "sha256": "512069986a80f2d7c1f0a3de9e9d3c0c93487776bf1fad1a9f8fb39fefadcc4a",
+      "sha256": "2146a6ab3b23fa5d5bc61c4e204a134983167a140b23b6c1e11febcc9c79304d",
       "subdivisions": 6,
       "cities": 9,
-      "compressedBytes": 586,
+      "compressedBytes": 594,
       "uncompressedBytes": 3760
     },
     {
       "countryCode": "MH",
       "path": "countries/MH.json.gz",
-      "sha256": "49101bd7da6c74d331c428b8a010b9f14e4d617571b8d3f394c3726e87a6a718",
+      "sha256": "74ab2f0f7100b02d8dd88fcdf66e769b95e28b2c23e48d4286b81a58c5274ab2",
       "subdivisions": 26,
       "cities": 26,
-      "compressedBytes": 1409,
-      "uncompressedBytes": 12549
+      "compressedBytes": 1408,
+      "uncompressedBytes": 12551
     },
     {
       "countryCode": "MK",
       "path": "countries/MK.json.gz",
-      "sha256": "0e4105a31a64d05643146ba4926cdbe5a1e34b3c9466c9d28ccd1753e42c893e",
+      "sha256": "793dc5bdce5f547e3369d8979056d37b6e29432cb652fbfe7053d60e83702c76",
       "subdivisions": 80,
-      "cities": 194,
-      "compressedBytes": 7155,
-      "uncompressedBytes": 68069
+      "cities": 195,
+      "compressedBytes": 7156,
+      "uncompressedBytes": 68307
     },
     {
       "countryCode": "ML",
       "path": "countries/ML.json.gz",
-      "sha256": "ea0a898e63bf96c21d425b6c777b1f4ac015395daded4d809a0809b537fb4f47",
+      "sha256": "c4f133328fa8f6522e1c5c03eeee82cfe6da41bcf4307dc242c647c9624a34bb",
       "subdivisions": 11,
-      "cities": 47,
-      "compressedBytes": 1682,
-      "uncompressedBytes": 14470
+      "cities": 50,
+      "compressedBytes": 1755,
+      "uncompressedBytes": 15237
     },
     {
       "countryCode": "MM",
       "path": "countries/MM.json.gz",
-      "sha256": "a8ba0becd711a7e1beb7286179e34a5a4b9f128566e32bfacd658225bcecc4b4",
+      "sha256": "54aa62b080f5ed8f23367c5a7cf4dbb722e92f33f9ccc7b8943d55e3ca75b3c9",
       "subdivisions": 15,
-      "cities": 74,
-      "compressedBytes": 2455,
-      "uncompressedBytes": 22264
+      "cities": 116,
+      "compressedBytes": 3462,
+      "uncompressedBytes": 33092
     },
     {
       "countryCode": "MN",
       "path": "countries/MN.json.gz",
-      "sha256": "b732b4ee66ad3df85f3ca95913bb248d84b6109eb0b763882077dd0c392f4536",
+      "sha256": "be2e0e96d0e36760c637a8e42c4e54da444ec40153119c30ca818eba7449ae4f",
       "subdivisions": 22,
-      "cities": 40,
-      "compressedBytes": 2000,
-      "uncompressedBytes": 15364
+      "cities": 41,
+      "compressedBytes": 2012,
+      "uncompressedBytes": 15627
     },
     {
       "countryCode": "MO",
@@ -1610,20 +1610,20 @@
     {
       "countryCode": "MQ",
       "path": "countries/MQ.json.gz",
-      "sha256": "b9bb214782ae2f448bdde901ce1b6bbc780870f761d79e58f62b410c7bc857f7",
+      "sha256": "764c5cb4d06cc1ec3a86553c1f14e53b7ecb832e94dbd0a46082e5a1820ed010",
       "subdivisions": 4,
       "cities": 34,
-      "compressedBytes": 1267,
-      "uncompressedBytes": 10281
+      "compressedBytes": 1249,
+      "uncompressedBytes": 10280
     },
     {
       "countryCode": "MR",
       "path": "countries/MR.json.gz",
-      "sha256": "ee8a32749122fc464c49dcf44bca26c30f68b051c7f0d4a37ca7b0b16ad96c90",
+      "sha256": "4d7f1f1b8334d46035dfc659dae78dc65cc38c60ca027fa355f9e9101c2fbad4",
       "subdivisions": 15,
-      "cities": 42,
-      "compressedBytes": 1812,
-      "uncompressedBytes": 14507
+      "cities": 40,
+      "compressedBytes": 1766,
+      "uncompressedBytes": 13961
     },
     {
       "countryCode": "MS",
@@ -1637,11 +1637,11 @@
     {
       "countryCode": "MT",
       "path": "countries/MT.json.gz",
-      "sha256": "b69fcb8030eb6a981052c35292468d5f662fedc3328e6d3596823ada73b9b863",
-      "subdivisions": 68,
+      "sha256": "e1006b2a97fcb5edf6e345838c7e840e8088948bd70b5288cb89a4271e5346f6",
+      "subdivisions": 74,
       "cities": 87,
-      "compressedBytes": 3992,
-      "uncompressedBytes": 37249
+      "compressedBytes": 4150,
+      "uncompressedBytes": 38563
     },
     {
       "countryCode": "MU",
@@ -1664,47 +1664,47 @@
     {
       "countryCode": "MW",
       "path": "countries/MW.json.gz",
-      "sha256": "fffaf171a1e5e4ab99261c8681a7e5ca7c272ff6902d5764087cf396ef30a30d",
+      "sha256": "81545d67f1f1a9cdf167050defa2cf8ab5d64b0ab89bc38cb88f249003e6c14a",
       "subdivisions": 31,
       "cities": 61,
-      "compressedBytes": 2300,
-      "uncompressedBytes": 22794
+      "compressedBytes": 2479,
+      "uncompressedBytes": 22819
     },
     {
       "countryCode": "MX",
       "path": "countries/MX.json.gz",
-      "sha256": "36163a6cea3a6e2402acdaef1560476ca97543cf318b63f1d0487ec9aee14aaf",
+      "sha256": "bde36d35e63381a5b544763b6c483e15d636ae913b87c606c28e0f9d81701416",
       "subdivisions": 32,
-      "cities": 9321,
-      "compressedBytes": 222735,
-      "uncompressedBytes": 2568536
+      "cities": 9308,
+      "compressedBytes": 222207,
+      "uncompressedBytes": 2565136
     },
     {
       "countryCode": "MY",
       "path": "countries/MY.json.gz",
-      "sha256": "3bfe74f02ce7da9e5b044ee7102ff5fb0d557e0093077e6c60ce657a643da614",
+      "sha256": "026482027281bb0c95cabf9f46227f82b40262816ace81ca86829ff95f52a44b",
       "subdivisions": 16,
-      "cities": 223,
-      "compressedBytes": 5598,
-      "uncompressedBytes": 62326
+      "cities": 250,
+      "compressedBytes": 6187,
+      "uncompressedBytes": 69399
     },
     {
       "countryCode": "MZ",
       "path": "countries/MZ.json.gz",
-      "sha256": "e60bcf949676ed2e02a36ff797106f1c49c1491a43a793545645b3faa895a71b",
+      "sha256": "bf2f4e286c2c545bdb3ee989de74bf3d2cdec62b7d9db6e88712b50f6c077488",
       "subdivisions": 11,
-      "cities": 38,
-      "compressedBytes": 1504,
-      "uncompressedBytes": 12266
+      "cities": 51,
+      "compressedBytes": 1801,
+      "uncompressedBytes": 15639
     },
     {
       "countryCode": "NA",
       "path": "countries/NA.json.gz",
-      "sha256": "03975fecf4132b73239b1898fa22a9ded6c11a34c15db90a3cb7a78cfd0130f9",
+      "sha256": "ff663204e77a29209c14c168c7e5a6b19fcda76774e78c80e943943ce35052a2",
       "subdivisions": 14,
-      "cities": 48,
-      "compressedBytes": 1750,
-      "uncompressedBytes": 15548
+      "cities": 50,
+      "compressedBytes": 1809,
+      "uncompressedBytes": 16072
     },
     {
       "countryCode": "NC",
@@ -1736,47 +1736,47 @@
     {
       "countryCode": "NG",
       "path": "countries/NG.json.gz",
-      "sha256": "10340747c4e6848ab0a26aec1dfd8ad6bb938c09e3981002465ecd7370bcd87b",
+      "sha256": "b72293cd1309398b32b331c737f4b7f787c2f1dbca0f99129519c6684794973e",
       "subdivisions": 37,
-      "cities": 491,
-      "compressedBytes": 12436,
-      "uncompressedBytes": 132951
+      "cities": 513,
+      "compressedBytes": 12957,
+      "uncompressedBytes": 138589
     },
     {
       "countryCode": "NI",
       "path": "countries/NI.json.gz",
-      "sha256": "29439ed7b1b92c585612e26a52a03daff97f8c42d64e6b320b67e8223857b3f2",
+      "sha256": "256bd2dc960a64dac3510bfe9d611f45de158969f8b27a0e06467016c2e766d1",
       "subdivisions": 17,
-      "cities": 155,
-      "compressedBytes": 4487,
-      "uncompressedBytes": 45015
+      "cities": 171,
+      "compressedBytes": 4897,
+      "uncompressedBytes": 49267
     },
     {
       "countryCode": "NL",
       "path": "countries/NL.json.gz",
-      "sha256": "1a326929185e43e3cc35fe1db477d2e951a1bc73aa888771716da3396a7a8aec",
+      "sha256": "8746850156572bec984af6913ac79a4e11266890c9a17248e9a12cdbdd186da2",
       "subdivisions": 12,
-      "cities": 1644,
-      "compressedBytes": 32278,
-      "uncompressedBytes": 434154
+      "cities": 1651,
+      "compressedBytes": 32404,
+      "uncompressedBytes": 435986
     },
     {
       "countryCode": "NO",
       "path": "countries/NO.json.gz",
-      "sha256": "29bbe7834184fe07a0e4594a0011282a89dffa5b827b938192367f592070a517",
+      "sha256": "f22e34c2c87680a5b05b6a42dc3545f8c13574ddd142d8eb3720d021ba49ca4b",
       "subdivisions": 17,
-      "cities": 666,
-      "compressedBytes": 15190,
-      "uncompressedBytes": 174634
+      "cities": 731,
+      "compressedBytes": 16599,
+      "uncompressedBytes": 191403
     },
     {
       "countryCode": "NP",
       "path": "countries/NP.json.gz",
-      "sha256": "3cc828634c91309d355e90fe7b38a8564d2cb82b273f2c66dbcc3013e607b6e5",
+      "sha256": "29a008f0ef29d3401f190d06ad17cf7623e6a8bbfcf823d4086d71500f27d0d7",
       "subdivisions": 7,
-      "cities": 77,
-      "compressedBytes": 2442,
-      "uncompressedBytes": 21967
+      "cities": 97,
+      "compressedBytes": 2985,
+      "uncompressedBytes": 27233
     },
     {
       "countryCode": "NR",
@@ -1799,11 +1799,11 @@
     {
       "countryCode": "NZ",
       "path": "countries/NZ.json.gz",
-      "sha256": "9b4c5000dd2cf08c8fc8fd54d7045a3dc2a162fc040ffacb07284597b48a8c6a",
+      "sha256": "053576644d86abe28c5fb6fc3ed7289e33eff2b32ede171e39928a349038f998",
       "subdivisions": 17,
-      "cities": 160,
-      "compressedBytes": 4379,
-      "uncompressedBytes": 46183
+      "cities": 149,
+      "compressedBytes": 4150,
+      "uncompressedBytes": 43228
     },
     {
       "countryCode": "OM",
@@ -1817,65 +1817,65 @@
     {
       "countryCode": "PA",
       "path": "countries/PA.json.gz",
-      "sha256": "9c2fc16416a8b70ca5af6290fad75c6cdf9f46633458b435a08e0b9a2051958d",
+      "sha256": "6270da4afa560749d71b81bb1695dd0f9d057d61416d27c1eccc94e7e2309016",
       "subdivisions": 14,
       "cities": 551,
-      "compressedBytes": 12976,
+      "compressedBytes": 12973,
       "uncompressedBytes": 148289
     },
     {
       "countryCode": "PE",
       "path": "countries/PE.json.gz",
-      "sha256": "6b5543f832c38f9a4e5be9e073fb2c13695a7b224b1636def182a88f5be47327",
+      "sha256": "6c3885733dc6452deb75bfcdd4e78bc0f3ed58792efec9ed106fc84ea87af73e",
       "subdivisions": 26,
-      "cities": 485,
-      "compressedBytes": 11675,
-      "uncompressedBytes": 134127
+      "cities": 482,
+      "compressedBytes": 11622,
+      "uncompressedBytes": 133036
     },
     {
       "countryCode": "PF",
       "path": "countries/PF.json.gz",
-      "sha256": "dc9db1e9a0327857dd8151cc14b4f37be88f462215145578ab18f526fa09845d",
+      "sha256": "6d2ae178744f350f08bf1d4859766a47d2769a8f49dff63fa49eadff0cbfe8c2",
       "subdivisions": 5,
       "cities": 48,
-      "compressedBytes": 1658,
-      "uncompressedBytes": 14057
+      "compressedBytes": 1653,
+      "uncompressedBytes": 14022
     },
     {
       "countryCode": "PG",
       "path": "countries/PG.json.gz",
-      "sha256": "25c5eedd5a63408ea9179e12bf32ef36275465883dcb9d3e1faf65721b6dd96f",
+      "sha256": "d0892146fdf196eeb019c9023b16a501595d2dc85e6d701da47d32cf2602ebca",
       "subdivisions": 22,
-      "cities": 100,
-      "compressedBytes": 3211,
-      "uncompressedBytes": 31604
+      "cities": 102,
+      "compressedBytes": 3263,
+      "uncompressedBytes": 32143
     },
     {
       "countryCode": "PH",
       "path": "countries/PH.json.gz",
-      "sha256": "456891e903a70e7e4062d1b10322c780136596f4fb4ae39ca469cc2df7338cd7",
-      "subdivisions": 99,
-      "cities": 5357,
-      "compressedBytes": 118478,
-      "uncompressedBytes": 1419834
+      "sha256": "98ded4be2b52703f08b2f5596be5370f03b75e9dfbc982209b011d0dbb1c48f9",
+      "subdivisions": 101,
+      "cities": 4374,
+      "compressedBytes": 96956,
+      "uncompressedBytes": 1157526
     },
     {
       "countryCode": "PK",
       "path": "countries/PK.json.gz",
-      "sha256": "7ef5b1227c8d9d8c30c99497331ed3f6867c2dcdc03b71f2b5c2275019e782e9",
+      "sha256": "ccd05acfc3f9bad84012da893d266d3fd2b1073ff0e86f036e82522fbf219e72",
       "subdivisions": 7,
-      "cities": 456,
-      "compressedBytes": 10695,
-      "uncompressedBytes": 120189
+      "cities": 458,
+      "compressedBytes": 10818,
+      "uncompressedBytes": 120574
     },
     {
       "countryCode": "PL",
       "path": "countries/PL.json.gz",
-      "sha256": "7f26dfaa4b4110a66e0edf0f4eca1a409709b75dc418e974ba869cc0c0e20542",
+      "sha256": "541a45f36eaaf460990f05af65b4a5f21e3e2d9c4ea2407dba009492a7145984",
       "subdivisions": 16,
       "cities": 2810,
-      "compressedBytes": 62003,
-      "uncompressedBytes": 737982
+      "compressedBytes": 61994,
+      "uncompressedBytes": 737981
     },
     {
       "countryCode": "PM",
@@ -1898,29 +1898,29 @@
     {
       "countryCode": "PR",
       "path": "countries/PR.json.gz",
-      "sha256": "88cd30e67ca13c58a7e2439163d87b5763b2f6360f5399c7e0eb95d9bce977c5",
+      "sha256": "c8624fbedd66406d7262cd1f0d951317bb99b1740e5911b8504ec7cbda328640",
       "subdivisions": 78,
       "cities": 78,
-      "compressedBytes": 4067,
-      "uncompressedBytes": 38382
+      "compressedBytes": 4010,
+      "uncompressedBytes": 38385
     },
     {
       "countryCode": "PS",
       "path": "countries/PS.json.gz",
-      "sha256": "0938864de9b116eb7a2f20932c6820234f0ea9f06c6a094e754484570732a307",
+      "sha256": "534d71adcd476fd8ad3ca702635041dd185611648450d3533afbe0f8c98d5d23",
       "subdivisions": 16,
-      "cities": 132,
-      "compressedBytes": 4045,
-      "uncompressedBytes": 38295
+      "cities": 134,
+      "compressedBytes": 4100,
+      "uncompressedBytes": 38819
     },
     {
       "countryCode": "PT",
       "path": "countries/PT.json.gz",
-      "sha256": "39323016eefcc098b07b95574b44c66deffa68e5a72b9e0c9861949a880e69f0",
+      "sha256": "09ab3f848c1894d4e5e9187e2bb2af0735bdac2a0454901c5d9ced4f1c13b10b",
       "subdivisions": 20,
-      "cities": 1296,
-      "compressedBytes": 29229,
-      "uncompressedBytes": 347510
+      "cities": 1276,
+      "compressedBytes": 28504,
+      "uncompressedBytes": 342162
     },
     {
       "countryCode": "PW",
@@ -1952,64 +1952,64 @@
     {
       "countryCode": "RE",
       "path": "countries/RE.json.gz",
-      "sha256": "551d628b21e0ed912b8c506f23e60277f61cc1f8ca7c2b2119d2c97913fbf869",
+      "sha256": "7ab2ab349a83b74eba89898f73801ac9311406dc90b57329fda477c7bceee0d9",
       "subdivisions": 4,
       "cities": 24,
-      "compressedBytes": 977,
-      "uncompressedBytes": 7433
+      "compressedBytes": 952,
+      "uncompressedBytes": 7450
     },
     {
       "countryCode": "RO",
       "path": "countries/RO.json.gz",
-      "sha256": "16f733fcb6be7475ffad6109a43fe74aa0355e17454866c61aefd8d6203689ee",
+      "sha256": "b171c414eb6c143d0ce036e6fb80a0f26e65293c07d9271132e42ca3a4d7885f",
       "subdivisions": 42,
-      "cities": 7949,
-      "compressedBytes": 155225,
-      "uncompressedBytes": 2125391
+      "cities": 7948,
+      "compressedBytes": 147195,
+      "uncompressedBytes": 2104712
     },
     {
       "countryCode": "RS",
       "path": "countries/RS.json.gz",
-      "sha256": "3b1350005572fa8e18ac7181467b0e2073a613c7397fe2fdc6582e8d0ebb7699",
+      "sha256": "d5292379aba47fe0be8a24d080105eaa90d694745ce90e3b6c873d377f5b1507",
       "subdivisions": 32,
-      "cities": 379,
-      "compressedBytes": 9831,
-      "uncompressedBytes": 106694
+      "cities": 380,
+      "compressedBytes": 9827,
+      "uncompressedBytes": 106948
     },
     {
       "countryCode": "RU",
       "path": "countries/RU.json.gz",
-      "sha256": "9c2763a49c2ede20cc1376bde8d7fa873dde4951218c2fdfa28712e192eb8193",
+      "sha256": "c330b59476025f5d8a771628d79bd8476d4b8576a7fb48504e25613d26d4231f",
       "subdivisions": 83,
-      "cities": 5523,
-      "compressedBytes": 127922,
-      "uncompressedBytes": 1476528
+      "cities": 5269,
+      "compressedBytes": 124684,
+      "uncompressedBytes": 1409488
     },
     {
       "countryCode": "RW",
       "path": "countries/RW.json.gz",
-      "sha256": "474e9be3ad6b599b4b1178d5ae56da950859c4a3833bb391b0a75d1c954d830d",
+      "sha256": "4ef2d6414b1a341f7eef102abed644195d72585a83bd71970a2aca299b7d18bf",
       "subdivisions": 5,
-      "cities": 12,
-      "compressedBytes": 661,
-      "uncompressedBytes": 4241
+      "cities": 20,
+      "compressedBytes": 843,
+      "uncompressedBytes": 6306
     },
     {
       "countryCode": "SA",
       "path": "countries/SA.json.gz",
-      "sha256": "4898d495b0a7ffc9ee367ebf165e605489dd322af65544915807821362a7ff56",
+      "sha256": "908bbb6114a4cd66a6c009cc3b14d30fe8567ed088cee54514b1d4651f13660c",
       "subdivisions": 13,
-      "cities": 399,
-      "compressedBytes": 8927,
-      "uncompressedBytes": 105968
+      "cities": 397,
+      "compressedBytes": 8918,
+      "uncompressedBytes": 105454
     },
     {
       "countryCode": "SB",
       "path": "countries/SB.json.gz",
-      "sha256": "bc47e562f177e6f3fa82552a520959a4663c78ed6dc43fa8589440aa456eec1a",
+      "sha256": "b6a53a5d95bbd5f5716e90175929a4e271e893c6f478c8e93c8e77b611402acc",
       "subdivisions": 10,
       "cities": 7,
-      "compressedBytes": 733,
+      "compressedBytes": 732,
       "uncompressedBytes": 4088
     },
     {
@@ -2024,47 +2024,47 @@
     {
       "countryCode": "SD",
       "path": "countries/SD.json.gz",
-      "sha256": "88d97202dab295836d9ca6dd7f1ab6a572ee06e3a2efa4cca0953cdf97e004ac",
+      "sha256": "fccc3f413405da7c9309569dd058324fec8d3519b3d57d9a43d819906be88e90",
       "subdivisions": 18,
-      "cities": 71,
-      "compressedBytes": 2465,
-      "uncompressedBytes": 22367
+      "cities": 75,
+      "compressedBytes": 2556,
+      "uncompressedBytes": 23411
     },
     {
       "countryCode": "SE",
       "path": "countries/SE.json.gz",
-      "sha256": "7af69bc324379db05399bbcebfbcf921a50026137357b22f9d24e8c2046b45ea",
+      "sha256": "d5e189787b3f5960d4389beae122c1adc01eaa704e74065988c4319a7d002aeb",
       "subdivisions": 21,
-      "cities": 800,
-      "compressedBytes": 17603,
-      "uncompressedBytes": 214605
+      "cities": 808,
+      "compressedBytes": 17810,
+      "uncompressedBytes": 216709
     },
     {
       "countryCode": "SG",
       "path": "countries/SG.json.gz",
-      "sha256": "0a9477ee97fd36af2cfff3a10125c5249bfec1964b341df274248c86a884a75a",
+      "sha256": "fba8998389ab6a49bc3d091cc66fe36e72bd5906e1784b9869816257e86e573a",
       "subdivisions": 5,
       "cities": 26,
-      "compressedBytes": 923,
-      "uncompressedBytes": 7933
+      "compressedBytes": 904,
+      "uncompressedBytes": 7929
     },
     {
       "countryCode": "SH",
       "path": "countries/SH.json.gz",
-      "sha256": "8268ee89357c0d33326269488ec6a7b30a9f7dca9a952b18f26f991cbd2de592",
-      "subdivisions": 8,
+      "sha256": "b8b189ecebe7bf0c54adf8d14e2f69c72d01a4acd732e35c4f40dcada6b277a8",
+      "subdivisions": 11,
       "cities": 0,
-      "compressedBytes": 391,
-      "uncompressedBytes": 1806
+      "compressedBytes": 515,
+      "uncompressedBytes": 2494
     },
     {
       "countryCode": "SI",
       "path": "countries/SI.json.gz",
-      "sha256": "2fc054fbcbffe6d80ae99fa0a42abff29610b73d720a39d59d3147f4db4ea286",
+      "sha256": "48ca0001296d250ccbdaca57b6f6fd4cd90497d4eec1ecb183b24042c6e2f930",
       "subdivisions": 212,
-      "cities": 312,
-      "compressedBytes": 13986,
-      "uncompressedBytes": 130112
+      "cities": 317,
+      "compressedBytes": 14166,
+      "uncompressedBytes": 131454
     },
     {
       "countryCode": "SJ",
@@ -2078,20 +2078,20 @@
     {
       "countryCode": "SK",
       "path": "countries/SK.json.gz",
-      "sha256": "c36cd64b79f42e4be3818d580a12db0db0765d95f36bdbe48c0d5bc011acf95d",
+      "sha256": "49493c17825f48cbed8a755275438e037a69cdc8cccf4f294f9793b1ad828136",
       "subdivisions": 8,
-      "cities": 233,
-      "compressedBytes": 5505,
-      "uncompressedBytes": 64314
+      "cities": 155,
+      "compressedBytes": 4220,
+      "uncompressedBytes": 43123
     },
     {
       "countryCode": "SL",
       "path": "countries/SL.json.gz",
-      "sha256": "acc932a923a3417f3f6c21d47614ff3dd6bc19188480b29a31d88710c316aa32",
+      "sha256": "3a450deabc0c724640ff1341318e36896c2531c2a5db8805f228083cc0fef1a6",
       "subdivisions": 5,
-      "cities": 91,
-      "compressedBytes": 2253,
-      "uncompressedBytes": 24783
+      "cities": 93,
+      "compressedBytes": 2298,
+      "uncompressedBytes": 25301
     },
     {
       "countryCode": "SM",
@@ -2105,20 +2105,20 @@
     {
       "countryCode": "SN",
       "path": "countries/SN.json.gz",
-      "sha256": "da12418aed74cc9ec9fc33ea73baaeccb2285e498ca587eb6c2e003718b831d1",
+      "sha256": "2e78287d0d340fbe27a951b54ae607ff20d403dc861bc22a6decec135e3aea81",
       "subdivisions": 14,
-      "cities": 73,
-      "compressedBytes": 2325,
-      "uncompressedBytes": 22087
+      "cities": 85,
+      "compressedBytes": 2617,
+      "uncompressedBytes": 25199
     },
     {
       "countryCode": "SO",
       "path": "countries/SO.json.gz",
-      "sha256": "b047207fca59c1bd7c7295da4617074900a74b423e83fd13ae3cd55684cecd7c",
+      "sha256": "3c80db0d54b0f4c378bae4bf897ddd60f3b2610b7869356f2c1e5a21a2d42e02",
       "subdivisions": 18,
-      "cities": 51,
-      "compressedBytes": 2036,
-      "uncompressedBytes": 17154
+      "cities": 59,
+      "compressedBytes": 2257,
+      "uncompressedBytes": 19248
     },
     {
       "countryCode": "SR",
@@ -2132,11 +2132,11 @@
     {
       "countryCode": "SS",
       "path": "countries/SS.json.gz",
-      "sha256": "a21a5140a7cc884709d7850cc425ac9bb001a17c3c3576e6bc630e2c659445c1",
+      "sha256": "4cb4dabdee37d9e14b6b5cb8d517d2fb2e174412d767337ba30c39f4db431bab",
       "subdivisions": 10,
-      "cities": 1,
-      "compressedBytes": 503,
-      "uncompressedBytes": 2428
+      "cities": 15,
+      "compressedBytes": 904,
+      "uncompressedBytes": 5993
     },
     {
       "countryCode": "ST",
@@ -2168,11 +2168,11 @@
     {
       "countryCode": "SY",
       "path": "countries/SY.json.gz",
-      "sha256": "deef7d7a845ea273bf693a640a74a0ae90d39b3f4f4edf7e5e890fbe177834f6",
+      "sha256": "4ef395174ac1c55f5c89e45059e7889a92a2d1706770acf9063b1de521397463",
       "subdivisions": 14,
-      "cities": 142,
-      "compressedBytes": 4129,
-      "uncompressedBytes": 40337
+      "cities": 147,
+      "compressedBytes": 4254,
+      "uncompressedBytes": 41654
     },
     {
       "countryCode": "SZ",
@@ -2195,11 +2195,11 @@
     {
       "countryCode": "TD",
       "path": "countries/TD.json.gz",
-      "sha256": "157e4e6edd14afe6d4d608ac96025b84c65c5fb65b36538880baf1c07fb22dee",
+      "sha256": "ee7fe6141349a5ba449b7a5a4abb42807137ba2b2c50d222609b8c5ea2572eba",
       "subdivisions": 23,
-      "cities": 49,
-      "compressedBytes": 2201,
-      "uncompressedBytes": 17718
+      "cities": 51,
+      "compressedBytes": 2251,
+      "uncompressedBytes": 18236
     },
     {
       "countryCode": "TF",
@@ -2213,29 +2213,29 @@
     {
       "countryCode": "TG",
       "path": "countries/TG.json.gz",
-      "sha256": "2cd93fbd1a95527b68358d85f5b18e29eb48e166bb3df4ffebf2af89df377e69",
+      "sha256": "096d8144882bb2f73094849b2ae4ae53fbaebadb46f2bb43121ec00affe09e6d",
       "subdivisions": 5,
-      "cities": 22,
-      "compressedBytes": 849,
-      "uncompressedBytes": 6704
+      "cities": 23,
+      "compressedBytes": 866,
+      "uncompressedBytes": 6952
     },
     {
       "countryCode": "TH",
       "path": "countries/TH.json.gz",
-      "sha256": "9d9128b3a865ebfc00f2226e4e28f6583560b8cc07bb9b29ee59ed3afd234a56",
+      "sha256": "0abc3903543ec5277b91396e4149c3b7b3c86bbe235e2aa588270bd4b22a9020",
       "subdivisions": 78,
-      "cities": 1241,
-      "compressedBytes": 29697,
-      "uncompressedBytes": 343901
+      "cities": 1012,
+      "compressedBytes": 25827,
+      "uncompressedBytes": 282708
     },
     {
       "countryCode": "TJ",
       "path": "countries/TJ.json.gz",
-      "sha256": "280cdf2010027ece9318747b97bdd6d3ad80251f3623a549841b9d656a0dc382",
+      "sha256": "e3bfe0435033dcdf45dfaedbbd2971ca7307571967a06ada7ba74b3064d2a9ce",
       "subdivisions": 5,
-      "cities": 71,
-      "compressedBytes": 2094,
-      "uncompressedBytes": 19755
+      "cities": 79,
+      "compressedBytes": 2276,
+      "uncompressedBytes": 21838
     },
     {
       "countryCode": "TK",
@@ -2258,20 +2258,20 @@
     {
       "countryCode": "TM",
       "path": "countries/TM.json.gz",
-      "sha256": "d4aad6be0aaec87bb99a6c41dce98971f06bdbbbc6246dfc7de3afe9375ca9fa",
+      "sha256": "d86efd8eef87a17eb6c7433ac99bcc905ba0544d7f277f7f55303fe09b61e415",
       "subdivisions": 6,
-      "cities": 30,
-      "compressedBytes": 1141,
-      "uncompressedBytes": 9093
+      "cities": 37,
+      "compressedBytes": 1326,
+      "uncompressedBytes": 10918
     },
     {
       "countryCode": "TN",
       "path": "countries/TN.json.gz",
-      "sha256": "a9549e54eaa2a7a345a835bc6740f9b3b968ea2c3a9c04f83a469b4974205b9c",
-      "subdivisions": 24,
-      "cities": 165,
-      "compressedBytes": 4792,
-      "uncompressedBytes": 48125
+      "sha256": "b6c0f15cc342fb9ccb658886f9d5002715dbf25d517063fa736e0340b654b4ab",
+      "subdivisions": 29,
+      "cities": 166,
+      "compressedBytes": 4955,
+      "uncompressedBytes": 49467
     },
     {
       "countryCode": "TO",
@@ -2285,20 +2285,20 @@
     {
       "countryCode": "TR",
       "path": "countries/TR.json.gz",
-      "sha256": "a4acd5b01e305c8ca2066b46a6aca1590e84fa470736c3faf9d5e348ad30fea7",
+      "sha256": "c87d4420510e47915957fdd7f44832344cfe0e968742a2fa6346a6af68f2a460",
       "subdivisions": 81,
-      "cities": 980,
-      "compressedBytes": 25795,
-      "uncompressedBytes": 274660
+      "cities": 988,
+      "compressedBytes": 26096,
+      "uncompressedBytes": 276831
     },
     {
       "countryCode": "TT",
       "path": "countries/TT.json.gz",
-      "sha256": "aafe7b6d5184dc581eedd5bb7cb32537f30e1791d852612fff651eaa01e1e552",
-      "subdivisions": 17,
-      "cities": 25,
-      "compressedBytes": 1379,
-      "uncompressedBytes": 10587
+      "sha256": "7de5f8892345cb7a5bb55695ebc75bb530a37bf40df0cc5f659aa64148e4e859",
+      "subdivisions": 15,
+      "cities": 26,
+      "compressedBytes": 1341,
+      "uncompressedBytes": 10422
     },
     {
       "countryCode": "TV",
@@ -2312,38 +2312,38 @@
     {
       "countryCode": "TW",
       "path": "countries/TW.json.gz",
-      "sha256": "c2dfe393d50273f5d852a812f5f038e4b762aec0f0d8d3e2a77de1acc3072014",
+      "sha256": "66b67f293fb1beb282f7fe077f9f1c9a001c1d5d68bf8a696f165c9f810f77ff",
       "subdivisions": 22,
-      "cities": 383,
-      "compressedBytes": 8330,
-      "uncompressedBytes": 107365
+      "cities": 377,
+      "compressedBytes": 8191,
+      "uncompressedBytes": 105825
     },
     {
       "countryCode": "TZ",
       "path": "countries/TZ.json.gz",
-      "sha256": "6721149d80a175eb1012c0b94c9422c91d6f4c91be71cb8cf3ae8051aa053bfa",
+      "sha256": "6fc8f82814002ca9cdc66981447489654d7a32b1021483e1fe08cf8dd2d73258",
       "subdivisions": 31,
-      "cities": 303,
-      "compressedBytes": 7182,
-      "uncompressedBytes": 87019
+      "cities": 309,
+      "compressedBytes": 7280,
+      "uncompressedBytes": 88599
     },
     {
       "countryCode": "UA",
       "path": "countries/UA.json.gz",
-      "sha256": "a88212e3d02792c8408e087b637fdcf90f1dfdb061b3ededcdd6627c06eaeceb",
+      "sha256": "86dd82601914717e45bb74261896c50f403a1b158e49dda842b62fe8e49507b5",
       "subdivisions": 27,
-      "cities": 1819,
-      "compressedBytes": 41712,
-      "uncompressedBytes": 483599
+      "cities": 1790,
+      "compressedBytes": 40979,
+      "uncompressedBytes": 475411
     },
     {
       "countryCode": "UG",
       "path": "countries/UG.json.gz",
-      "sha256": "cd83423116fc8b578c9116c3ec579c6a91081ce352251e237cdc1d2d994d77e4",
+      "sha256": "ccb50d5dd908954ac90b2348abc12907b4b4f1d1d7e701317dc6629a375537e4",
       "subdivisions": 139,
-      "cities": 91,
-      "compressedBytes": 5776,
-      "uncompressedBytes": 52964
+      "cities": 129,
+      "compressedBytes": 6925,
+      "uncompressedBytes": 62856
     },
     {
       "countryCode": "UM",
@@ -2357,29 +2357,29 @@
     {
       "countryCode": "US",
       "path": "countries/US.json.gz",
-      "sha256": "fd6358e6dc596cc8f10149923081aed9ac9f8b5fe1f4082193cea8ed098320ce",
+      "sha256": "cbfceeccb2701d67a149428fe90000d4c34c79a9f47315dd253d62319525eb07",
       "subdivisions": 60,
-      "cities": 16707,
-      "compressedBytes": 368339,
-      "uncompressedBytes": 4467273
+      "cities": 17317,
+      "compressedBytes": 381414,
+      "uncompressedBytes": 4630089
     },
     {
       "countryCode": "UY",
       "path": "countries/UY.json.gz",
-      "sha256": "164fa85995a3621f2fe1d6804b43f517c5b87900c2c984cea2f2bb04b2db220a",
+      "sha256": "ef6da1f19473b781bdf1168a0d9c5c1cf6b1278be492012a08ac33413239d08a",
       "subdivisions": 19,
-      "cities": 2010,
-      "compressedBytes": 52485,
-      "uncompressedBytes": 564326
+      "cities": 2008,
+      "compressedBytes": 52452,
+      "uncompressedBytes": 563779
     },
     {
       "countryCode": "UZ",
       "path": "countries/UZ.json.gz",
-      "sha256": "796449dd4dcce1054ae33947ad6298ae74e4860e32f4f1a6cef25073682df7f8",
+      "sha256": "ca732d0ba4c1149060b205b238b023dc0505cb8bb86300839456e6fe82c1b292",
       "subdivisions": 14,
-      "cities": 135,
-      "compressedBytes": 3797,
-      "uncompressedBytes": 38382
+      "cities": 162,
+      "compressedBytes": 4469,
+      "uncompressedBytes": 45512
     },
     {
       "countryCode": "VA",
@@ -2393,20 +2393,20 @@
     {
       "countryCode": "VC",
       "path": "countries/VC.json.gz",
-      "sha256": "b51154c72dfa0adddc20cc02d56e4b953830bd12920be511258f748170d3898f",
+      "sha256": "ef9945d5c32d68f09ccc562fe7becd6d5e7cc995da61397a64685ecff0368e53",
       "subdivisions": 6,
-      "cities": 9,
-      "compressedBytes": 628,
-      "uncompressedBytes": 3785
+      "cities": 10,
+      "compressedBytes": 656,
+      "uncompressedBytes": 4053
     },
     {
       "countryCode": "VE",
       "path": "countries/VE.json.gz",
-      "sha256": "1252c1f17a13edf03fc609ab59a17206464d00a16899fe26c8ad16f963304808",
+      "sha256": "9a6e5819e6dccb5f973ae4f25ee880c87bad695be175bea38b739ab99723572b",
       "subdivisions": 25,
-      "cities": 136,
-      "compressedBytes": 4508,
-      "uncompressedBytes": 41527
+      "cities": 259,
+      "compressedBytes": 7550,
+      "uncompressedBytes": 74127
     },
     {
       "countryCode": "VG",
@@ -2429,25 +2429,25 @@
     {
       "countryCode": "VN",
       "path": "countries/VN.json.gz",
-      "sha256": "a4b4b38eed5a4b1fa2cd7bcda57f923eddb44e3df0234dd08a4186fca0a77cd5",
+      "sha256": "f00db404208802ed8b5629bfc939e388cd9a3bc337ea152488b12f30c6f17cc5",
       "subdivisions": 34,
-      "cities": 488,
-      "compressedBytes": 13098,
-      "uncompressedBytes": 140920
+      "cities": 480,
+      "compressedBytes": 13088,
+      "uncompressedBytes": 136785
     },
     {
       "countryCode": "VU",
       "path": "countries/VU.json.gz",
-      "sha256": "bed4d309729133ad23218886b1243212af34bee6d4f2c2f28f16ca2797af7665",
+      "sha256": "3bd4b3d57500855cc49ee5d8a1ee6ea8a2355518db37ec55bac3a51873a637ec",
       "subdivisions": 6,
-      "cities": 7,
-      "compressedBytes": 577,
-      "uncompressedBytes": 3196
+      "cities": 8,
+      "compressedBytes": 611,
+      "uncompressedBytes": 3462
     },
     {
       "countryCode": "WF",
       "path": "countries/WF.json.gz",
-      "sha256": "af60c952ace4e0282840738478cf17488e8a8bf829e40eb77db47ad3ea6dd927",
+      "sha256": "e4e11cc4c4475d3f7f8c1056202e5f5d1dd4b1120c6107cec83878d7396d00d5",
       "subdivisions": 3,
       "cities": 3,
       "compressedBytes": 362,
@@ -2474,11 +2474,11 @@
     {
       "countryCode": "YE",
       "path": "countries/YE.json.gz",
-      "sha256": "a3ecef6d6a84c80d74e546ffbeb65b8f06febf507e187403219a3b04b9aef663",
+      "sha256": "de777c7f4d69a49b7aebf668d4ebcc461b3be3d9f62bbad1049a14e33d62c640",
       "subdivisions": 22,
-      "cities": 339,
-      "compressedBytes": 8395,
-      "uncompressedBytes": 91731
+      "cities": 352,
+      "compressedBytes": 8692,
+      "uncompressedBytes": 95079
     },
     {
       "countryCode": "YT",
@@ -2492,29 +2492,29 @@
     {
       "countryCode": "ZA",
       "path": "countries/ZA.json.gz",
-      "sha256": "f8f6be97ecfc69373c725b8ab39e5b8e848dfd9425c096d0fc4ff9be922a8cdc",
+      "sha256": "c7402056679dc49550f28e144e9cf2e6e58e936a8372f515b9920c00653240e8",
       "subdivisions": 9,
-      "cities": 314,
-      "compressedBytes": 8091,
-      "uncompressedBytes": 86314
+      "cities": 364,
+      "compressedBytes": 9291,
+      "uncompressedBytes": 99731
     },
     {
       "countryCode": "ZM",
       "path": "countries/ZM.json.gz",
-      "sha256": "d2ca699a64b51ffd0fa6647811e85dd8fe02f7bfc21a0a63dffe8d91eb82aa40",
+      "sha256": "73dadb9240299aca246378f484d9a52f166665f76a31cbba1f8a7e18aa4f7661",
       "subdivisions": 10,
-      "cities": 71,
-      "compressedBytes": 2167,
-      "uncompressedBytes": 20745
+      "cities": 73,
+      "compressedBytes": 2203,
+      "uncompressedBytes": 21266
     },
     {
       "countryCode": "ZW",
       "path": "countries/ZW.json.gz",
-      "sha256": "d6f7e2559d4c4a1e37bba741358671a69eb765948071f018fa4f86bfb2ee356b",
+      "sha256": "6651594c5c20f8185ac5b92f6301eb5f7652c1a4690fd771eae771b5d81958ef",
       "subdivisions": 10,
       "cities": 109,
-      "compressedBytes": 2903,
-      "uncompressedBytes": 30865
+      "compressedBytes": 2900,
+      "uncompressedBytes": 30864
     }
   ]
 }
